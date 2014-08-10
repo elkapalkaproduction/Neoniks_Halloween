@@ -9,5 +9,4 @@ TODO:
 * Site;
 * Sounds;
 * Fix zooming state;
-* Fix popup sizes;
 * Make a card view;

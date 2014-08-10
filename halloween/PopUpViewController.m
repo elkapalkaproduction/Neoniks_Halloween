@@ -13,14 +13,15 @@
 
 @interface PopUpViewController ()
 
-@property (strong, nonatomic) IBOutlet UIButton *crossButton;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (weak, nonatomic) IBOutlet UIImageView *popUpBackground;
 @property (weak, nonatomic) IBOutlet UIImageView *popUpTitle;
 @property (weak, nonatomic) IBOutlet UIImageView *textImage;
 @property (weak, nonatomic) IBOutlet UIImageView *popUpArtImage;
+@property (weak, nonatomic) IBOutlet UIButton *crossButton;
 @property (weak, nonatomic) IBOutlet UIButton *leftButton;
 @property (weak, nonatomic) IBOutlet UIButton *rightButton;
+@property (weak, nonatomic) IBOutlet UIButton *readTheTale;
 @property (weak, nonatomic) id <PopUpDelegate> delegate;
 @property (assign, nonatomic) BOOL fromRightToLeft;
 @property (assign, nonatomic) NSInteger curentPage;
@@ -95,7 +96,7 @@
     [PopUpAnimations animationForAppear:NO fromRight:YES forView:self.contentView withCompletionBlock:^{
         weakSelf.view.hidden = YES;
 
-        [weakSelf.delegate next:self.nextPage isPrev:NO];
+        [weakSelf.delegate showPage:self.nextPage isPrev:NO];
     }];
 }
 
@@ -105,8 +106,13 @@
     [PopUpAnimations animationForAppear:NO fromRight:NO forView:self.contentView withCompletionBlock:^{
         weakSelf.view.hidden = YES;
 
-        [weakSelf.delegate next:self.prevPage isPrev:YES];
+        [weakSelf.delegate showPage:self.prevPage isPrev:YES];
     }];
+}
+
+
+- (IBAction)readTheNeoniksTale:(id)sender {
+    [self.delegate readTheBook];
 }
 
 
@@ -144,6 +150,9 @@
 
     NSString *popupTextImage = [NSString stringWithFormat:@"%ld_text", (long)self.curentPage];
     self.textImage.image = [UIImage imageWithUnlocalizedName:popupTextImage];
+   
+    self.readTheTale.image = [UIImage imageWithUnlocalizedName:@"who_are_read"];
+
 }
 
 

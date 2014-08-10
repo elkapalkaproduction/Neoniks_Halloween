@@ -35,9 +35,6 @@ NSString *const GameDefaultExtension = @"plist";
 
 - (void)createDoorCharacterID:(Character)characterID {
     DoorView *door = [DoorView instantiateWithCharactedID:characterID delegate:self];
-//    DoorView *door = [self.storyboard instantiateViewControllerWithIdentifier:@"doorView"];
-//    door.characterId = characterID;
-//    door.delegate = self;
     [StoryboardUtils addViewController:door onViewController:self];
     [self.doors addObject:door];
 }
@@ -134,7 +131,7 @@ NSString *const GameDefaultExtension = @"plist";
 }
 
 
-- (void)next:(NSInteger)pageToShow isPrev:(BOOL)prev {
+- (void)showPage:(NSInteger)pageToShow isPrev:(BOOL)prev {
     [self closeWithShadow:NO];
 
     PopUpParameters *param = [[PopUpParameters alloc] init];
@@ -143,6 +140,12 @@ NSString *const GameDefaultExtension = @"plist";
     param.fromRightToLeft = prev;
     self.popUpViewController = [[PopUpViewController alloc] initWithPageNumber:param delegate:self];
     [self.view addSubview:self.popUpViewController.view];
+}
+
+
+- (void)readTheBook {
+    NSURL *bookUrl = [NSURL openStoreToAppWithID:bookAppID];
+    [[UIApplication sharedApplication] openURL:bookUrl];
 }
 
 

@@ -13,6 +13,7 @@
                 <outlet property="popUpArtImage" destination="fa0-im-JWM" id="xyw-1Z-KSs"/>
                 <outlet property="popUpBackground" destination="aPV-k5-n58" id="LsY-UG-VJr"/>
                 <outlet property="popUpTitle" destination="7Fc-cZ-0M9" id="nis-nd-bGq"/>
+                <outlet property="readTheTale" destination="oyj-0k-ocs" id="eNS-h6-cnm"/>
                 <outlet property="rightButton" destination="etC-i9-4cT" id="b3y-Zl-ZOC"/>
                 <outlet property="textImage" destination="ZUv-WU-gIj" id="tyZ-Hf-eUL"/>
                 <outlet property="view" destination="1" id="Qiv-WW-U9S"/>
@@ -32,21 +33,21 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3_title_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="7Fc-cZ-0M9" userLabel="Image View - Title">
-                            <rect key="frame" x="184" y="20" width="125" height="35"/>
+                            <rect key="frame" x="158" y="12" width="164" height="46"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="5_popup_art.png" translatesAutoresizingMaskIntoConstraints="NO" id="fa0-im-JWM">
-                            <rect key="frame" x="137" y="49" width="272" height="254"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3_popup_art.png" translatesAutoresizingMaskIntoConstraints="NO" id="fa0-im-JWM">
+                            <rect key="frame" x="99" y="53" width="281" height="262"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="5_text_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZUv-WU-gIj">
-                            <rect key="frame" x="121" y="68" width="305" height="186"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="3_text_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZUv-WU-gIj">
+                            <rect key="frame" x="99" y="71" width="281" height="171"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oQR-P9-Hkm" userLabel="Button - cross">
-                            <rect key="frame" x="415" y="25" width="30" height="30"/>
+                            <rect key="frame" x="379" y="38" width="30" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" image="cross.png">
@@ -57,7 +58,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etC-i9-4cT" userLabel="Button - right">
-                            <rect key="frame" x="411" y="114" width="67" height="80"/>
+                            <rect key="frame" x="378" y="111" width="67" height="80"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" image="right.png">
@@ -68,7 +69,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGb-nl-dw8" userLabel="Button - left">
-                            <rect key="frame" x="69" y="114" width="67" height="80"/>
+                            <rect key="frame" x="35" y="111" width="67" height="80"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <state key="normal" image="left.png">
@@ -76,6 +77,26 @@
                             </state>
                             <connections>
                                 <action selector="left" destination="-1" eventType="touchUpInside" id="ayl-b5-vro"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DmL-gf-zj9">
+                            <rect key="frame" x="280" y="216" width="60" height="60"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="who_are_read_icon.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="readTheNeoniksTale:" destination="-1" eventType="touchUpInside" id="iB8-aa-Mfg"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyj-0k-ocs" userLabel="Button - who_are_read">
+                            <rect key="frame" x="327" y="223" width="76" height="26"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="who_are_read_eng.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="readTheNeoniksTale:" destination="-1" eventType="touchUpInside" id="HyD-p8-OuG"/>
                             </connections>
                         </button>
                     </subviews>
@@ -89,12 +110,14 @@
         </view>
     </objects>
     <resources>
+        <image name="3_popup_art.png" width="1148" height="1070"/>
+        <image name="3_text_eng.png" width="1148" height="698"/>
         <image name="3_title_eng.png" width="662" height="186"/>
-        <image name="5_popup_art.png" width="1148" height="1070"/>
-        <image name="5_text_eng.png" width="1148" height="698"/>
         <image name="cross.png" width="92" height="92"/>
         <image name="iphone4_pop_up.png" width="960" height="640"/>
         <image name="left.png" width="269" height="321"/>
         <image name="right.png" width="269" height="321"/>
+        <image name="who_are_read_eng.png" width="474" height="162"/>
+        <image name="who_are_read_icon.png" width="220" height="220"/>
     </resources>
 </document>
