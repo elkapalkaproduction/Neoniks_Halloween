@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Menu View Controller-->
@@ -240,6 +241,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S8q-KB-WMI">
                                 <rect key="frame" x="0.0" y="0.0" width="182" height="220"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="S8q-KB-WMI" secondAttribute="height" multiplier="91:110" id="xKu-kz-216"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9B-hb-kao">
                                 <rect key="frame" x="0.0" y="0.0" width="182" height="220"/>
@@ -255,10 +259,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="u9B-hb-kao" secondAttribute="trailing" id="48j-Df-7lx"/>
-                            <constraint firstItem="S8q-KB-WMI" firstAttribute="leading" secondItem="awE-U4-d6L" secondAttribute="leading" id="Iiw-pb-Kn4"/>
-                            <constraint firstItem="S8q-KB-WMI" firstAttribute="top" secondItem="7sy-ti-0S4" secondAttribute="bottom" id="Kaw-B5-sp8"/>
-                            <constraint firstAttribute="trailing" secondItem="S8q-KB-WMI" secondAttribute="trailing" id="Q6D-wK-8cC"/>
-                            <constraint firstItem="f9y-MS-4x3" firstAttribute="top" secondItem="S8q-KB-WMI" secondAttribute="bottom" id="b0q-B2-dAc"/>
+                            <constraint firstItem="S8q-KB-WMI" firstAttribute="leading" secondItem="awE-U4-d6L" secondAttribute="leading" id="R9R-C1-2Br"/>
+                            <constraint firstAttribute="trailing" secondItem="S8q-KB-WMI" secondAttribute="trailing" id="ai2-bm-TC8"/>
+                            <constraint firstItem="S8q-KB-WMI" firstAttribute="top" secondItem="7sy-ti-0S4" secondAttribute="bottom" id="f80-qW-8Dv"/>
                             <constraint firstItem="f9y-MS-4x3" firstAttribute="top" secondItem="u9B-hb-kao" secondAttribute="bottom" id="gpS-OD-KNi"/>
                             <constraint firstItem="u9B-hb-kao" firstAttribute="top" secondItem="7sy-ti-0S4" secondAttribute="bottom" id="pnb-Tr-FJL"/>
                             <constraint firstItem="u9B-hb-kao" firstAttribute="leading" secondItem="awE-U4-d6L" secondAttribute="leading" id="qUI-73-7If"/>

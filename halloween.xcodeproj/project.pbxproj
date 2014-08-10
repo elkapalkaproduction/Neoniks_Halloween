@@ -181,6 +181,8 @@
 		758A1030198D1A5D00FB0F7C /* make_card_fon.png in Resources */ = {isa = PBXBuildFile; fileRef = 758A102D198D1A5D00FB0F7C /* make_card_fon.png */; };
 		758A1031198D1A5D00FB0F7C /* make_card_fon~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 758A102E198D1A5D00FB0F7C /* make_card_fon~ipad.png */; };
 		758A1033198D20B700FB0F7C /* menu_eng5.png in Resources */ = {isa = PBXBuildFile; fileRef = 758A1032198D20B700FB0F7C /* menu_eng5.png */; };
+		75B43C0619976295000BB491 /* game-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B43C0519976295000BB491 /* game-5.png */; };
+		75B43C08199762B1000BB491 /* play4.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B43C07199762B1000BB491 /* play4.png */; };
 		75BF7E7719916C5900C1F31B /* DoorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BF7E7519916C5900C1F31B /* DoorView.m */; };
 		75BF7E7A1991761700C1F31B /* CharactersInitialPosition.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75BF7E791991761700C1F31B /* CharactersInitialPosition.plist */; };
 		75C4C63119902C4B008E55F7 /* Characters in Resources */ = {isa = PBXBuildFile; fileRef = 75C4C63019902C4B008E55F7 /* Characters */; };
@@ -397,6 +399,8 @@
 		758A102D198D1A5D00FB0F7C /* make_card_fon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = make_card_fon.png; sourceTree = "<group>"; };
 		758A102E198D1A5D00FB0F7C /* make_card_fon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "make_card_fon~ipad.png"; sourceTree = "<group>"; };
 		758A1032198D20B700FB0F7C /* menu_eng5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_eng5.png; sourceTree = "<group>"; };
+		75B43C0519976295000BB491 /* game-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "game-5.png"; sourceTree = "<group>"; };
+		75B43C07199762B1000BB491 /* play4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play4.png; sourceTree = "<group>"; };
 		75BF7E7419916C5900C1F31B /* DoorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoorView.h; sourceTree = "<group>"; };
 		75BF7E7519916C5900C1F31B /* DoorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoorView.m; sourceTree = "<group>"; };
 		75BF7E791991761700C1F31B /* CharactersInitialPosition.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CharactersInitialPosition.plist; sourceTree = "<group>"; };
@@ -644,6 +648,8 @@
 		758A0F63198CF63100FB0F7C /* images */ = {
 			isa = PBXGroup;
 			children = (
+				75B43C07199762B1000BB491 /* play4.png */,
+				75B43C0519976295000BB491 /* game-5.png */,
 				754F4165198E4ECF00C13D07 /* game-eng.png */,
 				758A0FF8198D0F6B00FB0F7C /* arrow_back.png */,
 				758A1016198D16E900FB0F7C /* how to play eng.png */,
@@ -969,9 +975,11 @@
 				758A0F8B198CF63200FB0F7C /* menu_play_icon.png in Resources */,
 				758A101A198D16E900FB0F7C /* how-5.png in Resources */,
 				752CB2BD19968B4D001C5459 /* 7_popup_art.png in Resources */,
+				75B43C08199762B1000BB491 /* play4.png in Resources */,
 				758A100D198D169400FB0F7C /* how_to_top_fon-568.png in Resources */,
 				758A1014198D169400FB0F7C /* how_to_text_right_eng.png in Resources */,
 				758A0FED198D0D6E00FB0F7C /* who_are_read_rus.png in Resources */,
+				75B43C0619976295000BB491 /* game-5.png in Resources */,
 				758A0F8A198CF63200FB0F7C /* menu_play_eng.png in Resources */,
 				752CB2C219968B4D001C5459 /* 2_text_eng.png in Resources */,
 				758A100C198D169400FB0F7C /* how_to_dot.png in Resources */,

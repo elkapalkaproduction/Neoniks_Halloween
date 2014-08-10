@@ -26,6 +26,8 @@ NSString *const GameDefaultExtension = @"plist";
 @property (strong, nonatomic) NSMutableArray *doors;
 @property (strong, nonatomic) PopUpViewController *popUpViewController;
 @property (weak, nonatomic) IBOutlet UIImageView *shadowView;
+@property (strong, nonatomic) IBOutlet UIImageView *starsBackground;
+@property (strong, nonatomic) IBOutlet UIImageView *backgroundImage;
 
 @end
 
@@ -54,7 +56,8 @@ NSString *const GameDefaultExtension = @"plist";
     for (int i = 0; i < 8; i++) {
         [self createDoorCharacterID:i];
     }
-
+    self.backgroundImage.image = [UIImage backgroundImageWithName:@"game_fon"];
+    self.starsBackground.image = [UIImage backgroundImageWithName:@"make_card_fon"];
 }
 
 

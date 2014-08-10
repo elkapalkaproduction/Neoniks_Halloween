@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Menu View Controller-->
@@ -147,6 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="329"/>
         </scene>
         <!--Who Are View Controller-->
         <scene sceneID="Ly7-ZQ-hwS">
@@ -414,9 +416,124 @@
             </objects>
             <point key="canvasLocation" x="132" y="1164"/>
         </scene>
+        <!--Game View Controller-->
+        <scene sceneID="L0g-fS-pwL">
+            <objects>
+                <viewController storyboardIdentifier="game_view_controller" id="s9Z-rh-7lE" customClass="GameViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bfd-j0-Cwx"/>
+                        <viewControllerLayoutGuide type="bottom" id="iLO-N4-Mea"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CBJ-pd-mhq">
+                        <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="play4.png" translatesAutoresizingMaskIntoConstraints="NO" id="c2q-Ag-nst">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="make_card_fon-568.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bus-bB-jGG">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game_fon-568.png" translatesAutoresizingMaskIntoConstraints="NO" id="qR6-RT-EHM">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fon_pop_up_window.png" translatesAutoresizingMaskIntoConstraints="NO" id="ELP-hT-BeM">
+                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bus-bB-jGG" firstAttribute="top" secondItem="CBJ-pd-mhq" secondAttribute="top" id="5Ra-iA-CfG"/>
+                            <constraint firstAttribute="trailing" secondItem="qR6-RT-EHM" secondAttribute="trailing" id="6iw-iB-hi3"/>
+                            <constraint firstItem="iLO-N4-Mea" firstAttribute="top" secondItem="ELP-hT-BeM" secondAttribute="bottom" id="Gd3-2o-bg1"/>
+                            <constraint firstAttribute="trailing" secondItem="Bus-bB-jGG" secondAttribute="trailing" id="Iza-hl-9rY"/>
+                            <constraint firstItem="qR6-RT-EHM" firstAttribute="leading" secondItem="CBJ-pd-mhq" secondAttribute="leading" id="Md6-Nh-Uv6"/>
+                            <constraint firstAttribute="trailing" secondItem="ELP-hT-BeM" secondAttribute="trailing" id="PhW-o7-Egq"/>
+                            <constraint firstItem="ELP-hT-BeM" firstAttribute="leading" secondItem="CBJ-pd-mhq" secondAttribute="leading" id="UXm-Gr-kvV"/>
+                            <constraint firstItem="ELP-hT-BeM" firstAttribute="top" secondItem="CBJ-pd-mhq" secondAttribute="top" id="ZCW-Nc-Td1"/>
+                            <constraint firstItem="Bus-bB-jGG" firstAttribute="leading" secondItem="CBJ-pd-mhq" secondAttribute="leading" id="aOw-yq-nna"/>
+                            <constraint firstItem="iLO-N4-Mea" firstAttribute="top" secondItem="Bus-bB-jGG" secondAttribute="bottom" id="pRW-lA-9Lj"/>
+                            <constraint firstItem="qR6-RT-EHM" firstAttribute="top" secondItem="CBJ-pd-mhq" secondAttribute="top" id="pjv-Rr-c6w"/>
+                            <constraint firstItem="iLO-N4-Mea" firstAttribute="top" secondItem="qR6-RT-EHM" secondAttribute="bottom" id="z42-1D-2n4"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="backgroundImage" destination="qR6-RT-EHM" id="XVZ-WJ-XiW"/>
+                        <outlet property="shadowView" destination="ELP-hT-BeM" id="C2Z-qN-ICC"/>
+                        <outlet property="starsBackground" destination="Bus-bB-jGG" id="RPH-TY-cea"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4fX-uK-pfh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="1573"/>
+        </scene>
+        <!--Door View-->
+        <scene sceneID="l1k-Ge-7BL">
+            <objects>
+                <viewController storyboardIdentifier="doorView" id="65x-1G-vZF" customClass="DoorView" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DGP-FO-UnO"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Qr-cy-JrN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lVW-sD-VYK">
+                        <rect key="frame" x="0.0" y="0.0" width="182" height="220"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jBf-rk-UAb">
+                                <rect key="frame" x="0.0" y="0.0" width="182" height="220"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jBf-rk-UAb" secondAttribute="height" multiplier="91:110" id="h61-WO-Jtf"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7Y-L3-zWn">
+                                <rect key="frame" x="0.0" y="0.0" width="182" height="220"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="doorPress:" destination="65x-1G-vZF" eventType="touchUpInside" id="dnK-Og-XJe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jBf-rk-UAb" firstAttribute="leading" secondItem="lVW-sD-VYK" secondAttribute="leading" id="1Vb-0w-r7c"/>
+                            <constraint firstItem="6Qr-cy-JrN" firstAttribute="top" secondItem="s7Y-L3-zWn" secondAttribute="bottom" id="2Uz-J5-lvL"/>
+                            <constraint firstItem="jBf-rk-UAb" firstAttribute="top" secondItem="DGP-FO-UnO" secondAttribute="bottom" id="Ete-Ou-YZg"/>
+                            <constraint firstAttribute="trailing" secondItem="s7Y-L3-zWn" secondAttribute="trailing" id="HeI-NQ-5Ku"/>
+                            <constraint firstItem="s7Y-L3-zWn" firstAttribute="leading" secondItem="lVW-sD-VYK" secondAttribute="leading" id="Jiq-CQ-NNH"/>
+                            <constraint firstItem="s7Y-L3-zWn" firstAttribute="top" secondItem="DGP-FO-UnO" secondAttribute="bottom" id="Xay-Az-b9y"/>
+                            <constraint firstAttribute="trailing" secondItem="jBf-rk-UAb" secondAttribute="trailing" id="i96-Ew-TfK"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="182" height="220"/>
+                    <connections>
+                        <outlet property="characterImage" destination="s7Y-L3-zWn" id="vib-SZ-kAP"/>
+                        <outlet property="doorImage" destination="jBf-rk-UAb" id="whk-lh-dzt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1cp-iC-rX7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="539" y="2036"/>
+        </scene>
     </scenes>
     <resources>
         <image name="arrow_back.png" width="64" height="77"/>
+        <image name="fon_pop_up_window.png" width="2048" height="1536"/>
+        <image name="game_fon-568.png" width="1136" height="640"/>
         <image name="how_to_banner_eng.png" width="1413" height="271"/>
         <image name="how_to_dot.png" width="216" height="192"/>
         <image name="how_to_make_eng.png" width="134" height="54"/>
@@ -440,6 +557,7 @@
         <image name="menu_text_eng.png" width="974" height="468"/>
         <image name="menu_who_are_eng.png" width="458" height="95"/>
         <image name="menu_who_are_icon.png" width="220" height="220"/>
+        <image name="play4.png" width="960" height="640"/>
         <image name="who_are_banner_eng.png" width="1413" height="271"/>
         <image name="who_are_contributors_eng.png" width="974" height="468"/>
         <image name="who_are_feedback_eng.png" width="474" height="162"/>

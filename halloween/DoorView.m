@@ -42,8 +42,8 @@
 
 
 - (void)updateImages {
-    CGFloat width = 91;
-    CGFloat heigth = 110;
+    CGFloat width = [self getDeviceValueFromIphone4:40 iphone5:40 ipad:91];
+    CGFloat heigth = [self getDeviceValueFromIphone4:48 iphone5:48 ipad:110];
     CGFloat x;
     CGFloat y;
     NSString *doorImageName;
@@ -52,7 +52,7 @@
         case CharacterCat:
         case CharacterOwl:
         case CharacterSheep:
-            x = 7;
+            x = [self getDeviceValueFromIphone4:1 iphone5:4 ipad:7];
             doorImageName = @"door_0";
             break;
         case CharacterKnight:
@@ -60,7 +60,7 @@
         case CharacterWitch:
         case CharacterGoblin:
             doorImageName = @"door_1";
-            x = 926;
+            x = [self getDeviceValueFromIphone4:439 iphone5:525 ipad:926];
             break;
         default:
             break;
@@ -68,23 +68,27 @@
     switch (self.characterId) {
         case CharacterCat:
         case CharacterWitch:
-            y = 172;
+            y = [self getDeviceValueFromIphone4:74 iphone5:74 ipad:172];
             break;
         case CharacterOwl:
         case CharacterKnight:
-            y = 295;
+            y = [self getDeviceValueFromIphone4:126 iphone5:126 ipad:295];
             break;
         case CharacterSheep:
         case CharacterSnail:
-            y = 418;
+            y = [self getDeviceValueFromIphone4:178 iphone5:178 ipad:418];
             break;
         case CharacterBat:
         case CharacterGoblin:
-            y = 541;
+            y = [self getDeviceValueFromIphone4:230 iphone5:230 ipad:541];;
             break;
         default:
             break;
     }
+    if (self.characterId == CharacterGoblin && !self.questionState) {
+        heigth = width * 382 / 182;
+    }
+    
     self.view.frame = CGRectMake(x, y, width, heigth);
     self.doorImage.image = [UIImage imageNamed:doorImageName];
     if (self.questionState) {
@@ -133,6 +137,11 @@
     }
     
     return characterID;
+}
+
+
+- (CGFloat)getDeviceValueFromIphone4:(CGFloat)iphone4 iphone5:(CGFloat)iphone5 ipad:(CGFloat)ipad {
+    return isIphone()? isIphone5()? iphone5 : iphone4 : ipad;
 }
 
 @end
