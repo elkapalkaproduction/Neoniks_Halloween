@@ -7,6 +7,7 @@
 //
 
 #import "GameViewController.h"
+#import "MakeACardViewController.h"
 #import "StatedObject.h"
 #import "PopUpViewController.h"
 #import "PopUpAnimations.h"
@@ -15,19 +16,30 @@
 #import "Utils.h"
 
 NSString *const GameDefaultObjects = @"GameDefaultObjects";
-NSString *const CharacterInitialPosition = @"CharactersInitialPosition";
 NSString *const GameDefaultExtension = @"plist";
 
 @interface GameViewController () <DoorDelegate, StatedObjectDelegate, PopUpDelegate>
 
 @property (strong, nonatomic) NSMutableArray *allObjects;
-@property (strong, nonatomic) NSDictionary *characterInitialPosition;
 @property (strong, nonatomic) StatedObject *currentObject;
 @property (strong, nonatomic) NSMutableArray *doors;
 @property (strong, nonatomic) PopUpViewController *popUpViewController;
 @property (weak, nonatomic) IBOutlet UIImageView *shadowView;
+@property (strong, nonatomic) IBOutlet UIView *bottomMenu;
 @property (strong, nonatomic) IBOutlet UIImageView *starsBackground;
 @property (strong, nonatomic) IBOutlet UIImageView *backgroundImage;
+@property (strong, nonatomic) IBOutlet UIImageView *returnImage;
+@property (strong, nonatomic) IBOutlet UIImageView *makeImage;
+@property (strong, nonatomic) IBOutlet UIImageView *gameImage;
+@property (strong, nonatomic) IBOutlet UIButton *goToSiteButton;
+@property (strong, nonatomic) NNKObjectParameters *catObjectParameters;
+@property (strong, nonatomic) NNKObjectParameters *owlObjectParameters;
+@property (strong, nonatomic) NNKObjectParameters *sheepObjectParameters;
+@property (strong, nonatomic) NNKObjectParameters *batObjectParameters;
+@property (strong, nonatomic) NNKObjectParameters *witchObjectParameters;
+@property (strong, nonatomic) NNKObjectParameters *knightObjectParameters;
+@property (strong, nonatomic) NNKObjectParameters *snailObjectParameters;
+@property (strong, nonatomic) NNKObjectParameters *goblinObjectParameters;
 
 @end
 
@@ -40,21 +52,41 @@ NSString *const GameDefaultExtension = @"plist";
 }
 
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)createDoors {
+    for (int i = 0; i < 8; i++) {
+        [self createDoorCharacterID:i];
+    }
+}
+
+
+- (void)setupInitialView {
     NSDictionary *allDictObjects = [[NSDictionary alloc] initWithContentsOfURL:[NSURL urlFromLocalizedName:GameDefaultObjects extension:GameDefaultExtension]];
     NSArray *allKeys = [allDictObjects allKeys];
-
+    
     for (NSString *key in allKeys) {
         NNKObjectParameters *parameters = [[NNKObjectParameters alloc] initWithDictionary:allDictObjects[key]];
         StatedObject *object = [[StatedObject alloc] initWithParameters:parameters delegate:self];
         [self.allObjects addObject:object];
     }
-    for (int i = 0; i < 8; i++) {
-        [self createDoorCharacterID:i];
-    }
+}
+
+
+- (void)updateLanguage {
     self.backgroundImage.image = [UIImage backgroundImageWithName:@"game_fon"];
     self.starsBackground.image = [UIImage backgroundImageWithName:@"make_card_fon"];
+    self.goToSiteButton.image = [UIImage imageWithUnlocalizedName:@"menu_site"];
+    self.returnImage.image = [UIImage imageWithUnlocalizedName:@"game_return"];
+    self.makeImage.image = [UIImage imageWithUnlocalizedName:@"game_make"];
+    self.gameImage.image = [UIImage imageWithUnlocalizedName:@"game_new_game"];
+}
+
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self setupInitialView];
+    [self updateLanguage];
+    [self createDoors];
+
 }
 
 
@@ -64,6 +96,93 @@ NSString *const GameDefaultExtension = @"plist";
     }
     
     return _doors;
+}
+
+
+- (IBAction)goToSite:(id)sender {
+    NSURL *bookUrl = [NSURL urlForSite];
+    [[UIApplication sharedApplication] openURL:bookUrl];
+}
+
+
+- (UIImage *)createImage {
+    UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+    CGRect rect = [keyWindow bounds];
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [keyWindow.layer renderInContext:context];
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    UIImageOrientation imageOrientation;
+    switch (orientation) {
+        case UIInterfaceOrientationLandscapeLeft:
+            imageOrientation = UIImageOrientationRight;
+            break;
+        case UIInterfaceOrientationLandscapeRight:
+            imageOrientation = UIImageOrientationLeft;
+            break;
+        case UIInterfaceOrientationPortrait:
+            imageOrientation = UIImageOrientationUp;
+            break;
+        default:
+            imageOrientation = UIImageOrientationLeft;
+            break;
+    }
+    CGFloat scale = [[UIScreen mainScreen] scale];
+    
+    return [[UIImage alloc] initWithCGImage:[img CGImage] scale:scale orientation:imageOrientation];;
+}
+
+
+- (void)goToMakeCard:(UIImage *)image {
+    MakeACardViewController *makeCard = [MakeACardViewController instantiateWithImage:image];
+    __weak GameViewController *weakSelf = self;
+    [self presentViewController:makeCard animated:YES completion:^{
+        for (DoorView *door in weakSelf.doors) {
+            door.view.hidden = NO;
+        }
+        weakSelf.bottomMenu.hidden = NO;
+        weakSelf.goToSiteButton.hidden = NO;
+        weakSelf.currentObject.hidden = NO;
+    }];
+}
+
+
+- (IBAction)makeSnapshot {
+    for (DoorView *door in self.doors) {
+        door.view.hidden = YES;
+    }
+    self.bottomMenu.hidden = YES;
+    self.goToSiteButton.hidden = YES;
+    self.currentObject.hidden = YES;
+    for (StatedObject *object in self.allObjects) {
+        [object stopAnimation];
+    }
+    UIImage *image = [self createImage];
+    [self goToMakeCard:image];
+
+}
+
+
+- (IBAction)newGame {
+    for (StatedObject *object in self.allObjects) {
+        [object cleanResources];
+    }
+    if (self.currentObject) {
+        [self.currentObject cleanResources];
+    }
+    [self setupInitialView];
+    for (DoorView *currentDoor in self.doors) {
+        currentDoor.questionState = NO;
+    }
+
+}
+
+
+- (IBAction)returnToMenu:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:NULL];
+
 }
 
 
@@ -79,8 +198,7 @@ NSString *const GameDefaultExtension = @"plist";
     if (self.currentObject) {
         [self.currentObject cleanResources];
     }
-    NSString *characterID = [door nameForDoor];
-    NNKObjectParameters *params = [[NNKObjectParameters alloc] initWithDictionary:self.characterInitialPosition[characterID]];
+    NNKObjectParameters *params = [self paramsForCharacter:door.characterId];
     self.currentObject = [[StatedObject alloc] initWithParameters:params delegate:self];
     [self.currentObject setupHighlightedImageIfExists];
 }
@@ -95,6 +213,108 @@ NSString *const GameDefaultExtension = @"plist";
         }
 
     }
+}
+
+
+- (NNKObjectParameters *)paramsForCharacter:(Character)characterID {
+    switch (characterID) {
+        case CharacterBat:
+            return self.batObjectParameters;
+            break;
+        case CharacterCat:
+            return self.catObjectParameters;
+            break;
+        case CharacterGoblin:
+            return self.goblinObjectParameters;
+            break;
+        case CharacterKnight:
+            return self.knightObjectParameters;
+            break;
+        case CharacterOwl:
+            return self.owlObjectParameters;
+            break;
+        case CharacterSheep:
+            return self.sheepObjectParameters;
+            break;
+        case CharacterSnail:
+            return self.snailObjectParameters;
+            break;
+        case CharacterWitch:
+            return self.witchObjectParameters;
+            break;
+    }
+}
+
+
+- (NNKObjectParameters *)catObjectParameters {
+    if (!_catObjectParameters) {
+        _catObjectParameters = [NNKObjectParameters catObjectParameters];
+    }
+    
+    return _catObjectParameters;
+}
+
+
+- (NNKObjectParameters *)owlObjectParameters {
+    if (!_owlObjectParameters) {
+        _owlObjectParameters = [NNKObjectParameters owlObjectParameters];
+    }
+    
+    return _owlObjectParameters;
+}
+
+
+- (NNKObjectParameters *)sheepObjectParameters {
+    if (!_sheepObjectParameters) {
+        _sheepObjectParameters = [NNKObjectParameters sheepObjectParameters];
+    }
+    
+    return _sheepObjectParameters;
+}
+
+
+- (NNKObjectParameters *)batObjectParameters {
+    if (!_batObjectParameters) {
+        _batObjectParameters = [NNKObjectParameters batObjectParameters];
+    }
+    
+    return _batObjectParameters;
+}
+
+
+- (NNKObjectParameters *)witchObjectParameters {
+    if (!_witchObjectParameters) {
+        _witchObjectParameters = [NNKObjectParameters witchObjectParameters];
+    }
+    
+    return _witchObjectParameters;
+}
+
+
+- (NNKObjectParameters *)knightObjectParameters {
+    if (!_knightObjectParameters) {
+        _knightObjectParameters = [NNKObjectParameters knightObjectParameters];
+    }
+    
+    return _knightObjectParameters;
+}
+
+
+- (NNKObjectParameters *)snailObjectParameters {
+    if (!_snailObjectParameters) {
+        _snailObjectParameters = [NNKObjectParameters snailObjectParameters];
+    }
+    
+    return _snailObjectParameters;
+}
+
+
+- (NNKObjectParameters *)goblinObjectParameters {
+    if (!_goblinObjectParameters) {
+        _goblinObjectParameters = [NNKObjectParameters goblinObjectParameters];
+    }
+    
+    return _goblinObjectParameters;
 }
 
 
@@ -162,15 +382,6 @@ NSString *const GameDefaultExtension = @"plist";
 
     [self.popUpViewController.view removeFromSuperview];
     self.popUpViewController = nil;
-}
-
-
-- (NSDictionary *)characterInitialPosition {
-    if (!_characterInitialPosition) {
-        _characterInitialPosition = [[NSDictionary alloc] initWithContentsOfURL:[NSURL urlFromLocalizedName:CharacterInitialPosition extension:GameDefaultExtension]];
-    }
-    
-    return _characterInitialPosition;
 }
 
 

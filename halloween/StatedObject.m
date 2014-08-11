@@ -238,9 +238,18 @@ extern NSString *const NNKRiseActionObjectId;
 #pragma mark - Public Methods
 
 - (void)cleanResources {
+    self.parameters.animationImages = nil;
     [self resetAnimationTimer];
     [self resetAnimationSoundPlayer];
     [self removeFromSuperview];
+}
+
+
+- (void)stopAnimation {
+    [self resetAnimationDefaults];
+    [self resetAnimationSoundPlayer];
+    [self resetAnimationTimer];
+    [self setupImageToCurrentImageIndex];
 }
 
 

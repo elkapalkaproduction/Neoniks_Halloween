@@ -22,5 +22,6 @@
 - (id)initWithParameters:(NNKObjectParameters *)parameters delegate:(UIViewController<StatedObjectDelegate> *)aDelegate;
 - (void)setupHighlightedImageIfExists;
 - (void)cleanResources;
+- (void)stopAnimation;
 
 @end

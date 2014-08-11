@@ -149,15 +149,15 @@
                                 <rect key="frame" x="397" y="473" width="278" height="178"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="how_to_return_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="XLU-M4-86Q">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game_return_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="XLU-M4-86Q">
                                 <rect key="frame" x="382" y="725" width="56" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="how_to_make_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="BFA-3J-dms">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game_make_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="BFA-3J-dms">
                                 <rect key="frame" x="498" y="723" width="56" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="how_to_new_game_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="bp6-Ph-5ee">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game_new_game_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="bp6-Ph-5ee">
                                 <rect key="frame" x="618" y="725" width="56" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -197,6 +197,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fon_pop_up_window.png" translatesAutoresizingMaskIntoConstraints="NO" id="0ga-1u-RV9">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game-eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ffl-dK-s5m">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -209,8 +213,222 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fon_pop_up_window.png" translatesAutoresizingMaskIntoConstraints="NO" id="0ga-1u-RV9">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lm-xu-wHq" userLabel="Button - menu_site">
+                                <rect key="frame" x="887" y="739" width="133" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" image="menu_site_eng.png"/>
+                                <connections>
+                                    <action selector="goToSite:" destination="2X3-91-84G" eventType="touchUpInside" id="wac-pN-uu1"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CXk-m8-Lgk">
+                                <rect key="frame" x="308" y="647" width="408" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O78-Hb-6wD" userLabel="Button - make_icon">
+                                        <rect key="frame" x="145" y="0.0" width="121" height="121"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="game_make_icon.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="makeSnapshot" destination="2X3-91-84G" eventType="touchUpInside" id="T9e-6M-4zk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNz-Q3-0nX" userLabel="Button - new_icon">
+                                        <rect key="frame" x="287" y="0.0" width="121" height="121"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="game_new_game_icon.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="newGame" destination="2X3-91-84G" eventType="touchUpInside" id="JS3-Sq-UWi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmN-2M-UXb" userLabel="Button - return_icon">
+                                        <rect key="frame" x="0.0" y="0.0" width="121" height="121"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="game_return_icon.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="returnToMenu:" destination="2X3-91-84G" eventType="touchUpInside" id="mvu-Me-8W8"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game_return_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="iDn-aU-iTB">
+                                        <rect key="frame" x="27" y="94" width="67" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game_make_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bsc-5V-Tnb">
+                                        <rect key="frame" x="172" y="89" width="67" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game_new_game_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ecf-r5-rY9">
+                                        <rect key="frame" x="314" y="94" width="67" height="27"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="bottomMenu" destination="CXk-m8-Lgk" id="2QV-Bt-yW2"/>
+                        <outlet property="gameImage" destination="Ecf-r5-rY9" id="7JN-gu-bOg"/>
+                        <outlet property="goToSiteButton" destination="0lm-xu-wHq" id="5Vq-wa-fI2"/>
+                        <outlet property="makeImage" destination="Bsc-5V-Tnb" id="l4L-Xm-hrf"/>
+                        <outlet property="returnImage" destination="iDn-aU-iTB" id="cPN-Rc-Dqq"/>
+                        <outlet property="shadowView" destination="0ga-1u-RV9" id="8nv-2m-djA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WYH-9z-opE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-54" y="2726"/>
+        </scene>
+        <!--MakeA Card View Controller-->
+        <scene sceneID="FKi-yF-KGb">
+            <objects>
+                <viewController storyboardIdentifier="make_a_card_view_controller" id="vvP-LI-08p" customClass="MakeACardViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Il8-ZP-wsL"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sje-Bs-So7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2es-tM-lII">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="make_card_fon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Uf4-76-0ka">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9bL-9l-e2h">
+                                <rect key="frame" x="48" y="107" width="785" height="636"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="make_card_fon.png" translatesAutoresizingMaskIntoConstraints="NO" id="x6c-qc-uY0">
+                                        <rect key="frame" x="-48" y="-107" width="1024" height="768"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="whm-jk-Ldr">
+                                        <rect key="frame" x="25" y="25" width="735" height="553"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="79K-SY-aOr">
+                                                <rect key="frame" x="4" y="4" width="727" height="545"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="make_a_card_text1_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="2zl-t1-GnO">
+                                        <rect key="frame" x="-48" y="478" width="860" height="183"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5r8-ZX-gXw" userLabel="Button - menu_site">
+                                        <rect key="frame" x="650" y="610" width="133" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                        <state key="normal" image="menu_site_eng.png"/>
+                                    </button>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J9Z-i5-H3H">
+                                        <rect key="frame" x="0.0" y="0.0" width="1" height="636"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Im2-4Y-f4q">
+                                        <rect key="frame" x="0.0" y="0.0" width="785" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aHK-4H-zdO">
+                                        <rect key="frame" x="0.0" y="635" width="785" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xNh-bq-Soe">
+                                        <rect key="frame" x="784" y="0.0" width="1" height="636"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aO3-r3-e5U">
+                                <rect key="frame" x="868" y="126" width="110" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="make_a_card_captions_icon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="captions" destination="vvP-LI-08p" eventType="touchUpInside" id="sSH-Lt-98a"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1J7-SZ-9iz">
+                                <rect key="frame" x="857" y="214" width="133" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="make_a_card_captions_eng.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="captions" destination="vvP-LI-08p" eventType="touchUpInside" id="NtL-nu-uqB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbp-DH-hn9">
+                                <rect key="frame" x="868" y="268" width="110" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="make_a_card_send_icon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="send" destination="vvP-LI-08p" eventType="touchUpInside" id="wSi-Hm-bGr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HE0-kT-vC4">
+                                <rect key="frame" x="857" y="356" width="133" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="make_a_card_send_eng.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="send" destination="vvP-LI-08p" eventType="touchUpInside" id="Wms-Gd-Ds4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUM-rQ-7Pb">
+                                <rect key="frame" x="868" y="410" width="110" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="make_a_card_save_icon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="save" destination="vvP-LI-08p" eventType="touchUpInside" id="N0W-9f-6bA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cd-pU-grI">
+                                <rect key="frame" x="857" y="498" width="133" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="make_a_card_save_eng.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="save" destination="vvP-LI-08p" eventType="touchUpInside" id="D4o-Ph-5Mg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5m-Be-1sz">
+                                <rect key="frame" x="967" y="20" width="32" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="arrow_back.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack:" destination="vvP-LI-08p" eventType="touchUpInside" id="OFS-bB-wz0"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7k7-e7-WrK">
+                                <rect key="frame" x="159" y="0.0" width="706" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -219,12 +437,94 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="shadowView" destination="0ga-1u-RV9" id="8nv-2m-djA"/>
+                        <outlet property="bannerImage" destination="7k7-e7-WrK" id="TPb-1W-wID"/>
+                        <outlet property="captionTextButton" destination="1J7-SZ-9iz" id="8yl-bc-Hu7"/>
+                        <outlet property="cardImageView" destination="79K-SY-aOr" id="EGn-cA-tzi"/>
+                        <outlet property="cardView" destination="9bL-9l-e2h" id="HGJ-1w-XcT"/>
+                        <outlet property="saveTextButton" destination="5cd-pU-grI" id="P8Z-Po-G7b"/>
+                        <outlet property="sendTextButton" destination="HE0-kT-vC4" id="E1x-Oh-ER3"/>
+                        <outlet property="siteAddress" destination="5r8-ZX-gXw" id="WHC-Z6-FHL"/>
+                        <outlet property="textMessage" destination="2zl-t1-GnO" id="0qN-zC-uzX"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WYH-9z-opE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dfg-ne-ZJF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-54" y="2726"/>
+            <point key="canvasLocation" x="-54" y="3598"/>
+        </scene>
+        <!--Captions View Controller-->
+        <scene sceneID="rSj-rU-ARc">
+            <objects>
+                <viewController storyboardIdentifier="captions_view_controller" id="RBS-pu-DQX" customClass="CaptionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jpw-Yx-gx1"/>
+                        <viewControllerLayoutGuide type="bottom" id="brF-rG-Bvb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Rlu-bn-KdQ">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fon_pop_up_window.png" translatesAutoresizingMaskIntoConstraints="NO" id="yeZ-Ij-hdt">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_caption_fon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Icp-DK-Tcj">
+                                <rect key="frame" x="112" y="177" width="658" height="360"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DMW-lA-5KO" customClass="NNKShapedButton">
+                                <rect key="frame" x="141" y="223" width="600" height="133"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="card_caption_text1_eng.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luP-Ov-YoN" customClass="NNKShapedButton">
+                                <rect key="frame" x="141" y="297" width="600" height="133"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="card_caption_text2_eng.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xMH-p4-8KF" customClass="NNKShapedButton">
+                                <rect key="frame" x="141" y="371" width="600" height="133"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="card_caption_text3_eng.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tFk-Nd-nfr">
+                                <rect key="frame" x="690" y="216" width="32" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="arrow_blue.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="backButton:" destination="RBS-pu-DQX" eventType="touchUpInside" id="PWt-KH-W7F"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yeZ-Ij-hdt" firstAttribute="top" secondItem="Rlu-bn-KdQ" secondAttribute="top" id="6MJ-QK-ghq"/>
+                            <constraint firstItem="yeZ-Ij-hdt" firstAttribute="leading" secondItem="Rlu-bn-KdQ" secondAttribute="leading" id="8BG-Vq-siE"/>
+                            <constraint firstItem="brF-rG-Bvb" firstAttribute="top" secondItem="yeZ-Ij-hdt" secondAttribute="bottom" id="EMW-pI-rmc"/>
+                            <constraint firstAttribute="trailing" secondItem="yeZ-Ij-hdt" secondAttribute="trailing" id="iB1-jv-0zv"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <connections>
+                        <outlet property="text1" destination="DMW-lA-5KO" id="sLj-ui-Mzv"/>
+                        <outlet property="text2" destination="luP-Ov-YoN" id="uth-tS-gtS"/>
+                        <outlet property="text3" destination="xMH-p4-8KF" id="F6j-8Z-JAi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FAz-Fq-YoF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-54" y="4467"/>
         </scene>
         <!--Door View-->
         <scene sceneID="GfZ-o2-Nbd">
@@ -279,7 +579,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tHv-ho-UDR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="514" y="3624"/>
+            <point key="canvasLocation" x="1000" y="3274"/>
         </scene>
         <!--Who Are View Controller-->
         <scene sceneID="SVH-fA-ASD">
@@ -367,18 +667,33 @@
     </scenes>
     <resources>
         <image name="arrow_back.png" width="64" height="77"/>
+        <image name="arrow_blue.png" width="64" height="77"/>
+        <image name="card_caption_fon.png" width="1317" height="721"/>
+        <image name="card_caption_text1_eng.png" width="1200" height="267"/>
+        <image name="card_caption_text2_eng.png" width="1200" height="267"/>
+        <image name="card_caption_text3_eng.png" width="1200" height="267"/>
         <image name="fon_pop_up_window.png" width="2048" height="1536"/>
         <image name="game-eng.png" width="2048" height="1536"/>
         <image name="game_fon.png" width="2048" height="1536"/>
+        <image name="game_make_eng.png" width="134" height="54"/>
+        <image name="game_make_icon.png" width="243" height="241"/>
+        <image name="game_new_game_eng.png" width="134" height="54"/>
+        <image name="game_new_game_icon.png" width="243" height="241"/>
+        <image name="game_return_eng.png" width="134" height="54"/>
+        <image name="game_return_icon.png" width="243" height="241"/>
         <image name="how_to_banner_eng.png" width="1413" height="271"/>
         <image name="how_to_dot.png" width="216" height="192"/>
-        <image name="how_to_make_eng.png" width="134" height="54"/>
-        <image name="how_to_new_game_eng.png" width="134" height="54"/>
-        <image name="how_to_return_eng.png" width="134" height="54"/>
         <image name="how_to_text_center_eng.png" width="556" height="356"/>
         <image name="how_to_text_left_eng.png" width="556" height="356"/>
         <image name="how_to_text_right_eng.png" width="556" height="356"/>
         <image name="how_to_top_fon.png" width="2048" height="1536"/>
+        <image name="make_a_card_captions_eng.png" width="266" height="88"/>
+        <image name="make_a_card_captions_icon.png" width="220" height="220"/>
+        <image name="make_a_card_save_eng.png" width="266" height="88"/>
+        <image name="make_a_card_save_icon.png" width="220" height="220"/>
+        <image name="make_a_card_send_eng.png" width="266" height="88"/>
+        <image name="make_a_card_send_icon.png" width="220" height="220"/>
+        <image name="make_a_card_text1_eng.png" width="1720" height="366"/>
         <image name="make_card_fon.png" width="2048" height="1536"/>
         <image name="menu_banner_eng.png" width="1413" height="271"/>
         <image name="menu_flag_eng.png" width="220" height="220"/>

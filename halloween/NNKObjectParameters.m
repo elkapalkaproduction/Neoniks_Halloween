@@ -18,6 +18,17 @@ NSString *const NNKIphone5Frame = @"iphone5Frame";
 NSString *const NNKIpadFrame = @"ipadFrame";
 NSString *const NNKStates = @"states";
 
+NSString *const CharacterInitialPosition = @"CharactersInitialPosition";
+
+NSString *const NNKObjectCat = @"cat";
+NSString *const NNKObjectOwl = @"owl";
+NSString *const NNKObjectSheep = @"sheep";
+NSString *const NNKObjectBat = @"bat";
+NSString *const NNKObjectWitch = @"witch";
+NSString *const NNKObjectKnight = @"knight";
+NSString *const NNKObjectSnail = @"snail";
+NSString *const NNKObjectGolbin = @"goblin";
+
 @interface NNKObjectParameters ()
 
 @property (strong, nonatomic) NSString *animationDirectoryPath;
@@ -87,6 +98,63 @@ NSString *const NNKStates = @"states";
     } else {
         return CGRectZero;
     }
+}
+
+
++ (NNKObjectParameters *)catObjectParameters {
+    return nil;
+    NSDictionary *characterInitialPosition = [[NSDictionary alloc] initWithContentsOfURL:[NSURL urlFromLocalizedName:CharacterInitialPosition extension:@"plist"]];
+    
+    return  [[NNKObjectParameters alloc] initWithDictionary:characterInitialPosition[NNKObjectCat]];
+}
+
+
++ (NNKObjectParameters *)owlObjectParameters {
+    NSDictionary *characterInitialPosition = [[NSDictionary alloc] initWithContentsOfURL:[NSURL urlFromLocalizedName:CharacterInitialPosition extension:@"plist"]];
+    
+    return  [[NNKObjectParameters alloc] initWithDictionary:characterInitialPosition[NNKObjectOwl]];
+}
+
+
++ (NNKObjectParameters *)sheepObjectParameters {
+    NSDictionary *characterInitialPosition = [[NSDictionary alloc] initWithContentsOfURL:[NSURL urlFromLocalizedName:CharacterInitialPosition extension:@"plist"]];
+    
+    return [[NNKObjectParameters alloc] initWithDictionary:characterInitialPosition[NNKObjectSheep]];
+}
+
+
++ (NNKObjectParameters *)batObjectParameters {
+    NSDictionary *characterInitialPosition = [[NSDictionary alloc] initWithContentsOfURL:[NSURL urlFromLocalizedName:CharacterInitialPosition extension:@"plist"]];
+    
+    return [[NNKObjectParameters alloc] initWithDictionary:characterInitialPosition[NNKObjectBat]];
+}
+
+
++ (NNKObjectParameters *)witchObjectParameters {
+    NSDictionary *characterInitialPosition = [[NSDictionary alloc] initWithContentsOfURL:[NSURL urlFromLocalizedName:CharacterInitialPosition extension:@"plist"]];
+    
+    return  [[NNKObjectParameters alloc] initWithDictionary:characterInitialPosition[NNKObjectWitch]];
+}
+
+
++ (NNKObjectParameters *)knightObjectParameters {
+    NSDictionary *characterInitialPosition = [[NSDictionary alloc] initWithContentsOfURL:[NSURL urlFromLocalizedName:CharacterInitialPosition extension:@"plist"]];
+    
+    return [[NNKObjectParameters alloc] initWithDictionary:characterInitialPosition[NNKObjectKnight]];
+}
+
+
++ (NNKObjectParameters *)snailObjectParameters {
+    NSDictionary *characterInitialPosition = [[NSDictionary alloc] initWithContentsOfURL:[NSURL urlFromLocalizedName:CharacterInitialPosition extension:@"plist"]];
+    
+    return [[NNKObjectParameters alloc] initWithDictionary:characterInitialPosition[NNKObjectSnail]];
+}
+
+
++ (NNKObjectParameters *)goblinObjectParameters {
+    NSDictionary *characterInitialPosition = [[NSDictionary alloc] initWithContentsOfURL:[NSURL urlFromLocalizedName:CharacterInitialPosition extension:@"plist"]];
+    
+    return [[NNKObjectParameters alloc] initWithDictionary:characterInitialPosition[NNKObjectGolbin]];
 }
 
 @end

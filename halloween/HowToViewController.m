@@ -48,9 +48,9 @@
     self.textLeftImage.image = [UIImage imageWithUnlocalizedName:@"how_to_text_left"];
     self.textRightImage.image = [UIImage imageWithUnlocalizedName:@"how_to_text_right"];
     self.textCenterImage.image = [UIImage imageWithUnlocalizedName:@"how_to_text_center"];
-    self.returnImage.image = [UIImage imageWithUnlocalizedName:@"how_to_return"];
-    self.makeImage.image = [UIImage imageWithUnlocalizedName:@"how_to_make"];
-    self.gameImage.image = [UIImage imageWithUnlocalizedName:@"how_to_new_game"];
+    self.returnImage.image = [UIImage imageWithUnlocalizedName:@"game_return"];
+    self.makeImage.image = [UIImage imageWithUnlocalizedName:@"game_make"];
+    self.gameImage.image = [UIImage imageWithUnlocalizedName:@"game_new_game"];
 }
 
 

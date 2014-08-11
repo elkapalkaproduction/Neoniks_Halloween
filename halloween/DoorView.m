@@ -105,41 +105,6 @@
 }
 
 
-- (NSString *)nameForDoor {
-    NSString *characterID;
-    switch (self.characterId) {
-        case CharacterBat:
-            characterID = @"bat";
-            break;
-        case CharacterCat:
-            characterID = @"cat";
-            break;
-        case CharacterGoblin:
-            characterID = @"goblin";
-            break;
-        case CharacterKnight:
-            characterID = @"knight";
-            break;
-        case CharacterOwl:
-            characterID = @"owl";
-            break;
-        case CharacterSheep:
-            characterID = @"sheep";
-            break;
-        case CharacterSnail:
-            characterID = @"snail";
-            break;
-        case CharacterWitch:
-            characterID = @"witch";
-            break;
-        default:
-            break;
-    }
-    
-    return characterID;
-}
-
-
 - (CGFloat)getDeviceValueFromIphone4:(CGFloat)iphone4 iphone5:(CGFloat)iphone5 ipad:(CGFloat)ipad {
     return isIphone()? isIphone5()? iphone5 : iphone4 : ipad;
 }

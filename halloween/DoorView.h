@@ -34,6 +34,4 @@ typedef NS_ENUM(NSInteger, Character) {
 
 @property (assign, nonatomic, getter = isQuestionState) BOOL questionState;
 
-- (NSString *)nameForDoor;
-
 @end

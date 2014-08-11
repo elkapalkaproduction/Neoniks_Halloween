@@ -5,8 +5,6 @@ TODO:
 * Branch;
 * Fan;
 * Palm;
-* Buttons and actions;
-* Site;
 * Sounds;
 * Fix zooming state;
-* Make a card view;
+* Fix screenshot retina image

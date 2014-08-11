@@ -17,4 +17,14 @@
 @property (assign, nonatomic) CGRect frame;
 @property (strong, nonatomic) NSArray *states;
 
+
++ (NNKObjectParameters *)catObjectParameters;
++ (NNKObjectParameters *)owlObjectParameters;
++ (NNKObjectParameters *)sheepObjectParameters;
++ (NNKObjectParameters *)batObjectParameters;
++ (NNKObjectParameters *)witchObjectParameters;
++ (NNKObjectParameters *)knightObjectParameters;
++ (NNKObjectParameters *)snailObjectParameters;
++ (NNKObjectParameters *)goblinObjectParameters;
+
 @end
