@@ -13,6 +13,8 @@
 + (void)presentViewControllerWithStoryboardID:(NSString *)storyboardId
                            fromViewController:(UIViewController *)viewController;
 
++ (UIStoryboard *)storyboard;
+
 + (void)addViewController:(UIViewController *)childView onViewController:(UIViewController *)parentView;
 
 @end

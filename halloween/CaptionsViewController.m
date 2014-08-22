@@ -20,13 +20,7 @@
 @implementation CaptionsViewController
 
 + (instancetype)instantiateWithDelegate:(id<CaptionsDelegate>)delegate {
-    UIStoryboard *storyboard;
-    if (isIphone()) {
-        storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
-    } else {
-        storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
-    }
-    CaptionsViewController *viewController = [storyboard instantiateViewControllerWithIdentifier:@"captions_view_controller"];
+    CaptionsViewController *viewController = [[StoryboardUtils storyboard] instantiateViewControllerWithIdentifier:@"captions_view_controller"];
     viewController.delegate = delegate;
     
     return viewController;

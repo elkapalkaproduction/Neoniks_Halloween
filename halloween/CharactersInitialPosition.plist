@@ -58,13 +58,36 @@
 				<string>Characters/sheep_images/sheep_highlighted.png</string>
 				<key>interactive</key>
 				<true/>
-				<key>autoreverse</key>
+				<key>dragable</key>
+				<true/>
+				<key>scaleble</key>
+				<true/>
+				<key>rotateble</key>
+				<true/>
+				<key>autoTransition</key>
+				<true/>
+				<key>actions</key>
+				<array>
+					<dict>
+						<key>actionBehavior</key>
+						<string>playAnimation:</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>highlightedImage</key>
+				<string>Characters/sheep_images/sheep_highlighted.png</string>
+				<key>interactive</key>
 				<true/>
 				<key>dragable</key>
 				<true/>
 				<key>scaleble</key>
 				<true/>
 				<key>rotateble</key>
+				<true/>
+				<key>autoTransition</key>
+				<true/>
+				<key>backward</key>
 				<true/>
 				<key>actions</key>
 				<array>
@@ -208,13 +231,36 @@
 				<string>Characters/snail_images/snail_highlighted.png</string>
 				<key>interactive</key>
 				<true/>
-				<key>autoreverse</key>
+				<key>dragable</key>
+				<true/>
+				<key>scaleble</key>
+				<true/>
+				<key>rotateble</key>
+				<true/>
+				<key>autoTransition</key>
+				<true/>
+				<key>actions</key>
+				<array>
+					<dict>
+						<key>actionBehavior</key>
+						<string>playAnimation:</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>highlightedImage</key>
+				<string>Characters/snail_images/snail_highlighted.png</string>
+				<key>interactive</key>
 				<true/>
 				<key>dragable</key>
 				<true/>
 				<key>scaleble</key>
 				<true/>
 				<key>rotateble</key>
+				<true/>
+				<key>autoTransition</key>
+				<true/>
+				<key>backward</key>
 				<true/>
 				<key>actions</key>
 				<array>

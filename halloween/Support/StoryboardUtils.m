@@ -14,6 +14,13 @@
 + (void)presentViewControllerWithStoryboardID:(NSString *)storyboardId
                            fromViewController:(UIViewController *)viewController {
     
+    
+    UIViewController *vc = [[StoryboardUtils storyboard] instantiateViewControllerWithIdentifier:storyboardId];
+    [viewController presentViewController:vc animated:YES completion:NULL];
+}
+
+
++ (UIStoryboard *)storyboard {
     UIStoryboard *storyboard;
     if (isIphone()) {
         storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
@@ -21,8 +28,7 @@
         storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
     }
     
-    UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:storyboardId];
-    [viewController presentViewController:vc animated:YES completion:NULL];
+    return storyboard;
 }
 
 

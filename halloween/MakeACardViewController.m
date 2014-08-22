@@ -29,13 +29,7 @@
 @implementation MakeACardViewController
 
 + (instancetype)instantiateWithImage:(UIImage *)image {
-    UIStoryboard *storyboard;
-    if (isIphone()) {
-        storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
-    } else {
-        storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
-    }
-    MakeACardViewController *card = [storyboard instantiateViewControllerWithIdentifier:@"make_a_card_view_controller"];
+    MakeACardViewController *card = [[StoryboardUtils storyboard] instantiateViewControllerWithIdentifier:@"make_a_card_view_controller"];
     card.cardImage = image;
     card.cardTextNumber = 1;
     
