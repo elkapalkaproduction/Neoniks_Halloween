@@ -182,6 +182,7 @@
 		758A1030198D1A5D00FB0F7C /* make_card_fon.png in Resources */ = {isa = PBXBuildFile; fileRef = 758A102D198D1A5D00FB0F7C /* make_card_fon.png */; };
 		758A1031198D1A5D00FB0F7C /* make_card_fon~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 758A102E198D1A5D00FB0F7C /* make_card_fon~ipad.png */; };
 		758A1033198D20B700FB0F7C /* menu_eng5.png in Resources */ = {isa = PBXBuildFile; fileRef = 758A1032198D20B700FB0F7C /* menu_eng5.png */; };
+		75ABADD319AA101B0021007E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 75ABADD219AA101B0021007E /* README.md */; };
 		75B43C0619976295000BB491 /* game-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B43C0519976295000BB491 /* game-5.png */; };
 		75B43C08199762B1000BB491 /* play4.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B43C07199762B1000BB491 /* play4.png */; };
 		75B43C151997B246000BB491 /* game_make_eng.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B43C0F1997B246000BB491 /* game_make_eng.png */; };
@@ -442,6 +443,7 @@
 		758A102D198D1A5D00FB0F7C /* make_card_fon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = make_card_fon.png; sourceTree = "<group>"; };
 		758A102E198D1A5D00FB0F7C /* make_card_fon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "make_card_fon~ipad.png"; sourceTree = "<group>"; };
 		758A1032198D20B700FB0F7C /* menu_eng5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_eng5.png; sourceTree = "<group>"; };
+		75ABADD219AA101B0021007E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		75B43C0519976295000BB491 /* game-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "game-5.png"; sourceTree = "<group>"; };
 		75B43C07199762B1000BB491 /* play4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play4.png; sourceTree = "<group>"; };
 		75B43C0F1997B246000BB491 /* game_make_eng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game_make_eng.png; sourceTree = "<group>"; };
@@ -661,6 +663,7 @@
 		758A0F1F198CF08300FB0F7C = {
 			isa = PBXGroup;
 			children = (
+				75ABADD219AA101B0021007E /* README.md */,
 				758A0FCA198D07A300FB0F7C /* StyleSettings.plist */,
 				758A0F31198CF08300FB0F7C /* halloween */,
 				758A0F2A198CF08300FB0F7C /* Frameworks */,
@@ -1153,6 +1156,7 @@
 				75B43C0619976295000BB491 /* game-5.png in Resources */,
 				758A0F8A198CF63200FB0F7C /* menu_play_eng.png in Resources */,
 				752CB2C219968B4D001C5459 /* 2_text_eng.png in Resources */,
+				75ABADD319AA101B0021007E /* README.md in Resources */,
 				75B43C5A1998017A000BB491 /* make_a_card_banner_rus.png in Resources */,
 				75B43C1E1997B372000BB491 /* game_make_icon.png in Resources */,
 				758A100C198D169400FB0F7C /* how_to_dot.png in Resources */,

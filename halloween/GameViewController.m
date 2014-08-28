@@ -65,7 +65,7 @@ NSString *const GameDefaultExtension = @"plist";
     
     for (NSString *key in allKeys) {
         NNKObjectParameters *parameters = [[NNKObjectParameters alloc] initWithDictionary:allDictObjects[key]];
-        StatedObject *object = [[StatedObject alloc] initWithParameters:parameters delegate:self];
+        StatedObject *object = [[parameters.type alloc] initWithParameters:parameters delegate:self];
         [self.allObjects addObject:object];
     }
 }

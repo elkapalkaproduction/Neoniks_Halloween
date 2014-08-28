@@ -127,5 +127,49 @@
 			</dict>
 		</array>
 	</dict>
+	<key>crack</key>
+	<dict>
+		<key>type</key>
+		<string>StatedObject</string>
+		<key>animationDirectoryPath</key>
+		<string>Characters/crack_images</string>
+		<key>ipadFrame</key>
+		<string>{{458, 41}, {108, 45}}</string>
+		<key>iphone5Frame</key>
+		<string>{{261, 17}, {46, 19}}</string>
+		<key>iphone4Frame</key>
+		<string>{{217, 17}, {46, 19}}</string>
+		<key>states</key>
+		<array>
+			<dict>
+				<key>interactive</key>
+				<true/>
+				<key>autoTransition</key>
+				<true/>
+				<key>actions</key>
+				<array>
+					<dict>
+						<key>actionBehavior</key>
+						<string>playAnimation:</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>interactive</key>
+				<true/>
+				<key>autoTransition</key>
+				<true/>
+				<key>backward</key>
+				<true/>
+				<key>actions</key>
+				<array>
+					<dict>
+						<key>actionBehavior</key>
+						<string>playAnimation:</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
 </dict>
 </plist>

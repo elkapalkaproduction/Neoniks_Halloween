@@ -364,6 +364,10 @@ extern NSString *const NNKRiseActionObjectId;
 
 
 - (void)performActions {
+    if ([self shouldRemoveFromScreen:self.center]) {
+        [self cleanResources];
+        return;
+    }
     [self parseActions:self.currentState.actions];
 }
 
@@ -470,6 +474,21 @@ extern NSString *const NNKRiseActionObjectId;
         }
         [self setupStateSettingsToDefault];
     }
+}
+
+
+- (BOOL)shouldRemoveFromScreen:(CGPoint)point {
+    NSInteger magicValue = isIphone() ? 50 : 100;
+    if (point.x < magicValue) {
+        return YES;
+    }
+    if (point.x > [UIScreen mainScreen].bounds.size.height - magicValue) {
+        return YES;
+    }
+    if (point.y > [UIScreen mainScreen].bounds.size.width - magicValue / 2) {
+        return YES;
+    }
+    return NO;
 }
 
 
