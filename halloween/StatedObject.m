@@ -16,10 +16,7 @@ extern NSString *const NNKRiseActionObjectId;
 
 @interface StatedObject () <UIGestureRecognizerDelegate>
 
-@property (strong, nonatomic) NNKObjectParameters *parameters;
 @property (strong, nonatomic) NNKObjectState *currentState;
-
-@property (weak, nonatomic) UIViewController<StatedObjectDelegate> *delegate;
 
 @property (assign, nonatomic) NSInteger currentStateIndex;
 @property (assign, nonatomic) NSInteger currentImageIndex;
@@ -231,7 +228,7 @@ extern NSString *const NNKRiseActionObjectId;
 
 
 - (void)fireActionInObject:(NSDictionary *)actionDictionary {
-    [self.delegate fireSelector:NSSelectorFromString(actionDictionary[NNKSelector]) inObjectId:actionDictionary[NNKRiseActionObjectId]];
+    [self.delegate fireSelector:actionDictionary[NNKSelector] inObjectId:actionDictionary[NNKRiseActionObjectId]];
 }
 
 
@@ -377,7 +374,7 @@ extern NSString *const NNKRiseActionObjectId;
         return;
     }
     for (NNKObjectAction *action in actionsArray) {
-        [self performSelectorOnMainThread:action.actionBehavior
+        [self performSelectorOnMainThread:NSSelectorFromString(action.actionBehavior)
                                withObject:action
                             waitUntilDone:NO];
     }

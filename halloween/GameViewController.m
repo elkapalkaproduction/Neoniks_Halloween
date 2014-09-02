@@ -14,11 +14,12 @@
 #import "NNKObjectParameters.h"
 #import "DoorView.h"
 #import "Utils.h"
+#import "BranchObject.h"
 
 NSString *const GameDefaultObjects = @"GameDefaultObjects";
 NSString *const GameDefaultExtension = @"plist";
 
-@interface GameViewController () <DoorDelegate, StatedObjectDelegate, PopUpDelegate>
+@interface GameViewController () <UIDynamicAnimatorDelegate, DoorDelegate, StatedObjectDelegate, PopUpDelegate>
 
 @property (strong, nonatomic) NSMutableArray *allObjects;
 @property (strong, nonatomic) StatedObject *currentObject;
@@ -40,6 +41,7 @@ NSString *const GameDefaultExtension = @"plist";
 @property (strong, nonatomic) NNKObjectParameters *knightObjectParameters;
 @property (strong, nonatomic) NNKObjectParameters *snailObjectParameters;
 @property (strong, nonatomic) NNKObjectParameters *goblinObjectParameters;
+@property (nonatomic) UIDynamicAnimator *animator;
 
 @end
 
@@ -318,8 +320,45 @@ NSString *const GameDefaultExtension = @"plist";
 }
 
 
-- (void)fireSelector:(SEL)selector inObjectId:(NSString *)objectId {
+- (UIDynamicAnimator *)animator {
+    if (!_animator) {
+        _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
+        _animator.delegate = self;
+    }
     
+    return _animator;
+}
+
+
+- (void)fireSelector:(NSString *)stringSelector inObjectId:(NSObject *)objectId {
+    SEL selector = NSSelectorFromString(stringSelector);
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+    [self performSelector:selector withObject:objectId];
+#pragma clang diagnostic pop
+}
+
+
+- (void)branchFall:(UIButton *)button {
+    [UIView animateWithDuration:0.4 animations:^{
+        button.transform = CGAffineTransformMakeRotation(30 * M_PI / 180);
+    } completion:^(BOOL finished) {
+        UIGravityBehavior *gravityBehavior = [[UIGravityBehavior alloc] initWithItems:@[button]];
+        gravityBehavior.magnitude = 0.6;
+        [self.animator addBehavior:gravityBehavior];
+    }];
+    [self performSelector:@selector(recreateBranch:) withObject:button afterDelay:2.f];
+}
+
+
+- (void)recreateBranch:(BranchObject *)branch {
+    [self.animator removeAllBehaviors];
+    branch.alpha = 0.f;
+    branch.transform = CGAffineTransformIdentity;
+    branch.frame = branch.parameters.frame;
+    [UIView animateWithDuration:0.2 animations:^{
+        branch.alpha = 1.f;
+    }];
 }
 
 
@@ -391,6 +430,12 @@ NSString *const GameDefaultExtension = @"plist";
     }
     
     return _allObjects;
+}
+
+
+- (void)sendBranchToBack:(NSObject *)branch {
+    [self.view sendSubviewToBack:(UIView *)branch];
+    [self.view sendSubviewToBack:self.starsBackground];
 }
 
 @end

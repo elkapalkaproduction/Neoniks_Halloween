@@ -171,5 +171,34 @@
 			</dict>
 		</array>
 	</dict>
+	<key>branch</key>
+	<dict>
+		<key>type</key>
+		<string>BranchObject</string>
+		<key>ipadFrame</key>
+		<string>{{250, 92}, {514, 380}}</string>
+		<key>iphone5Frame</key>
+		<string>{{261, 17}, {46, 19}}</string>
+		<key>iphone4Frame</key>
+		<string>{{217, 17}, {46, 19}}</string>
+		<key>states</key>
+		<array>
+			<dict>
+				<key>backgroundImage</key>
+				<string>Characters/branch.png</string>
+				<key>interactive</key>
+				<true/>
+				<key>autoTransition</key>
+				<true/>
+				<key>actions</key>
+				<array>
+					<dict>
+						<key>actionBehavior</key>
+						<string>branchFall:</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
 </dict>
 </plist>

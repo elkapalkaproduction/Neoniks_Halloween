@@ -12,8 +12,8 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dict;
 
-@property (assign, nonatomic) SEL actionBehavior;
-@property (assign, nonatomic) SEL selector;
+@property (strong, nonatomic) NSString *actionBehavior;
+@property (strong, nonatomic) NSString *selector;
 @property (strong, nonatomic) NSString *riseActionObjectId;
 
 @end

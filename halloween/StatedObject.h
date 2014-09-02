@@ -13,7 +13,7 @@
 @protocol StatedObjectDelegate <NSObject>
 
 - (void)objectInteracted:(StatedObject *)object;
-- (void)fireSelector:(SEL)selector inObjectId:(NSString *)objectId;
+- (void)fireSelector:(NSString *)stringSelector inObjectId:(NSObject *)objectId;
 
 @end
 
@@ -23,5 +23,10 @@
 - (void)setupHighlightedImageIfExists;
 - (void)cleanResources;
 - (void)stopAnimation;
+
+- (void)performActions;
+
+@property (weak, nonatomic) UIViewController<StatedObjectDelegate> *delegate;
+@property (strong, nonatomic) NNKObjectParameters *parameters;
 
 @end

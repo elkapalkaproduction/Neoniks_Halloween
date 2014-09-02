@@ -17,8 +17,8 @@ NSString *const NNKRiseActionObjectId = @"riseActionObjectId";
 - (instancetype)initWithDictionary:(NSDictionary *)dict {
     self = [super init];
     if (self) {
-        _actionBehavior = NSSelectorFromString(dict[NNKActionBehavior]);
-        _selector = NSSelectorFromString(dict[NNKSelector]);
+        _actionBehavior = dict[NNKActionBehavior];
+        _selector = dict[NNKSelector];
         _riseActionObjectId = dict[NNKRiseActionObjectId];
     }
     

@@ -223,6 +223,7 @@
 		75BF7E7719916C5900C1F31B /* DoorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75BF7E7519916C5900C1F31B /* DoorView.m */; };
 		75BF7E7A1991761700C1F31B /* CharactersInitialPosition.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75BF7E791991761700C1F31B /* CharactersInitialPosition.plist */; };
 		75C4C63119902C4B008E55F7 /* Characters in Resources */ = {isa = PBXBuildFile; fileRef = 75C4C63019902C4B008E55F7 /* Characters */; };
+		75DAE83119B5009100CC61A4 /* BranchObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DAE83019B5009100CC61A4 /* BranchObject.m */; };
 		75F00664199945DD00C2FE3E /* CaptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F00663199945DD00C2FE3E /* CaptionsViewController.m */; };
 		75F00666199948BF00C2FE3E /* card_captions_eng.png in Resources */ = {isa = PBXBuildFile; fileRef = 75F00665199948BF00C2FE3E /* card_captions_eng.png */; };
 		75F006681999556B00C2FE3E /* card_pop_up-eng_5.png in Resources */ = {isa = PBXBuildFile; fileRef = 75F006671999556B00C2FE3E /* card_pop_up-eng_5.png */; };
@@ -486,6 +487,8 @@
 		75BF7E7519916C5900C1F31B /* DoorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoorView.m; sourceTree = "<group>"; };
 		75BF7E791991761700C1F31B /* CharactersInitialPosition.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = CharactersInitialPosition.plist; sourceTree = "<group>"; };
 		75C4C63019902C4B008E55F7 /* Characters */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Characters; sourceTree = "<group>"; };
+		75DAE82F19B5009100CC61A4 /* BranchObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BranchObject.h; sourceTree = "<group>"; };
+		75DAE83019B5009100CC61A4 /* BranchObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BranchObject.m; sourceTree = "<group>"; };
 		75F00662199945DD00C2FE3E /* CaptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptionsViewController.h; sourceTree = "<group>"; };
 		75F00663199945DD00C2FE3E /* CaptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptionsViewController.m; sourceTree = "<group>"; };
 		75F00665199948BF00C2FE3E /* card_captions_eng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = card_captions_eng.png; sourceTree = "<group>"; };
@@ -713,6 +716,8 @@
 				75F00663199945DD00C2FE3E /* CaptionsViewController.m */,
 				754F4167198E76A100C13D07 /* StatedObject.h */,
 				754F4168198E76A100C13D07 /* StatedObject.m */,
+				75DAE82F19B5009100CC61A4 /* BranchObject.h */,
+				75DAE83019B5009100CC61A4 /* BranchObject.m */,
 				75BF7E791991761700C1F31B /* CharactersInitialPosition.plist */,
 				754F416D198E78BC00C13D07 /* GameDefaultObjects.plist */,
 				754F416A198E76C500C13D07 /* NNKShapedButton.h */,
@@ -1235,6 +1240,7 @@
 				758A101E198D188E00FB0F7C /* HowToViewController.m in Sources */,
 				754F417C198ED01000C13D07 /* NNKObjectParameters.m in Sources */,
 				754F4176198ECFD600C13D07 /* NNKObjectState.m in Sources */,
+				75DAE83119B5009100CC61A4 /* BranchObject.m in Sources */,
 				758A0FC5198CFC4F00FB0F7C /* LanguageSettings.m in Sources */,
 				758A0F45198CF08300FB0F7C /* MenuViewController.m in Sources */,
 				758A0F3C198CF08300FB0F7C /* AppDelegate.m in Sources */,
