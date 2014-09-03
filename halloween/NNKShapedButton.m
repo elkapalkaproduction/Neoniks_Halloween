@@ -170,5 +170,4 @@ const CGFloat ShapedButtonAlphaVisibleThreshold = 0.1f;
     return [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
 }
 
-
 @end

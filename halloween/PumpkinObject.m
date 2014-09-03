@@ -1,14 +1,14 @@
 //
-//  BranchObject.m
+//  PumpkinObject.m
 //  halloween
 //
-//  Created by Andrei Vidrasco on 9/1/14.
+//  Created by Andrei Vidrasco on 9/3/14.
 //  Copyright (c) 2014 Andrei Vidrasco. All rights reserved.
 //
 
-#import "BranchObject.h"
+#import "PumpkinObject.h"
 
-@implementation BranchObject
+@implementation PumpkinObject
 
 - (id)initWithParameters:(NNKObjectParameters *)parameters delegate:(UIViewController<StatedObjectDelegate> *)aDelegate {
     self = [super initWithParameters:parameters delegate:aDelegate];
@@ -19,8 +19,8 @@
 }
 
 
-- (void)branchFall:(NSArray *)action {
-    [self.delegate fireSelector:@"branchFall:" inObjectId:self];
+- (void)pumpkinShake:(NSArray *)action {
+    [self.delegate fireSelector:@"pumpkinShake:" inObjectId:self];
 }
 
 

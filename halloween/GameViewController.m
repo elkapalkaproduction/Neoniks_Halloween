@@ -12,9 +12,11 @@
 #import "PopUpViewController.h"
 #import "PopUpAnimations.h"
 #import "NNKObjectParameters.h"
+#import "NNKObjectParametersHelper.h"
 #import "DoorView.h"
 #import "Utils.h"
 #import "BranchObject.h"
+#import <QuartzCore/QuartzCore.h>
 
 NSString *const GameDefaultObjects = @"GameDefaultObjects";
 NSString *const GameDefaultExtension = @"plist";
@@ -33,55 +35,14 @@ NSString *const GameDefaultExtension = @"plist";
 @property (strong, nonatomic) IBOutlet UIImageView *makeImage;
 @property (strong, nonatomic) IBOutlet UIImageView *gameImage;
 @property (strong, nonatomic) IBOutlet UIButton *goToSiteButton;
-@property (strong, nonatomic) NNKObjectParameters *catObjectParameters;
-@property (strong, nonatomic) NNKObjectParameters *owlObjectParameters;
-@property (strong, nonatomic) NNKObjectParameters *sheepObjectParameters;
-@property (strong, nonatomic) NNKObjectParameters *batObjectParameters;
-@property (strong, nonatomic) NNKObjectParameters *witchObjectParameters;
-@property (strong, nonatomic) NNKObjectParameters *knightObjectParameters;
-@property (strong, nonatomic) NNKObjectParameters *snailObjectParameters;
-@property (strong, nonatomic) NNKObjectParameters *goblinObjectParameters;
 @property (nonatomic) UIDynamicAnimator *animator;
+@property (nonatomic) NNKObjectParametersHelper *parameterHelper;
 
 @end
 
 @implementation GameViewController
 
-- (void)createDoorCharacterID:(Character)characterID {
-    DoorView *door = [DoorView instantiateWithCharactedID:characterID delegate:self];
-    [StoryboardUtils addViewController:door onViewController:self];
-    [self.doors addObject:door];
-}
-
-
-- (void)createDoors {
-    for (int i = 0; i < 8; i++) {
-        [self createDoorCharacterID:i];
-    }
-}
-
-
-- (void)setupInitialView {
-    NSDictionary *allDictObjects = [[NSDictionary alloc] initWithContentsOfURL:[NSURL urlFromLocalizedName:GameDefaultObjects extension:GameDefaultExtension]];
-    NSArray *allKeys = [allDictObjects allKeys];
-    
-    for (NSString *key in allKeys) {
-        NNKObjectParameters *parameters = [[NNKObjectParameters alloc] initWithDictionary:allDictObjects[key]];
-        StatedObject *object = [[parameters.type alloc] initWithParameters:parameters delegate:self];
-        [self.allObjects addObject:object];
-    }
-}
-
-
-- (void)updateLanguage {
-    self.backgroundImage.image = [UIImage backgroundImageWithName:@"game_fon"];
-    self.starsBackground.image = [UIImage backgroundImageWithName:@"make_card_fon"];
-    self.goToSiteButton.image = [UIImage imageWithUnlocalizedName:@"menu_site"];
-    self.returnImage.image = [UIImage imageWithUnlocalizedName:@"game_return"];
-    self.makeImage.image = [UIImage imageWithUnlocalizedName:@"game_make"];
-    self.gameImage.image = [UIImage imageWithUnlocalizedName:@"game_new_game"];
-}
-
+#pragma mark - Life Cycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -92,48 +53,11 @@ NSString *const GameDefaultExtension = @"plist";
 }
 
 
-- (NSMutableArray *)doors {
-    if (!_doors) {
-        _doors = [[NSMutableArray alloc] init];
-    }
-    
-    return _doors;
-}
-
+#pragma mark - IBActions 
 
 - (IBAction)goToSite:(id)sender {
     NSURL *bookUrl = [NSURL urlForSite];
     [[UIApplication sharedApplication] openURL:bookUrl];
-}
-
-
-- (UIImage *)createImage {
-    UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
-    CGRect rect = [keyWindow bounds];
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    [keyWindow.layer renderInContext:context];
-    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
-    UIImageOrientation imageOrientation;
-    switch (orientation) {
-        case UIInterfaceOrientationLandscapeLeft:
-            imageOrientation = UIImageOrientationRight;
-            break;
-        case UIInterfaceOrientationLandscapeRight:
-            imageOrientation = UIImageOrientationLeft;
-            break;
-        case UIInterfaceOrientationPortrait:
-            imageOrientation = UIImageOrientationUp;
-            break;
-        default:
-            imageOrientation = UIImageOrientationLeft;
-            break;
-    }
-    CGFloat scale = [[UIScreen mainScreen] scale];
-    
-    return [[UIImage alloc] initWithCGImage:[img CGImage] scale:scale orientation:imageOrientation];;
 }
 
 
@@ -161,7 +85,7 @@ NSString *const GameDefaultExtension = @"plist";
     for (StatedObject *object in self.allObjects) {
         [object stopAnimation];
     }
-    UIImage *image = [self createImage];
+    UIImage *image = [UIImage createSnapshot];
     [self goToMakeCard:image];
 
 }
@@ -200,7 +124,7 @@ NSString *const GameDefaultExtension = @"plist";
     if (self.currentObject) {
         [self.currentObject cleanResources];
     }
-    NNKObjectParameters *params = [self paramsForCharacter:door.characterId];
+    NNKObjectParameters *params = [self.parameterHelper paramsForCharacter:door.characterId];
     self.currentObject = [[StatedObject alloc] initWithParameters:params delegate:self];
     [self.currentObject setupHighlightedImageIfExists];
 }
@@ -218,105 +142,19 @@ NSString *const GameDefaultExtension = @"plist";
 }
 
 
-- (NNKObjectParameters *)paramsForCharacter:(Character)characterID {
-    switch (characterID) {
-        case CharacterBat:
-            return self.batObjectParameters;
-            break;
-        case CharacterCat:
-            return self.catObjectParameters;
-            break;
-        case CharacterGoblin:
-            return self.goblinObjectParameters;
-            break;
-        case CharacterKnight:
-            return self.knightObjectParameters;
-            break;
-        case CharacterOwl:
-            return self.owlObjectParameters;
-            break;
-        case CharacterSheep:
-            return self.sheepObjectParameters;
-            break;
-        case CharacterSnail:
-            return self.snailObjectParameters;
-            break;
-        case CharacterWitch:
-            return self.witchObjectParameters;
-            break;
+#pragma mark - Custom Accesors
+
+- (NSMutableArray *)doors {
+    if (!_doors) {
+        _doors = [[NSMutableArray alloc] init];
     }
+    
+    return _doors;
 }
 
 
-- (NNKObjectParameters *)catObjectParameters {
-    if (!_catObjectParameters) {
-        _catObjectParameters = [NNKObjectParameters catObjectParameters];
-    }
-    
-    return _catObjectParameters;
-}
-
-
-- (NNKObjectParameters *)owlObjectParameters {
-    if (!_owlObjectParameters) {
-        _owlObjectParameters = [NNKObjectParameters owlObjectParameters];
-    }
-    
-    return _owlObjectParameters;
-}
-
-
-- (NNKObjectParameters *)sheepObjectParameters {
-    if (!_sheepObjectParameters) {
-        _sheepObjectParameters = [NNKObjectParameters sheepObjectParameters];
-    }
-    
-    return _sheepObjectParameters;
-}
-
-
-- (NNKObjectParameters *)batObjectParameters {
-    if (!_batObjectParameters) {
-        _batObjectParameters = [NNKObjectParameters batObjectParameters];
-    }
-    
-    return _batObjectParameters;
-}
-
-
-- (NNKObjectParameters *)witchObjectParameters {
-    if (!_witchObjectParameters) {
-        _witchObjectParameters = [NNKObjectParameters witchObjectParameters];
-    }
-    
-    return _witchObjectParameters;
-}
-
-
-- (NNKObjectParameters *)knightObjectParameters {
-    if (!_knightObjectParameters) {
-        _knightObjectParameters = [NNKObjectParameters knightObjectParameters];
-    }
-    
-    return _knightObjectParameters;
-}
-
-
-- (NNKObjectParameters *)snailObjectParameters {
-    if (!_snailObjectParameters) {
-        _snailObjectParameters = [NNKObjectParameters snailObjectParameters];
-    }
-    
-    return _snailObjectParameters;
-}
-
-
-- (NNKObjectParameters *)goblinObjectParameters {
-    if (!_goblinObjectParameters) {
-        _goblinObjectParameters = [NNKObjectParameters goblinObjectParameters];
-    }
-    
-    return _goblinObjectParameters;
+- (NNKObjectParametersHelper *)parameterHelper {
+    return [NNKObjectParametersHelper sharedHelper];
 }
 
 
@@ -330,6 +168,17 @@ NSString *const GameDefaultExtension = @"plist";
 }
 
 
+- (NSMutableArray *)allObjects {
+    if (!_allObjects) {
+        _allObjects = [[NSMutableArray alloc] init];
+    }
+    
+    return _allObjects;
+}
+
+
+#pragma mark - StatedObject Delegate
+
 - (void)fireSelector:(NSString *)stringSelector inObjectId:(NSObject *)objectId {
     SEL selector = NSSelectorFromString(stringSelector);
 #pragma clang diagnostic push
@@ -339,26 +188,41 @@ NSString *const GameDefaultExtension = @"plist";
 }
 
 
-- (void)branchFall:(UIButton *)button {
-    [UIView animateWithDuration:0.4 animations:^{
-        button.transform = CGAffineTransformMakeRotation(30 * M_PI / 180);
-    } completion:^(BOOL finished) {
-        UIGravityBehavior *gravityBehavior = [[UIGravityBehavior alloc] initWithItems:@[button]];
-        gravityBehavior.magnitude = 0.6;
-        [self.animator addBehavior:gravityBehavior];
-    }];
-    [self performSelector:@selector(recreateBranch:) withObject:button afterDelay:2.f];
+#pragma mark - Private Methods
+
+- (void)createDoorCharacterID:(Character)characterID {
+    DoorView *door = [DoorView instantiateWithCharactedID:characterID delegate:self];
+    [StoryboardUtils addViewController:door onViewController:self];
+    [self.doors addObject:door];
 }
 
 
-- (void)recreateBranch:(BranchObject *)branch {
-    [self.animator removeAllBehaviors];
-    branch.alpha = 0.f;
-    branch.transform = CGAffineTransformIdentity;
-    branch.frame = branch.parameters.frame;
-    [UIView animateWithDuration:0.2 animations:^{
-        branch.alpha = 1.f;
-    }];
+- (void)createDoors {
+    for (int i = 0; i < 8; i++) {
+        [self createDoorCharacterID:i];
+    }
+}
+
+
+- (void)setupInitialView {
+    NSDictionary *allDictObjects = [[NSDictionary alloc] initWithContentsOfURL:[NSURL urlFromLocalizedName:GameDefaultObjects extension:GameDefaultExtension]];
+    NSArray *allKeys = [allDictObjects allKeys];
+    
+    for (NSString *key in allKeys) {
+        NNKObjectParameters *parameters = [[NNKObjectParameters alloc] initWithDictionary:allDictObjects[key]];
+        StatedObject *object = [[parameters.type alloc] initWithParameters:parameters delegate:self];
+        [self.allObjects addObject:object];
+    }
+}
+
+
+- (void)updateLanguage {
+    self.backgroundImage.image = [UIImage backgroundImageWithName:@"game_fon"];
+    self.starsBackground.image = [UIImage backgroundImageWithName:@"make_card_fon"];
+    self.goToSiteButton.image = [UIImage imageWithUnlocalizedName:@"menu_site"];
+    self.returnImage.image = [UIImage imageWithUnlocalizedName:@"game_return"];
+    self.makeImage.image = [UIImage imageWithUnlocalizedName:@"game_make"];
+    self.gameImage.image = [UIImage imageWithUnlocalizedName:@"game_new_game"];
 }
 
 
@@ -424,18 +288,47 @@ NSString *const GameDefaultExtension = @"plist";
 }
 
 
-- (NSMutableArray *)allObjects {
-    if (!_allObjects) {
-        _allObjects = [[NSMutableArray alloc] init];
-    }
-    
-    return _allObjects;
+#pragma mark - Custom Selectors
+
+- (void)branchFall:(UIButton *)button {
+    [UIView animateWithDuration:0.4 animations:^{
+        button.transform = CGAffineTransformMakeRotation(30 * M_PI / 180);
+    } completion:^(BOOL finished) {
+        UIGravityBehavior *gravityBehavior = [[UIGravityBehavior alloc] initWithItems:@[button]];
+        gravityBehavior.magnitude = 0.6;
+        [self.animator addBehavior:gravityBehavior];
+    }];
+    [self performSelector:@selector(recreateBranch:) withObject:button afterDelay:2.f];
+}
+
+
+- (void)recreateBranch:(BranchObject *)branch {
+    [self.animator removeAllBehaviors];
+    branch.alpha = 0.f;
+    branch.transform = CGAffineTransformIdentity;
+    branch.frame = branch.parameters.frame;
+    [UIView animateWithDuration:0.2 animations:^{
+        branch.alpha = 1.f;
+    }];
 }
 
 
 - (void)sendBranchToBack:(NSObject *)branch {
     [self.view sendSubviewToBack:(UIView *)branch];
     [self.view sendSubviewToBack:self.starsBackground];
+}
+
+
+- (void)pumpkinShake:(UIButton *)button {
+    CABasicAnimation *shake = [CABasicAnimation animationWithKeyPath:@"position"];
+    [shake setDuration:0.1];
+    [shake setRepeatCount:2];
+    [shake setAutoreverses:YES];
+    [shake setFromValue:[NSValue valueWithCGPoint:
+                         CGPointMake(button.center.x - 5, button.center.y + 5)]];
+    [shake setToValue:[NSValue valueWithCGPoint:
+                       CGPointMake(button.center.x + 5, button.center.y - 5)]];
+    [button.layer addAnimation:shake forKey:@"position"];
 }
 
 @end

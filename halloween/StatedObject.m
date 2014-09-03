@@ -485,6 +485,7 @@ extern NSString *const NNKRiseActionObjectId;
     if (point.y > [UIScreen mainScreen].bounds.size.width - magicValue / 2) {
         return YES;
     }
+    
     return NO;
 }
 

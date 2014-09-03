@@ -178,9 +178,9 @@
 		<key>ipadFrame</key>
 		<string>{{250, 92}, {514, 380}}</string>
 		<key>iphone5Frame</key>
-		<string>{{261, 17}, {46, 19}}</string>
+		<string>{{170, 40}, {225, 166}}</string>
 		<key>iphone4Frame</key>
-		<string>{{217, 17}, {46, 19}}</string>
+		<string>{{126, 40}, {225, 166}}</string>
 		<key>states</key>
 		<array>
 			<dict>
@@ -195,6 +195,35 @@
 					<dict>
 						<key>actionBehavior</key>
 						<string>branchFall:</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
+	<key>pumpkin</key>
+	<dict>
+		<key>type</key>
+		<string>PumpkinObject</string>
+		<key>ipadFrame</key>
+		<string>{{250, 92}, {514, 380}}</string>
+		<key>iphone5Frame</key>
+		<string>{{170, 40}, {225, 166}}</string>
+		<key>iphone4Frame</key>
+		<string>{{126, 40}, {225, 166}}</string>
+		<key>states</key>
+		<array>
+			<dict>
+				<key>backgroundImage</key>
+				<string>Characters/pumpkin.png</string>
+				<key>interactive</key>
+				<true/>
+				<key>autoTransition</key>
+				<true/>
+				<key>actions</key>
+				<array>
+					<dict>
+						<key>actionBehavior</key>
+						<string>pumpkinShake:</string>
 					</dict>
 				</array>
 			</dict>

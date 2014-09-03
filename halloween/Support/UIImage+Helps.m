@@ -38,4 +38,34 @@
     return [UIImage imageWithContentsOfFile:path];
 }
 
+
++ (UIImage *)createSnapshot {
+    UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+    CGRect rect = [keyWindow bounds];
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [keyWindow.layer renderInContext:context];
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    UIInterfaceOrientation orientation = [UIApplication sharedApplication].statusBarOrientation;
+    UIImageOrientation imageOrientation;
+    switch (orientation) {
+        case UIInterfaceOrientationLandscapeLeft:
+            imageOrientation = UIImageOrientationRight;
+            break;
+        case UIInterfaceOrientationLandscapeRight:
+            imageOrientation = UIImageOrientationLeft;
+            break;
+        case UIInterfaceOrientationPortrait:
+            imageOrientation = UIImageOrientationUp;
+            break;
+        default:
+            imageOrientation = UIImageOrientationLeft;
+            break;
+    }
+    CGFloat scale = [[UIScreen mainScreen] scale];
+    
+    return [[UIImage alloc] initWithCGImage:[img CGImage] scale:scale orientation:imageOrientation];;
+}
+
 @end

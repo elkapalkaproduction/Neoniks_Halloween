@@ -183,6 +183,8 @@
 		758A1031198D1A5D00FB0F7C /* make_card_fon~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 758A102E198D1A5D00FB0F7C /* make_card_fon~ipad.png */; };
 		758A1033198D20B700FB0F7C /* menu_eng5.png in Resources */ = {isa = PBXBuildFile; fileRef = 758A1032198D20B700FB0F7C /* menu_eng5.png */; };
 		75ABADD319AA101B0021007E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 75ABADD219AA101B0021007E /* README.md */; };
+		75B0BA1E19B7A1C700E4DBEA /* PumpkinObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B0BA1D19B7A1C700E4DBEA /* PumpkinObject.m */; };
+		75B0BA2119B7A3B800E4DBEA /* NNKObjectParametersHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B0BA2019B7A3B800E4DBEA /* NNKObjectParametersHelper.m */; };
 		75B43C0619976295000BB491 /* game-5.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B43C0519976295000BB491 /* game-5.png */; };
 		75B43C08199762B1000BB491 /* play4.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B43C07199762B1000BB491 /* play4.png */; };
 		75B43C151997B246000BB491 /* game_make_eng.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B43C0F1997B246000BB491 /* game_make_eng.png */; };
@@ -445,6 +447,10 @@
 		758A102E198D1A5D00FB0F7C /* make_card_fon~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "make_card_fon~ipad.png"; sourceTree = "<group>"; };
 		758A1032198D20B700FB0F7C /* menu_eng5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_eng5.png; sourceTree = "<group>"; };
 		75ABADD219AA101B0021007E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		75B0BA1C19B7A1C700E4DBEA /* PumpkinObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PumpkinObject.h; sourceTree = "<group>"; };
+		75B0BA1D19B7A1C700E4DBEA /* PumpkinObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PumpkinObject.m; sourceTree = "<group>"; };
+		75B0BA1F19B7A3B800E4DBEA /* NNKObjectParametersHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNKObjectParametersHelper.h; sourceTree = "<group>"; };
+		75B0BA2019B7A3B800E4DBEA /* NNKObjectParametersHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNKObjectParametersHelper.m; sourceTree = "<group>"; };
 		75B43C0519976295000BB491 /* game-5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "game-5.png"; sourceTree = "<group>"; };
 		75B43C07199762B1000BB491 /* play4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play4.png; sourceTree = "<group>"; };
 		75B43C0F1997B246000BB491 /* game_make_eng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game_make_eng.png; sourceTree = "<group>"; };
@@ -718,10 +724,14 @@
 				754F4168198E76A100C13D07 /* StatedObject.m */,
 				75DAE82F19B5009100CC61A4 /* BranchObject.h */,
 				75DAE83019B5009100CC61A4 /* BranchObject.m */,
+				75B0BA1C19B7A1C700E4DBEA /* PumpkinObject.h */,
+				75B0BA1D19B7A1C700E4DBEA /* PumpkinObject.m */,
 				75BF7E791991761700C1F31B /* CharactersInitialPosition.plist */,
 				754F416D198E78BC00C13D07 /* GameDefaultObjects.plist */,
 				754F416A198E76C500C13D07 /* NNKShapedButton.h */,
 				754F416B198E76C500C13D07 /* NNKShapedButton.m */,
+				75B0BA1F19B7A3B800E4DBEA /* NNKObjectParametersHelper.h */,
+				75B0BA2019B7A3B800E4DBEA /* NNKObjectParametersHelper.m */,
 				754F417A198ED01000C13D07 /* NNKObjectParameters.h */,
 				754F417B198ED01000C13D07 /* NNKObjectParameters.m */,
 				754F4174198ECFD600C13D07 /* NNKObjectState.h */,
@@ -1240,6 +1250,7 @@
 				758A101E198D188E00FB0F7C /* HowToViewController.m in Sources */,
 				754F417C198ED01000C13D07 /* NNKObjectParameters.m in Sources */,
 				754F4176198ECFD600C13D07 /* NNKObjectState.m in Sources */,
+				75B0BA2119B7A3B800E4DBEA /* NNKObjectParametersHelper.m in Sources */,
 				75DAE83119B5009100CC61A4 /* BranchObject.m in Sources */,
 				758A0FC5198CFC4F00FB0F7C /* LanguageSettings.m in Sources */,
 				758A0F45198CF08300FB0F7C /* MenuViewController.m in Sources */,
@@ -1255,6 +1266,7 @@
 				758A0FBF198CFAFD00FB0F7C /* UIButton+Helps.m in Sources */,
 				758A0FFC198D132500FB0F7C /* StoryboardUtils.m in Sources */,
 				752CB126199684ED001C5459 /* PopUpAnimations.m in Sources */,
+				75B0BA1E19B7A1C700E4DBEA /* PumpkinObject.m in Sources */,
 				758A0FBD198CFAFD00FB0F7C /* NSURL+Helps.m in Sources */,
 				758A0FC0198CFAFD00FB0F7C /* UIImage+Helps.m in Sources */,
 				754F4173198E874A00C13D07 /* NSDictionary+Helps.m in Sources */,
