@@ -291,13 +291,9 @@ NSString *const GameDefaultExtension = @"plist";
 #pragma mark - Custom Selectors
 
 - (void)branchFall:(UIButton *)button {
-    [UIView animateWithDuration:0.4 animations:^{
-        button.transform = CGAffineTransformMakeRotation(30 * M_PI / 180);
-    } completion:^(BOOL finished) {
-        UIGravityBehavior *gravityBehavior = [[UIGravityBehavior alloc] initWithItems:@[button]];
-        gravityBehavior.magnitude = 0.6;
-        [self.animator addBehavior:gravityBehavior];
-    }];
+    UIGravityBehavior *gravityBehavior = [[UIGravityBehavior alloc] initWithItems:@[button]];
+    gravityBehavior.magnitude = 0.6;
+    [self.animator addBehavior:gravityBehavior];
     [self performSelector:@selector(recreateBranch:) withObject:button afterDelay:2.f];
 }
 
