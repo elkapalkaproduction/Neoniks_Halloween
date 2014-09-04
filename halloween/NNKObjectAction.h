@@ -15,5 +15,6 @@
 @property (strong, nonatomic) NSString *actionBehavior;
 @property (strong, nonatomic) NSString *selector;
 @property (strong, nonatomic) NSString *riseActionObjectId;
+@property (strong, nonatomic) NSDictionary *otherValues;
 
 @end

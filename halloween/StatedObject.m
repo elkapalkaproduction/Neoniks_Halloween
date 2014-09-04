@@ -227,8 +227,18 @@ extern NSString *const NNKRiseActionObjectId;
 }
 
 
+- (void)rotateAnimation:(NSDictionary *)actionDictionary {
+    [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(makeRotation) userInfo:nil repeats:YES];
+}
+
+
 - (void)fireActionInObject:(NSDictionary *)actionDictionary {
     [self.delegate fireSelector:actionDictionary[NNKSelector] inObjectId:actionDictionary[NNKRiseActionObjectId]];
+}
+
+
+- (void)playSoundWithName:(NNKObjectAction *)actionDictionary {
+    NSLog(@"%@", actionDictionary.otherValues);
 }
 
 
@@ -471,6 +481,12 @@ extern NSString *const NNKRiseActionObjectId;
         }
         [self setupStateSettingsToDefault];
     }
+}
+
+
+- (void)makeRotation {
+    CGFloat angle = [(NSNumber *)[self valueForKeyPath:@"layer.transform.rotation.z"] floatValue];
+    self.transform = CGAffineTransformMakeRotation(angle + 2 * M_PI / 15);
 }
 
 

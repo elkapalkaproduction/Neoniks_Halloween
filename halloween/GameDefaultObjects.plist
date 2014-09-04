@@ -229,5 +229,61 @@
 			</dict>
 		</array>
 	</dict>
+	<key>01_fan_stand</key>
+	<dict>
+		<key>type</key>
+		<string>StatedObject</string>
+		<key>ipadFrame</key>
+		<string>{{144, 364}, {106, 132}}</string>
+		<key>iphone5Frame</key>
+		<string>{{88, 158}, {48, 60}}</string>
+		<key>iphone4Frame</key>
+		<string>{{80, 154}, {48, 60}}</string>
+		<key>states</key>
+		<array>
+			<dict>
+				<key>backgroundImage</key>
+				<string>Characters/fan_images/fan_stand.png</string>
+			</dict>
+		</array>
+	</dict>
+	<key>02_fan_prop</key>
+	<dict>
+		<key>type</key>
+		<string>StatedObject</string>
+		<key>ipadFrame</key>
+		<string>{{146, 365}, {101, 101}}</string>
+		<key>iphone5Frame</key>
+		<string>{{88, 158}, {48, 48}}</string>
+		<key>iphone4Frame</key>
+		<string>{{80, 154}, {48, 48}}</string>
+		<key>states</key>
+		<array>
+			<dict>
+				<key>interactive</key>
+				<true/>
+				<key>backgroundImage</key>
+				<string>Characters/fan_images/fan_prop.png</string>
+				<key>idle</key>
+				<true/>
+				<key>actionsOnInitState</key>
+				<array>
+					<dict>
+						<key>actionBehavior</key>
+						<string>rotateAnimation:</string>
+					</dict>
+				</array>
+				<key>actions</key>
+				<array>
+					<dict>
+						<key>actionBehavior</key>
+						<string>playSoundWithName:</string>
+						<key>soundName</key>
+						<string>vasea</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
 </dict>
 </plist>

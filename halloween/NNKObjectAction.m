@@ -20,6 +20,16 @@ NSString *const NNKRiseActionObjectId = @"riseActionObjectId";
         _actionBehavior = dict[NNKActionBehavior];
         _selector = dict[NNKSelector];
         _riseActionObjectId = dict[NNKRiseActionObjectId];
+        NSArray *allKeys = [dict allKeys];
+        NSMutableDictionary *otherValues = [[NSMutableDictionary alloc] init];
+        for (NSString *key in allKeys) {
+            if (!([key isEqualToString:NNKActionBehavior] ||
+                  [key isEqualToString:NNKSelector] ||
+                  [key isEqualToString:NNKRiseActionObjectId])) {
+                [otherValues setObject:dict[key] forKey:key];
+            }
+        }
+        _otherValues = [NSDictionary dictionaryWithDictionary:otherValues];
     }
     
     return self;
