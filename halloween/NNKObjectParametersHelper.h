@@ -13,5 +13,6 @@
 
 + (instancetype)sharedHelper;
 - (NNKObjectParameters *)paramsForCharacter:(Character)characterID;
+- (NNKObjectParameters *)randomPalm;
 
 @end

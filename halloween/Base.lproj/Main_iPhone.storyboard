@@ -510,6 +510,15 @@
                                     <constraint firstAttribute="height" constant="60" id="rg7-kh-84X"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pEg-yZ-02T">
+                                <rect key="frame" x="200" y="225" width="168" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="48v-7d-6WJ"/>
+                                    <constraint firstAttribute="width" constant="168" id="lqu-VN-9nJ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -521,6 +530,7 @@
                             <constraint firstAttribute="trailing" secondItem="Bus-bB-jGG" secondAttribute="trailing" id="Iza-hl-9rY"/>
                             <constraint firstItem="qR6-RT-EHM" firstAttribute="leading" secondItem="CBJ-pd-mhq" secondAttribute="leading" id="Md6-Nh-Uv6"/>
                             <constraint firstAttribute="trailing" secondItem="ELP-hT-BeM" secondAttribute="trailing" id="PhW-o7-Egq"/>
+                            <constraint firstAttribute="centerX" secondItem="pEg-yZ-02T" secondAttribute="centerX" id="QD5-1U-CM2"/>
                             <constraint firstItem="ELP-hT-BeM" firstAttribute="leading" secondItem="CBJ-pd-mhq" secondAttribute="leading" id="UXm-Gr-kvV"/>
                             <constraint firstAttribute="centerX" secondItem="DMX-VY-Sf0" secondAttribute="centerX" id="V4N-af-pr4"/>
                             <constraint firstItem="ELP-hT-BeM" firstAttribute="top" secondItem="CBJ-pd-mhq" secondAttribute="top" id="ZCW-Nc-Td1"/>
@@ -528,6 +538,7 @@
                             <constraint firstItem="iLO-N4-Mea" firstAttribute="top" secondItem="F6r-12-wMe" secondAttribute="bottom" id="nW7-iU-6F1"/>
                             <constraint firstItem="iLO-N4-Mea" firstAttribute="top" secondItem="Bus-bB-jGG" secondAttribute="bottom" id="pRW-lA-9Lj"/>
                             <constraint firstItem="qR6-RT-EHM" firstAttribute="top" secondItem="CBJ-pd-mhq" secondAttribute="top" id="pjv-Rr-c6w"/>
+                            <constraint firstItem="iLO-N4-Mea" firstAttribute="top" secondItem="pEg-yZ-02T" secondAttribute="bottom" constant="40" id="u7o-3h-nGt"/>
                             <constraint firstItem="iLO-N4-Mea" firstAttribute="top" secondItem="qR6-RT-EHM" secondAttribute="bottom" id="z42-1D-2n4"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -540,6 +551,7 @@
                         <outlet property="gameImage" destination="zFN-rz-Oc5" id="7RT-f2-tFI"/>
                         <outlet property="goToSiteButton" destination="F6r-12-wMe" id="lip-kZ-RE6"/>
                         <outlet property="makeImage" destination="PI6-9v-8OD" id="uym-QT-Wzt"/>
+                        <outlet property="palmZone" destination="pEg-yZ-02T" id="LKi-O1-EFT"/>
                         <outlet property="returnImage" destination="0G3-9j-jbs" id="0Vk-0T-GC7"/>
                         <outlet property="shadowView" destination="ELP-hT-BeM" id="C2Z-qN-ICC"/>
                         <outlet property="starsBackground" destination="Bus-bB-jGG" id="RPH-TY-cea"/>

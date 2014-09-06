@@ -60,13 +60,6 @@ const CGFloat UtilsAnimationDuration = 0.8;
 }
 
 
-+ (void)swapValueWithFirstValue:(NSNumber *)number1 secondValue:(NSNumber *)number2 {
-    NSNumber *number3 = number1;
-    number1 = number2;
-    number2 = number3;
-}
-
-
 + (void)animationForLayer:(CALayer *)layer values:(NSDictionary *)animationValues {
     CABasicAnimation *rotationY = [CABasicAnimation animationWithKeyPath:@"transform.rotation.y"];
     rotationY.duration = UtilsAnimationDuration;

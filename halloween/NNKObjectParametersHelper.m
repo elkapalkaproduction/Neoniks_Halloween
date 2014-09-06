@@ -18,6 +18,8 @@
 @property (strong, nonatomic) NNKObjectParameters *knightObjectParameters;
 @property (strong, nonatomic) NNKObjectParameters *snailObjectParameters;
 @property (strong, nonatomic) NNKObjectParameters *goblinObjectParameters;
+@property (strong, nonatomic) NNKObjectParameters *palm1ObjectParameters;
+@property (strong, nonatomic) NNKObjectParameters *palm2ObjectParameters;
 
 @end
 
@@ -133,6 +135,32 @@
     }
     
     return _goblinObjectParameters;
+}
+
+
+- (NNKObjectParameters *)palm1ObjectParameters {
+    if (!_palm1ObjectParameters) {
+        _palm1ObjectParameters = [NNKObjectParameters palm1ObjectParameters];
+    }
+    
+    return _palm1ObjectParameters;
+}
+
+
+- (NNKObjectParameters *)palm2ObjectParameters {
+    if (!_palm2ObjectParameters) {
+        _palm2ObjectParameters = [NNKObjectParameters palm2ObjectParameters];
+    }
+    
+    return _palm2ObjectParameters;
+
+}
+
+
+- (NNKObjectParameters *)randomPalm {
+    BOOL randomNumber = arc4random() % 2;
+    
+    return randomNumber ? self.palm1ObjectParameters : self.palm2ObjectParameters;
 }
 
 @end

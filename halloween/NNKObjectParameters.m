@@ -28,10 +28,14 @@ NSString *const NNKObjectWitch = @"witch";
 NSString *const NNKObjectKnight = @"knight";
 NSString *const NNKObjectSnail = @"snail";
 NSString *const NNKObjectGolbin = @"goblin";
+NSString *const NNKObjectPalm1 = @"palm1";
+NSString *const NNKObjectPalm2 = @"palm2";
 
 @interface NNKObjectParameters ()
 
 @property (strong, nonatomic) NSString *animationDirectoryPath;
+@property (strong, nonatomic) NSDictionary *dict;
+@property (strong, nonatomic) NSArray *states;
 
 @end
 
@@ -40,12 +44,47 @@ NSString *const NNKObjectGolbin = @"goblin";
 - (instancetype)initWithDictionary:(NSDictionary *)dict {
     self = [super init];
     if (self) {
-        _type = NSClassFromString(dict[NNKType]);
-        _animationDirectoryPath = dict[NNKAnimationDirectoryPath];
-        _frame = [self frameFromDictionary:dict];
-        
+        _dict = dict;
+        _frame = [self frameFromDictionary:self.dict];
+
+    }
+    
+    return self;
+}
+
+
+- (Class)type {
+    if (!_type) {
+        _type = NSClassFromString(self.dict[NNKType]);
+    }
+    
+    return _type;
+}
+
+
+- (NSString *)animationDirectoryPath {
+    if (!_animationDirectoryPath) {
+        _animationDirectoryPath = self.dict[NNKAnimationDirectoryPath];
+    }
+    
+    return _animationDirectoryPath;
+}
+
+
+- (NNKObjectState *)stateAtIndex:(NSInteger)index {
+    return self.states[index];
+}
+
+
+- (NSInteger)statesCount {
+    return [self.states count];
+}
+
+
+- (NSArray *)states {
+    if (!_states) {
         NSMutableArray *localStates = [[NSMutableArray alloc] init];
-        NSArray *states = dict[NNKStates];
+        NSArray *states = self.dict[NNKStates];
         
         NSString *path = [[NSBundle mainBundle] pathForResource:self.animationDirectoryPath ofType:nil];
         NSArray *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:path error:NULL];
@@ -54,10 +93,11 @@ NSString *const NNKObjectGolbin = @"goblin";
             NNKObjectState *object = [[NNKObjectState alloc] initWithDictionary:state filesCount:[files count]];
             [localStates addObject:object];
         }
-        _states = [NSArray arrayWithArray:localStates];
+        _states = [[NSArray alloc] initWithArray:localStates];
+
     }
     
-    return self;
+    return _states;
 }
 
 
@@ -69,7 +109,7 @@ NSString *const NNKObjectGolbin = @"goblin";
     NSMutableArray *localAnimationImages = [[NSMutableArray alloc] initWithCapacity:[files count]];
     
     for (NSString *file in files) {
-        UIImage *image = [UIImage imageWithContentsOfFile:[path stringByAppendingPathComponent:file]];
+        UIImage *image = [UIImage imageNamed:[self.animationDirectoryPath stringByAppendingPathComponent:[file stringByDeletingPathExtension]]];
         [localAnimationImages addObject:image];
     }
     _animationImages = [NSArray arrayWithArray:localAnimationImages];
@@ -155,6 +195,20 @@ NSString *const NNKObjectGolbin = @"goblin";
     NSDictionary *characterInitialPosition = [[NSDictionary alloc] initWithContentsOfURL:[NSURL urlFromLocalizedName:CharacterInitialPosition extension:@"plist"]];
     
     return [[NNKObjectParameters alloc] initWithDictionary:characterInitialPosition[NNKObjectGolbin]];
+}
+
+
++ (NNKObjectParameters *)palm1ObjectParameters {
+    NSDictionary *characterInitialPosition = [[NSDictionary alloc] initWithContentsOfURL:[NSURL urlFromLocalizedName:CharacterInitialPosition extension:@"plist"]];
+    
+    return [[NNKObjectParameters alloc] initWithDictionary:characterInitialPosition[NNKObjectPalm1]];
+}
+
+
++ (NNKObjectParameters *)palm2ObjectParameters {
+    NSDictionary *characterInitialPosition = [[NSDictionary alloc] initWithContentsOfURL:[NSURL urlFromLocalizedName:CharacterInitialPosition extension:@"plist"]];
+    
+    return [[NNKObjectParameters alloc] initWithDictionary:characterInitialPosition[NNKObjectPalm2]];
 }
 
 @end

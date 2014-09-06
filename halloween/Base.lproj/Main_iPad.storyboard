@@ -201,10 +201,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game-eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ffl-dK-s5m">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="make_card_fon.png" translatesAutoresizingMaskIntoConstraints="NO" id="CbY-3O-dTO">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -222,6 +218,11 @@
                                     <action selector="goToSite:" destination="2X3-91-84G" eventType="touchUpInside" id="wac-pN-uu1"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mso-14-Ttd">
+                                <rect key="frame" x="308" y="534" width="385" height="138"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CXk-m8-Lgk">
                                 <rect key="frame" x="308" y="647" width="408" height="121"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -281,6 +282,7 @@
                         <outlet property="gameImage" destination="Ecf-r5-rY9" id="7JN-gu-bOg"/>
                         <outlet property="goToSiteButton" destination="0lm-xu-wHq" id="5Vq-wa-fI2"/>
                         <outlet property="makeImage" destination="Bsc-5V-Tnb" id="l4L-Xm-hrf"/>
+                        <outlet property="palmZone" destination="Mso-14-Ttd" id="24X-mj-SfQ"/>
                         <outlet property="returnImage" destination="iDn-aU-iTB" id="cPN-Rc-Dqq"/>
                         <outlet property="shadowView" destination="0ga-1u-RV9" id="8nv-2m-djA"/>
                         <outlet property="starsBackground" destination="CbY-3O-dTO" id="zDg-1u-zMb"/>
@@ -674,7 +676,6 @@
         <image name="card_caption_text2_eng.png" width="1200" height="267"/>
         <image name="card_caption_text3_eng.png" width="1200" height="267"/>
         <image name="fon_pop_up_window.png" width="2048" height="1536"/>
-        <image name="game-eng.png" width="2048" height="1536"/>
         <image name="game_fon.png" width="2048" height="1536"/>
         <image name="game_make_eng.png" width="134" height="54"/>
         <image name="game_make_icon.png" width="243" height="241"/>

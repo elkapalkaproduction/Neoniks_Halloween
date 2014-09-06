@@ -37,6 +37,7 @@ NSString *const GameDefaultExtension = @"plist";
 @property (strong, nonatomic) IBOutlet UIButton *goToSiteButton;
 @property (nonatomic) UIDynamicAnimator *animator;
 @property (nonatomic) NNKObjectParametersHelper *parameterHelper;
+@property (weak, nonatomic) IBOutlet UIView *palmZone;
 
 @end
 
@@ -49,7 +50,6 @@ NSString *const GameDefaultExtension = @"plist";
     [self setupInitialView];
     [self updateLanguage];
     [self createDoors];
-
 }
 
 
@@ -102,7 +102,6 @@ NSString *const GameDefaultExtension = @"plist";
     for (DoorView *currentDoor in self.doors) {
         currentDoor.questionState = NO;
     }
-
 }
 
 
@@ -139,6 +138,17 @@ NSString *const GameDefaultExtension = @"plist";
         }
 
     }
+}
+
+
+- (void)showPalms:(UIGestureRecognizer *)tapGesture {
+    NNKObjectParameters *params = [self.parameterHelper randomPalm];
+    CGPoint locationInView = [tapGesture locationInView:self.view];
+    CGSize size = params.frame.size;
+    params.frame = CGRectMake(locationInView.x - size.width / 2, locationInView.y - size.height / 2, size.width, size.height);
+    
+    StatedObject *object = [[StatedObject alloc] initWithParameters:params delegate:self];
+    [self.allObjects addObject:object];
 }
 
 
@@ -207,7 +217,9 @@ NSString *const GameDefaultExtension = @"plist";
 - (void)setupInitialView {
     NSDictionary *allDictObjects = [[NSDictionary alloc] initWithContentsOfURL:[NSURL urlFromLocalizedName:GameDefaultObjects extension:GameDefaultExtension]];
     NSArray *allKeys = [allDictObjects allKeys];
-    
+    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(showPalms:)];
+    [self.palmZone addGestureRecognizer:tapGesture];
+
     for (NSString *key in allKeys) {
         NNKObjectParameters *parameters = [[NNKObjectParameters alloc] initWithDictionary:allDictObjects[key]];
         StatedObject *object = [[parameters.type alloc] initWithParameters:parameters delegate:self];

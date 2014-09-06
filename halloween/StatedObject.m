@@ -21,8 +21,10 @@ extern NSString *const NNKRiseActionObjectId;
 @property (assign, nonatomic) NSInteger currentStateIndex;
 @property (assign, nonatomic) NSInteger currentImageIndex;
 @property (assign, nonatomic) NSInteger repeatCount;
+@property (assign, nonatomic) NSInteger statesCount;
 
 @property (strong, nonatomic) NSTimer *animationTimer;
+@property (strong, nonatomic) NSTimer *fanTimer;
 
 @property (assign, nonatomic) BOOL playAnimationForward;
 @property (assign, nonatomic) BOOL soundStateOn;
@@ -65,11 +67,22 @@ extern NSString *const NNKRiseActionObjectId;
 #pragma mark - Custom Accesors
 
 - (NNKObjectState *)currentState {
-    if ([self.parameters.states count] > self.currentStateIndex) {
-        return self.parameters.states[self.currentStateIndex];
+    NSInteger count = self.statesCount;
+    if (count > self.currentStateIndex) {
+        
+        return [self.parameters stateAtIndex:self.currentStateIndex];
     } else {
         return nil;
     }
+}
+
+
+- (NSInteger)statesCount {
+    if (!_statesCount) {
+        _statesCount = [self.parameters statesCount];
+    }
+    
+    return _statesCount;
 }
 
 
@@ -228,7 +241,7 @@ extern NSString *const NNKRiseActionObjectId;
 
 
 - (void)rotateAnimation:(NSDictionary *)actionDictionary {
-    [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(makeRotation) userInfo:nil repeats:YES];
+    self.fanTimer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(makeRotation) userInfo:nil repeats:YES];
 }
 
 
@@ -245,7 +258,12 @@ extern NSString *const NNKRiseActionObjectId;
 #pragma mark - Public Methods
 
 - (void)cleanResources {
+    if (self.fanTimer) {
+        [self.fanTimer invalidate];
+        self.fanTimer = nil;
+    }
     self.parameters.animationImages = nil;
+    self.parameters = nil;
     [self resetAnimationTimer];
     [self resetAnimationSoundPlayer];
     [self removeFromSuperview];
@@ -322,8 +340,7 @@ extern NSString *const NNKRiseActionObjectId;
 
 
 - (void)setupImageToCurrentImageIndex {
-    UIImage *image = self.parameters.animationImages[self.currentImageIndex];
-    [self setImage:image forState:UIControlStateNormal];
+    [self setupImageFromAnimationWithIndex:self.currentImageIndex];
 }
 
 
@@ -337,8 +354,16 @@ extern NSString *const NNKRiseActionObjectId;
 
 #pragma mark - Private Methods
 
+- (void)setupImageFromAnimationWithIndex:(NSInteger)index {
+//    NSString *path = self.parameters.animationImages[index];
+    UIImage *image = self.parameters.animationImages[index];//[UIImage imageWithContentsOfFile:path];
+    [self setImage:image forState:UIControlStateNormal];
+}
+
+
 - (void)resetAnimationSoundPlayer {
-    [self.animationSoundPlayer stop];
+    [self.animationSoundPlayer pause];
+//    [self.animationSoundPlayer stop];
 }
 
 
@@ -439,8 +464,7 @@ extern NSString *const NNKRiseActionObjectId;
 
 - (void)makeStep {
     self.playAnimationForward ? self.currentImageIndex++ : self.currentImageIndex--;
-    UIImage *image = self.parameters.animationImages[self.currentImageIndex - 1];
-    [self setImage:image forState:UIControlStateNormal];
+    [self setupImageFromAnimationWithIndex:self.currentImageIndex - 1];
 }
 
 
@@ -509,7 +533,7 @@ extern NSString *const NNKRiseActionObjectId;
 #pragma mark - Local Helps
 
 - (BOOL)isNextStateNotExist {
-    return [self.parameters.states count] - 1< self.currentStateIndex;
+    return self.statesCount - 1< self.currentStateIndex;
 }
 
 @end

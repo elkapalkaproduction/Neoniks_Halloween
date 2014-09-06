@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NNKObjectState.h"
 
 @interface NNKObjectParameters : NSObject
 
@@ -15,8 +16,9 @@
 @property (assign, nonatomic) Class type;
 @property (strong, nonatomic) NSArray *animationImages;
 @property (assign, nonatomic) CGRect frame;
-@property (strong, nonatomic) NSArray *states;
-
+//@property (strong, nonatomic) NSArray *states;
+- (NNKObjectState *)stateAtIndex:(NSInteger)index;
+- (NSInteger)statesCount;
 
 + (NNKObjectParameters *)catObjectParameters;
 + (NNKObjectParameters *)owlObjectParameters;
@@ -26,5 +28,7 @@
 + (NNKObjectParameters *)knightObjectParameters;
 + (NNKObjectParameters *)snailObjectParameters;
 + (NNKObjectParameters *)goblinObjectParameters;
++ (NNKObjectParameters *)palm1ObjectParameters;
++ (NNKObjectParameters *)palm2ObjectParameters;
 
 @end

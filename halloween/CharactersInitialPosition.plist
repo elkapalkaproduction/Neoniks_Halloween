@@ -309,5 +309,59 @@
 			</dict>
 		</array>
 	</dict>
+	<key>palm1</key>
+	<dict>
+		<key>type</key>
+		<string>StatedObject</string>
+		<key>ipadFrame</key>
+		<string>{{0, 0}, {55, 55}}</string>
+		<key>iphone5Frame</key>
+		<string>{{0, 0}, {30, 30}}</string>
+		<key>iphone4Frame</key>
+		<string>{{0, 0}, {30, 30}}</string>
+		<key>states</key>
+		<array>
+			<dict>
+				<key>backgroundImage</key>
+				<string>Characters/palm_images/palm1.png</string>
+				<key>actionsOnInitState</key>
+				<array>
+					<dict>
+						<key>actionBehavior</key>
+						<string>playSoundWithName:</string>
+						<key>soundName</key>
+						<string>vasea</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
+	<key>palm2</key>
+	<dict>
+		<key>type</key>
+		<string>StatedObject</string>
+		<key>ipadFrame</key>
+		<string>{{0, 0}, {55, 55}}</string>
+		<key>iphone5Frame</key>
+		<string>{{0, 0}, {30, 30}}</string>
+		<key>iphone4Frame</key>
+		<string>{{0, 0}, {30, 30}}</string>
+		<key>states</key>
+		<array>
+			<dict>
+				<key>backgroundImage</key>
+				<string>Characters/palm_images/palm2.png</string>
+				<key>actionsOnInitState</key>
+				<array>
+					<dict>
+						<key>actionBehavior</key>
+						<string>playSoundWithName:</string>
+						<key>soundName</key>
+						<string>vasea</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
 </dict>
 </plist>
