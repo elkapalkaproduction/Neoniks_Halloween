@@ -142,7 +142,6 @@ NSString *const NNKObjectPalm2 = @"palm2";
 
 
 + (NNKObjectParameters *)catObjectParameters {
-    return nil;
     NSDictionary *characterInitialPosition = [[NSDictionary alloc] initWithContentsOfURL:[NSURL urlFromLocalizedName:CharacterInitialPosition extension:@"plist"]];
     
     return  [[NNKObjectParameters alloc] initWithDictionary:characterInitialPosition[NNKObjectCat]];

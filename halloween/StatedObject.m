@@ -241,7 +241,12 @@ extern NSString *const NNKRiseActionObjectId;
 
 
 - (void)rotateAnimation:(NSDictionary *)actionDictionary {
-    self.fanTimer = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(makeRotation) userInfo:nil repeats:YES];
+    self.fanTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(makeRotation) userInfo:nil repeats:YES];
+}
+
+
+- (void)catSoar:(NSDictionary *)actionDictionary {
+    self.fanTimer = [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(makeSoarAnimation) userInfo:nil repeats:YES];
 }
 
 
@@ -355,15 +360,13 @@ extern NSString *const NNKRiseActionObjectId;
 #pragma mark - Private Methods
 
 - (void)setupImageFromAnimationWithIndex:(NSInteger)index {
-//    NSString *path = self.parameters.animationImages[index];
-    UIImage *image = self.parameters.animationImages[index];//[UIImage imageWithContentsOfFile:path];
+    UIImage *image = self.parameters.animationImages[index];
     [self setImage:image forState:UIControlStateNormal];
 }
 
 
 - (void)resetAnimationSoundPlayer {
     [self.animationSoundPlayer pause];
-//    [self.animationSoundPlayer stop];
 }
 
 
@@ -510,7 +513,21 @@ extern NSString *const NNKRiseActionObjectId;
 
 - (void)makeRotation {
     CGFloat angle = [(NSNumber *)[self valueForKeyPath:@"layer.transform.rotation.z"] floatValue];
-    self.transform = CGAffineTransformMakeRotation(angle + 2 * M_PI / 15);
+    self.transform = CGAffineTransformMakeRotation(angle + 4 * M_PI / 15);
+}
+
+
+- (void)makeSoarAnimation {
+    CGRect rect = self.frame;
+    NSInteger value = arc4random() % 3;
+    value--;
+    if (value == 0) {
+        rect.origin.y -= 1;
+    } else {
+        rect.origin.x += value;
+    }
+    
+    self.frame = rect;
 }
 
 

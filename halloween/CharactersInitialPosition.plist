@@ -2,6 +2,50 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>cat</key>
+	<dict>
+		<key>type</key>
+		<string>StatedObject</string>
+		<key>animationDirectoryPath</key>
+		<string>Characters/cat_images/cat_animation</string>
+		<key>ipadFrame</key>
+		<string>{{100, 29}, {150, 300}}</string>
+		<key>iphone5Frame</key>
+		<string>{{44, 2}, {88, 176}}</string>
+		<key>iphone4Frame</key>
+		<string>{{41, 2}, {88, 176}}</string>
+		<key>states</key>
+		<array>
+			<dict>
+				<key>highlightedImage</key>
+				<string>Characters/cat_images/cat_highlighted.png</string>
+				<key>interactive</key>
+				<true/>
+				<key>autoreverse</key>
+				<true/>
+				<key>dragable</key>
+				<true/>
+				<key>scaleble</key>
+				<true/>
+				<key>rotateble</key>
+				<true/>
+				<key>actionsOnInitState</key>
+				<array>
+					<dict>
+						<key>actionBehavior</key>
+						<string>catSoar:</string>
+					</dict>
+				</array>
+				<key>actions</key>
+				<array>
+					<dict>
+						<key>actionBehavior</key>
+						<string>playAnimation:</string>
+					</dict>
+				</array>
+			</dict>
+		</array>
+	</dict>
 	<key>owl</key>
 	<dict>
 		<key>type</key>
