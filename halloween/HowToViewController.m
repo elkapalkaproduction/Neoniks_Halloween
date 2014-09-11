@@ -28,7 +28,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setupTargets];
-    [self updateLanguage];
     [self adjustView];
 }
 
@@ -44,19 +43,12 @@
 }
 
 
-- (void)updateLanguage {
-    self.bannerImage.image = [UIImage imageWithUnlocalizedName:@"how_to_banner"];
-    self.textLeftImage.image = [UIImage imageWithUnlocalizedName:@"how_to_text_left"];
-    self.textRightImage.image = [UIImage imageWithUnlocalizedName:@"how_to_text_right"];
-    self.textCenterImage.image = [UIImage imageWithUnlocalizedName:@"how_to_text_center"];
-    self.returnImage.image = [UIImage imageWithUnlocalizedName:@"game_return"];
-    self.makeImage.image = [UIImage imageWithUnlocalizedName:@"game_make"];
-    self.gameImage.image = [UIImage imageWithUnlocalizedName:@"game_new_game"];
-}
-
-
 - (void)adjustView {
-    self.backgroundImage.image = [UIImage backgroundImageWithName:@"how_to_top_fon"];
+    NSString *string = [NSString neoniksLocalizedString:@"how_to_top_fon"];
+    if (isIphone5()) {
+        string = [string stringByAppendingString:@"-568"];
+    }
+    self.backgroundImage.image = [UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:string ofType:@"jpg"]];
 }
 
 @end

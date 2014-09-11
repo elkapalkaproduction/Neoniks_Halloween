@@ -295,11 +295,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="make_card_fon-568.png" translatesAutoresizingMaskIntoConstraints="NO" id="sm9-44-DAh">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="how_to_top_fon-568.png" translatesAutoresizingMaskIntoConstraints="NO" id="R1v-Lv-skx">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R1v-Lv-skx">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -314,87 +310,14 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="how_to_banner_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="eyZ-NE-D3t">
-                                <rect key="frame" x="119" y="0.0" width="329" height="74"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="329" id="4z0-Gk-skV"/>
-                                    <constraint firstAttribute="height" constant="74" id="kiy-gw-gmn"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="how_to_text_left_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="D0d-FM-WAU">
-                                <rect key="frame" x="54" y="76" width="130" height="83"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="83" id="NAe-Ye-L8T"/>
-                                    <constraint firstAttribute="width" constant="130" id="VWK-2S-bYY"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="how_to_text_right_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="XCW-cf-iKU">
-                                <rect key="frame" x="335" y="177" width="130" height="83"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="mZM-7c-gco"/>
-                                    <constraint firstAttribute="height" constant="83" id="wUE-gv-XET"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="how_to_text_center_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="nmJ-cD-9DQ">
-                                <rect key="frame" x="219" y="186" width="130" height="83"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="130" id="fNt-RU-TXr"/>
-                                    <constraint firstAttribute="height" constant="83" id="jwQ-2z-YPO"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="how_to_dot.png" translatesAutoresizingMaskIntoConstraints="NO" id="RTt-88-RS4">
-                                <rect key="frame" x="276" y="256" width="50" height="45"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a8T-4s-8HP">
-                                <rect key="frame" x="209" y="300" width="150" height="11"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game_return_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="C3P-Ol-VEW">
-                                        <rect key="frame" x="15" y="0.0" width="26" height="11"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game_make_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="enT-xA-Kdp">
-                                        <rect key="frame" x="70" y="0.0" width="26" height="11"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game_new_game_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="B9U-sv-Gj0">
-                                        <rect key="frame" x="124" y="0.0" width="26" height="11"/>
-                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="11" id="Brb-3p-aY2"/>
-                                    <constraint firstAttribute="width" constant="150" id="rT8-xd-ubA"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="eyZ-NE-D3t" secondAttribute="centerX" id="0Xa-C8-xgf"/>
-                            <constraint firstAttribute="centerX" secondItem="nmJ-cD-9DQ" secondAttribute="centerX" id="1Yv-8N-mf4"/>
                             <constraint firstItem="R1v-Lv-skx" firstAttribute="top" secondItem="eYz-ja-Nxn" secondAttribute="top" id="6hq-Nt-iW5"/>
                             <constraint firstItem="R1v-Lv-skx" firstAttribute="leading" secondItem="eYz-ja-Nxn" secondAttribute="leading" id="8Du-Za-H9u"/>
-                            <constraint firstAttribute="trailing" secondItem="XCW-cf-iKU" secondAttribute="trailing" constant="103" id="A23-7x-Hsv"/>
-                            <constraint firstItem="eyZ-NE-D3t" firstAttribute="top" secondItem="eYz-ja-Nxn" secondAttribute="top" id="CI4-oY-Xf7"/>
                             <constraint firstAttribute="trailing" secondItem="8nC-ef-fgO" secondAttribute="trailing" constant="20" id="HDU-As-IWL"/>
-                            <constraint firstItem="sm9-44-DAh" firstAttribute="leading" secondItem="eYz-ja-Nxn" secondAttribute="leading" id="HJS-qf-7Vp"/>
-                            <constraint firstAttribute="trailing" secondItem="sm9-44-DAh" secondAttribute="trailing" id="HrS-Uv-1ua"/>
-                            <constraint firstAttribute="bottom" secondItem="nmJ-cD-9DQ" secondAttribute="bottom" constant="51" id="ODZ-xK-t0C"/>
                             <constraint firstItem="8nC-ef-fgO" firstAttribute="top" secondItem="R8V-qt-Txx" secondAttribute="bottom" id="PBL-hx-oIm"/>
-                            <constraint firstItem="D0d-FM-WAU" firstAttribute="top" secondItem="eyZ-NE-D3t" secondAttribute="bottom" constant="2" id="Sdk-vS-aNG"/>
-                            <constraint firstItem="D0d-FM-WAU" firstAttribute="leading" secondItem="eYz-ja-Nxn" secondAttribute="leading" constant="54" id="Uig-2F-C5e"/>
-                            <constraint firstAttribute="centerX" secondItem="a8T-4s-8HP" secondAttribute="centerX" id="XP8-3X-1Qt"/>
-                            <constraint firstItem="Vkb-ce-Y2f" firstAttribute="top" secondItem="a8T-4s-8HP" secondAttribute="bottom" constant="9" id="b0l-66-TjI"/>
-                            <constraint firstItem="sm9-44-DAh" firstAttribute="top" secondItem="eYz-ja-Nxn" secondAttribute="top" id="bzp-XI-G90"/>
-                            <constraint firstItem="Vkb-ce-Y2f" firstAttribute="top" secondItem="sm9-44-DAh" secondAttribute="bottom" id="fNT-52-xsm"/>
                             <constraint firstItem="Vkb-ce-Y2f" firstAttribute="top" secondItem="R1v-Lv-skx" secondAttribute="bottom" id="jhX-fS-OkT"/>
-                            <constraint firstItem="XCW-cf-iKU" firstAttribute="top" secondItem="eyZ-NE-D3t" secondAttribute="bottom" constant="103" id="lBb-lv-Hep"/>
                             <constraint firstAttribute="trailing" secondItem="R1v-Lv-skx" secondAttribute="trailing" id="ze7-jE-fW1"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -403,13 +326,6 @@
                     <connections>
                         <outlet property="arrowBackButton" destination="8nC-ef-fgO" id="HWc-KI-DVo"/>
                         <outlet property="backgroundImage" destination="R1v-Lv-skx" id="d5O-Vs-FHO"/>
-                        <outlet property="bannerImage" destination="eyZ-NE-D3t" id="Z0q-Kz-44d"/>
-                        <outlet property="gameImage" destination="B9U-sv-Gj0" id="3fD-fi-j60"/>
-                        <outlet property="makeImage" destination="enT-xA-Kdp" id="ujg-2Z-Z4Y"/>
-                        <outlet property="returnImage" destination="C3P-Ol-VEW" id="GwQ-6E-D0F"/>
-                        <outlet property="textCenterImage" destination="nmJ-cD-9DQ" id="Xdf-az-zqY"/>
-                        <outlet property="textLeftImage" destination="D0d-FM-WAU" id="IrT-MK-pGz"/>
-                        <outlet property="textRightImage" destination="XCW-cf-iKU" id="d5Y-5n-zth"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VrE-hT-uQl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -431,10 +347,6 @@
                             <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fon_pop_up_window.png" translatesAutoresizingMaskIntoConstraints="NO" id="ELP-hT-BeM">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game-5.png" translatesAutoresizingMaskIntoConstraints="NO" id="c2q-Ag-nst">
-                                <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="make_card_fon-568.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bus-bB-jGG">
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
@@ -994,7 +906,6 @@
         <image name="card_caption_text2_eng.png" width="1200" height="267"/>
         <image name="card_caption_text3_eng.png" width="1200" height="267"/>
         <image name="fon_pop_up_window.png" width="2048" height="1536"/>
-        <image name="game-5.png" width="1136" height="640"/>
         <image name="game_fon-568.png" width="1136" height="640"/>
         <image name="game_make_eng.png" width="134" height="54"/>
         <image name="game_make_icon.png" width="243" height="241"/>
@@ -1002,12 +913,6 @@
         <image name="game_new_game_icon.png" width="243" height="241"/>
         <image name="game_return_eng.png" width="134" height="54"/>
         <image name="game_return_icon.png" width="243" height="241"/>
-        <image name="how_to_banner_eng.png" width="1413" height="271"/>
-        <image name="how_to_dot.png" width="216" height="192"/>
-        <image name="how_to_text_center_eng.png" width="556" height="356"/>
-        <image name="how_to_text_left_eng.png" width="556" height="356"/>
-        <image name="how_to_text_right_eng.png" width="556" height="356"/>
-        <image name="how_to_top_fon-568.png" width="1136" height="640"/>
         <image name="make_a_card_banner_eng.png" width="1413" height="271"/>
         <image name="make_a_card_captions_eng.png" width="266" height="88"/>
         <image name="make_a_card_captions_icon.png" width="220" height="220"/>

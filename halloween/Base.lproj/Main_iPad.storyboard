@@ -118,11 +118,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="make_card_fon.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZLc-O0-8GT">
-                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="how_to_top_fon.png" translatesAutoresizingMaskIntoConstraints="NO" id="9YB-oJ-fci">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9YB-oJ-fci">
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -133,38 +129,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="how_to_banner_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="SGx-BB-uEK">
-                                <rect key="frame" x="159" y="0.0" width="706" height="135"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="how_to_text_left_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="vc1-5H-AD9">
-                                <rect key="frame" x="22" y="137" width="278" height="178"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="how_to_text_right_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="MJu-ba-yQA">
-                                <rect key="frame" x="569" y="397" width="278" height="178"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="how_to_text_center_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="UMp-54-te9">
-                                <rect key="frame" x="397" y="473" width="278" height="178"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game_return_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="XLU-M4-86Q">
-                                <rect key="frame" x="382" y="725" width="56" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game_make_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="BFA-3J-dms">
-                                <rect key="frame" x="498" y="723" width="56" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game_new_game_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="bp6-Ph-5ee">
-                                <rect key="frame" x="618" y="725" width="56" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="how_to_dot.png" translatesAutoresizingMaskIntoConstraints="NO" id="SAs-gG-c5E">
-                                <rect key="frame" x="509" y="671" width="108" height="96"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -172,13 +136,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
                         <outlet property="arrowBackButton" destination="Z8z-Gn-IXt" id="ybH-DM-8sS"/>
-                        <outlet property="bannerImage" destination="SGx-BB-uEK" id="5Xp-eE-KOo"/>
-                        <outlet property="gameImage" destination="bp6-Ph-5ee" id="pZw-vS-TiS"/>
-                        <outlet property="makeImage" destination="BFA-3J-dms" id="Sm3-Rq-PkR"/>
-                        <outlet property="returnImage" destination="XLU-M4-86Q" id="ofa-Lb-8n8"/>
-                        <outlet property="textCenterImage" destination="UMp-54-te9" id="CAn-Dl-ke9"/>
-                        <outlet property="textLeftImage" destination="vc1-5H-AD9" id="MQ1-nx-7eD"/>
-                        <outlet property="textRightImage" destination="MJu-ba-yQA" id="IVA-qT-BnC"/>
+                        <outlet property="backgroundImage" destination="9YB-oJ-fci" id="r9k-Nd-FKo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rV0-bU-pUE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -693,12 +651,6 @@
         <image name="game_new_game_icon.png" width="243" height="241"/>
         <image name="game_return_eng.png" width="134" height="54"/>
         <image name="game_return_icon.png" width="243" height="241"/>
-        <image name="how_to_banner_eng.png" width="1413" height="271"/>
-        <image name="how_to_dot.png" width="216" height="192"/>
-        <image name="how_to_text_center_eng.png" width="556" height="356"/>
-        <image name="how_to_text_left_eng.png" width="556" height="356"/>
-        <image name="how_to_text_right_eng.png" width="556" height="356"/>
-        <image name="how_to_top_fon.png" width="2048" height="1536"/>
         <image name="make_a_card_captions_eng.png" width="266" height="88"/>
         <image name="make_a_card_captions_icon.png" width="220" height="220"/>
         <image name="make_a_card_save_eng.png" width="266" height="88"/>
