@@ -39,6 +39,7 @@
 
 
 - (IBAction)goBack:(id)sender {
+    [[SoundPlayer sharedPlayer] playClick];
     [self dismissViewControllerAnimated:YES completion:NULL];
 
 }
@@ -70,6 +71,7 @@
 
 
 - (IBAction)captions {
+    [[SoundPlayer sharedPlayer] playClick];
     CaptionsViewController *captions = [CaptionsViewController instantiateWithDelegate:self];
     captions.view.bounds = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
     captions.view.frame = captions.view.bounds;
@@ -78,6 +80,7 @@
 
 
 - (void)goToSite {
+    [[SoundPlayer sharedPlayer] playClick];
     NSURL *siteUrl = [NSURL urlForSite];
     [[UIApplication sharedApplication] openURL:siteUrl];
 }
@@ -103,6 +106,7 @@
 
 
 - (IBAction)send {
+    [[SoundPlayer sharedPlayer] playClick];
     UIImage *image = [self captureScreenInRect:self.cardView.frame];
     MFMailComposeViewController *mailCont = [self createMailFromImage:image];
     [self presentViewController:mailCont animated:YES completion:NULL];
@@ -110,6 +114,7 @@
 
 
 - (IBAction)save {
+    [[SoundPlayer sharedPlayer] playClick];
     UIImage *image = [self captureScreenInRect:self.cardView.frame];
     UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
     

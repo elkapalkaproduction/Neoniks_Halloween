@@ -29,6 +29,10 @@
 				<true/>
 				<key>rotateble</key>
 				<true/>
+				<key>soundPath</key>
+				<string>sounds/cat</string>
+				<key>shouldBringToFront</key>
+				<true/>
 				<key>actionsOnInitState</key>
 				<array>
 					<dict>
@@ -73,6 +77,10 @@
 				<true/>
 				<key>rotateble</key>
 				<true/>
+				<key>soundPath</key>
+				<string>sounds/owl</string>
+				<key>shouldBringToFront</key>
+				<true/>
 				<key>actions</key>
 				<array>
 					<dict>
@@ -110,6 +118,10 @@
 				<true/>
 				<key>autoTransition</key>
 				<true/>
+				<key>soundPath</key>
+				<string>sounds/sheep</string>
+				<key>shouldBringToFront</key>
+				<true/>
 				<key>actions</key>
 				<array>
 					<dict>
@@ -132,6 +144,10 @@
 				<key>autoTransition</key>
 				<true/>
 				<key>backward</key>
+				<true/>
+				<key>soundPath</key>
+				<string>sounds/sheep</string>
+				<key>shouldBringToFront</key>
 				<true/>
 				<key>actions</key>
 				<array>
@@ -162,13 +178,17 @@
 				<string>Characters/bat_images/bat_highlighted.png</string>
 				<key>interactive</key>
 				<true/>
-				<key>autoreverse</key>
-				<true/>
 				<key>dragable</key>
 				<true/>
 				<key>scaleble</key>
 				<true/>
 				<key>rotateble</key>
+				<true/>
+				<key>soundPath</key>
+				<string>sounds/bat</string>
+				<key>shouldBringToFront</key>
+				<true/>
+				<key>setDefaultImageAfterFinishAnimation</key>
 				<true/>
 				<key>actions</key>
 				<array>
@@ -206,6 +226,10 @@
 				<key>scaleble</key>
 				<true/>
 				<key>rotateble</key>
+				<true/>
+				<key>soundPath</key>
+				<string>sounds/witch</string>
+				<key>shouldBringToFront</key>
 				<true/>
 				<key>actions</key>
 				<array>
@@ -246,6 +270,8 @@
 				<true/>
 				<key>soundPath</key>
 				<string>sounds/knight</string>
+				<key>shouldBringToFront</key>
+				<true/>
 				<key>actions</key>
 				<array>
 					<dict>
@@ -283,6 +309,10 @@
 				<true/>
 				<key>autoTransition</key>
 				<true/>
+				<key>soundPath</key>
+				<string>sounds/snail</string>
+				<key>shouldBringToFront</key>
+				<true/>
 				<key>actions</key>
 				<array>
 					<dict>
@@ -305,6 +335,10 @@
 				<key>autoTransition</key>
 				<true/>
 				<key>backward</key>
+				<true/>
+				<key>soundPath</key>
+				<string>sounds/snail</string>
+				<key>shouldBringToFront</key>
 				<true/>
 				<key>actions</key>
 				<array>
@@ -343,6 +377,10 @@
 				<true/>
 				<key>rotateble</key>
 				<true/>
+				<key>soundPath</key>
+				<string>sounds/goblin</string>
+				<key>shouldBringToFront</key>
+				<true/>
 				<key>actions</key>
 				<array>
 					<dict>
@@ -374,7 +412,7 @@
 						<key>actionBehavior</key>
 						<string>playSoundWithName:</string>
 						<key>soundName</key>
-						<string>vasea</string>
+						<string>sounds/handprint</string>
 					</dict>
 				</array>
 			</dict>
@@ -401,7 +439,7 @@
 						<key>actionBehavior</key>
 						<string>playSoundWithName:</string>
 						<key>soundName</key>
-						<string>vasea</string>
+						<string>sounds/handprint</string>
 					</dict>
 				</array>
 			</dict>

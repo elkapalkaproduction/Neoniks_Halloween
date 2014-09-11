@@ -56,6 +56,8 @@
 				<true/>
 				<key>autoTransition</key>
 				<true/>
+				<key>soundPath</key>
+				<string>sounds/glass</string>
 				<key>actions</key>
 				<array>
 					<dict>
@@ -71,6 +73,8 @@
 				<true/>
 				<key>autoTransition</key>
 				<true/>
+				<key>soundPath</key>
+				<string>sounds/glass</string>
 				<key>backward</key>
 				<true/>
 				<key>actions</key>
@@ -102,6 +106,8 @@
 				<true/>
 				<key>autoTransition</key>
 				<true/>
+				<key>soundPath</key>
+				<string>sounds/button_click</string>
 				<key>actions</key>
 				<array>
 					<dict>
@@ -115,6 +121,8 @@
 				<true/>
 				<key>autoTransition</key>
 				<true/>
+				<key>soundPath</key>
+				<string>sounds/button_click</string>
 				<key>backward</key>
 				<true/>
 				<key>actions</key>
@@ -146,6 +154,8 @@
 				<true/>
 				<key>autoTransition</key>
 				<true/>
+				<key>soundPath</key>
+				<string>sounds/glasscrack</string>
 				<key>actions</key>
 				<array>
 					<dict>
@@ -161,6 +171,8 @@
 				<true/>
 				<key>backward</key>
 				<true/>
+				<key>soundPath</key>
+				<string>sounds/glasscrack</string>
 				<key>actions</key>
 				<array>
 					<dict>
@@ -190,6 +202,8 @@
 				<true/>
 				<key>autoTransition</key>
 				<true/>
+				<key>soundPath</key>
+				<string>sounds/branch</string>
 				<key>actions</key>
 				<array>
 					<dict>
@@ -219,6 +233,8 @@
 				<true/>
 				<key>autoTransition</key>
 				<true/>
+				<key>soundPath</key>
+				<string>sounds/pumpkin_laughter</string>
 				<key>actions</key>
 				<array>
 					<dict>
@@ -266,6 +282,8 @@
 				<string>Characters/fan_images/fan_prop.png</string>
 				<key>idle</key>
 				<true/>
+				<key>soundPath</key>
+				<string>sounds/fan</string>
 				<key>actionsOnInitState</key>
 				<array>
 					<dict>
@@ -279,7 +297,7 @@
 						<key>actionBehavior</key>
 						<string>playSoundWithName:</string>
 						<key>soundName</key>
-						<string>vasea</string>
+						<string>sounds/fan_screech</string>
 					</dict>
 				</array>
 			</dict>

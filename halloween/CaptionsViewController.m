@@ -42,12 +42,14 @@
 
 
 - (void)captionSelected:(UIButton *)sender {
+    [[SoundPlayer sharedPlayer] playClick];
     [self.delegate selectCaptionWithIndex:sender.tag];
     [self backButton:nil];
 }
 
 
 - (IBAction)backButton:(id)sender {
+    [[SoundPlayer sharedPlayer] playClick];
     [self.view removeFromSuperview];
 
 }

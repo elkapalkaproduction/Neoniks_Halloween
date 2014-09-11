@@ -519,9 +519,24 @@
                                     <constraint firstAttribute="width" constant="168" id="lqu-VN-9nJ"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSb-IN-0cf">
+                                <rect key="frame" x="436" y="165" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="GYh-vL-CYT"/>
+                                </constraints>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="shelf:" destination="s9Z-rh-7lE" eventType="touchUpInside" id="Xsg-Z5-EzK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="VSb-IN-0cf" firstAttribute="top" secondItem="bfd-j0-Cwx" secondAttribute="bottom" constant="145" id="3Bm-r3-VkW"/>
                             <constraint firstItem="Bus-bB-jGG" firstAttribute="top" secondItem="CBJ-pd-mhq" secondAttribute="top" id="5Ra-iA-CfG"/>
                             <constraint firstAttribute="trailing" secondItem="qR6-RT-EHM" secondAttribute="trailing" id="6iw-iB-hi3"/>
                             <constraint firstItem="iLO-N4-Mea" firstAttribute="top" secondItem="DMX-VY-Sf0" secondAttribute="bottom" id="9wj-1i-WIg"/>
@@ -534,11 +549,13 @@
                             <constraint firstItem="ELP-hT-BeM" firstAttribute="leading" secondItem="CBJ-pd-mhq" secondAttribute="leading" id="UXm-Gr-kvV"/>
                             <constraint firstAttribute="centerX" secondItem="DMX-VY-Sf0" secondAttribute="centerX" id="V4N-af-pr4"/>
                             <constraint firstItem="ELP-hT-BeM" firstAttribute="top" secondItem="CBJ-pd-mhq" secondAttribute="top" id="ZCW-Nc-Td1"/>
+                            <constraint firstItem="iLO-N4-Mea" firstAttribute="top" secondItem="VSb-IN-0cf" secondAttribute="bottom" constant="125" id="ZyE-6y-UgA"/>
                             <constraint firstItem="Bus-bB-jGG" firstAttribute="leading" secondItem="CBJ-pd-mhq" secondAttribute="leading" id="aOw-yq-nna"/>
                             <constraint firstItem="iLO-N4-Mea" firstAttribute="top" secondItem="F6r-12-wMe" secondAttribute="bottom" id="nW7-iU-6F1"/>
                             <constraint firstItem="iLO-N4-Mea" firstAttribute="top" secondItem="Bus-bB-jGG" secondAttribute="bottom" id="pRW-lA-9Lj"/>
                             <constraint firstItem="qR6-RT-EHM" firstAttribute="top" secondItem="CBJ-pd-mhq" secondAttribute="top" id="pjv-Rr-c6w"/>
                             <constraint firstItem="iLO-N4-Mea" firstAttribute="top" secondItem="pEg-yZ-02T" secondAttribute="bottom" constant="40" id="u7o-3h-nGt"/>
+                            <constraint firstAttribute="trailing" secondItem="VSb-IN-0cf" secondAttribute="trailing" constant="86" id="xMB-gS-sRQ"/>
                             <constraint firstItem="iLO-N4-Mea" firstAttribute="top" secondItem="qR6-RT-EHM" secondAttribute="bottom" id="z42-1D-2n4"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>

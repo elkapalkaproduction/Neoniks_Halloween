@@ -23,7 +23,7 @@
 - (void)setupHighlightedImageIfExists;
 - (void)cleanResources;
 - (void)stopAnimation;
-
+- (void)playAnimationSound;
 - (void)performActions;
 
 @property (weak, nonatomic) UIViewController<StatedObjectDelegate> *delegate;

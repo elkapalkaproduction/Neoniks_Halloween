@@ -69,6 +69,7 @@
 		752CB2DD19968B4D001C5459 /* 7_title_rus.png in Resources */ = {isa = PBXBuildFile; fileRef = 752CB2B519968B4D001C5459 /* 7_title_rus.png */; };
 		752CB2DF19968BAC001C5459 /* nextPages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 752CB2DE19968BAC001C5459 /* nextPages.plist */; };
 		752CB2E11996A4E9001C5459 /* sounds in Resources */ = {isa = PBXBuildFile; fileRef = 752CB2E01996A4E9001C5459 /* sounds */; };
+		7543E4BA19C230CA002004DD /* SoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7543E4B919C230CA002004DD /* SoundPlayer.m */; };
 		754F410E198E354400C13D07 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 754F410D198E354400C13D07 /* GameViewController.m */; };
 		754F4113198E3F6B00C13D07 /* game_fon-568.png in Resources */ = {isa = PBXBuildFile; fileRef = 754F4110198E3F6B00C13D07 /* game_fon-568.png */; };
 		754F4114198E3F6B00C13D07 /* game_fon.png in Resources */ = {isa = PBXBuildFile; fileRef = 754F4111198E3F6B00C13D07 /* game_fon.png */; };
@@ -310,6 +311,8 @@
 		752CB2B519968B4D001C5459 /* 7_title_rus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7_title_rus.png; sourceTree = "<group>"; };
 		752CB2DE19968BAC001C5459 /* nextPages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = nextPages.plist; sourceTree = "<group>"; };
 		752CB2E01996A4E9001C5459 /* sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sounds; sourceTree = "<group>"; };
+		7543E4B819C230CA002004DD /* SoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundPlayer.h; sourceTree = "<group>"; };
+		7543E4B919C230CA002004DD /* SoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundPlayer.m; sourceTree = "<group>"; };
 		754F410C198E354400C13D07 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		754F410D198E354400C13D07 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		754F4110198E3F6B00C13D07 /* game_fon-568.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "game_fon-568.png"; sourceTree = "<group>"; };
@@ -738,6 +741,8 @@
 				754F4175198ECFD600C13D07 /* NNKObjectState.m */,
 				754F4177198ECFFB00C13D07 /* NNKObjectAction.h */,
 				754F4178198ECFFB00C13D07 /* NNKObjectAction.m */,
+				7543E4B819C230CA002004DD /* SoundPlayer.h */,
+				7543E4B919C230CA002004DD /* SoundPlayer.m */,
 				75BF7E7419916C5900C1F31B /* DoorView.h */,
 				75BF7E7519916C5900C1F31B /* DoorView.m */,
 				752CB2E01996A4E9001C5459 /* sounds */,
@@ -1247,6 +1252,7 @@
 				754F4169198E76A100C13D07 /* StatedObject.m in Sources */,
 				752CB11E199684AC001C5459 /* PopUpViewController.m in Sources */,
 				75B43C231997D0CE000BB491 /* MakeACardViewController.m in Sources */,
+				7543E4BA19C230CA002004DD /* SoundPlayer.m in Sources */,
 				758A101E198D188E00FB0F7C /* HowToViewController.m in Sources */,
 				754F417C198ED01000C13D07 /* NNKObjectParameters.m in Sources */,
 				754F4176198ECFD600C13D07 /* NNKObjectState.m in Sources */,

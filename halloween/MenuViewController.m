@@ -36,6 +36,7 @@ NSString *const bookAppID = @"526641427";
 
 
 - (void)changeLanguge {
+    [[SoundPlayer sharedPlayer] playClick];
     if (isRussian()) {
         setEnglishLanguage();
     } else {
@@ -46,30 +47,35 @@ NSString *const bookAppID = @"526641427";
 
 
 - (void)goToWhoAre {
+    [[SoundPlayer sharedPlayer] playClick];
     [StoryboardUtils presentViewControllerWithStoryboardID:@"who_are_view_controller"
                                         fromViewController:self];
 }
 
 
 - (void)goToHowTo {
+    [[SoundPlayer sharedPlayer] playClick];
     [StoryboardUtils presentViewControllerWithStoryboardID:@"how_to_view_controller"
                                         fromViewController:self];
 }
 
 
 - (void)goToRateUs {
+    [[SoundPlayer sharedPlayer] playClick];
     NSURL *bookUrl = [NSURL openStoreToAppWithID:halloweenAppID];
     [[UIApplication sharedApplication] openURL:bookUrl];
 }
 
 
 - (void)goToPlay {
+    [[SoundPlayer sharedPlayer] playClick];
     [StoryboardUtils presentViewControllerWithStoryboardID:@"game_view_controller"
                                         fromViewController:self];
 }
 
 
 - (void)goToSite {
+    [[SoundPlayer sharedPlayer] playClick];
     NSURL *bookUrl = [NSURL urlForSite];
     [[UIApplication sharedApplication] openURL:bookUrl];
 }

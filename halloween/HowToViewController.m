@@ -34,6 +34,7 @@
 
 
 - (void)goToBack {
+    [[SoundPlayer sharedPlayer] playClick];
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 

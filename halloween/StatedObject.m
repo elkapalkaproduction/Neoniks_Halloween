@@ -30,6 +30,7 @@ extern NSString *const NNKRiseActionObjectId;
 @property (assign, nonatomic) BOOL soundStateOn;
 
 @property (strong, nonatomic) AVAudioPlayer *animationSoundPlayer;
+@property (strong, nonatomic) AVAudioPlayer *effectSoundPlayer;
 
 @property (assign, nonatomic) CGFloat lastScale;
 @property (assign, nonatomic) CGFloat lastRotation;
@@ -92,9 +93,9 @@ extern NSString *const NNKRiseActionObjectId;
     if (!soundName) return nil;
 
     NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:soundName ofType:NNKSoundFormat];
+    if (!soundFilePath) return nil;
     NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
     _animationSoundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
-    _animationSoundPlayer.volume = self.soundStateOn ? 1 : 0;
     [_animationSoundPlayer prepareToPlay];
 
     return _animationSoundPlayer;
@@ -148,6 +149,7 @@ extern NSString *const NNKRiseActionObjectId;
 
 - (void)scale:(UIPinchGestureRecognizer *)sender {
     [self.delegate objectInteracted:self];
+    if (self.currentState.shouldBringToFront)
     [self.delegate.view bringSubviewToFront:self];
     [self resetAnimationTimer];
     if ([sender state] == UIGestureRecognizerStateBegan) {
@@ -178,6 +180,7 @@ extern NSString *const NNKRiseActionObjectId;
 
 - (void)rotate:(UIRotationGestureRecognizer *)sender {
     [self.delegate objectInteracted:self];
+    if (self.currentState.shouldBringToFront)
     [self.delegate.view bringSubviewToFront:self];
     [self resetAnimationTimer];
     if ([sender state] == UIGestureRecognizerStateBegan) {
@@ -204,6 +207,7 @@ extern NSString *const NNKRiseActionObjectId;
 
 - (void)move:(UIPanGestureRecognizer *)sender {
     [self.delegate objectInteracted:self];
+    if (self.currentState.shouldBringToFront)
     [self.delegate.view bringSubviewToFront:self];
     [self resetAnimationTimer];
     CGPoint translatedPoint = [sender translationInView:self.superview];
@@ -226,6 +230,7 @@ extern NSString *const NNKRiseActionObjectId;
 
 - (void)tapped:(UITapGestureRecognizer *)sender {
     [self performActions];
+    if (self.currentState.shouldBringToFront)
     [self.delegate.view bringSubviewToFront:self];
 }
 
@@ -241,6 +246,10 @@ extern NSString *const NNKRiseActionObjectId;
 
 
 - (void)rotateAnimation:(NSDictionary *)actionDictionary {
+    self.animationSoundPlayer.numberOfLoops = -1;
+    self.animationSoundPlayer.volume = 0.5;
+#warning Uncomment please
+//    [self.animationSoundPlayer play];
     self.fanTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(makeRotation) userInfo:nil repeats:YES];
 }
 
@@ -256,7 +265,15 @@ extern NSString *const NNKRiseActionObjectId;
 
 
 - (void)playSoundWithName:(NNKObjectAction *)actionDictionary {
-    NSLog(@"%@", actionDictionary.otherValues);
+    NSString *soundName = actionDictionary.otherValues[@"soundName"];
+    if (!soundName) return;
+    
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:soundName ofType:NNKSoundFormat];
+    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+    self.effectSoundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
+//    self.effectSoundPlayer.volume = self.soundStateOn ? 1 : 0;
+    [self.effectSoundPlayer prepareToPlay];
+    [self.effectSoundPlayer play];
 }
 
 
@@ -266,6 +283,10 @@ extern NSString *const NNKRiseActionObjectId;
     if (self.fanTimer) {
         [self.fanTimer invalidate];
         self.fanTimer = nil;
+    }
+    if (self.effectSoundPlayer) {
+        [self.effectSoundPlayer stop];
+        self.effectSoundPlayer = nil;
     }
     self.parameters.animationImages = nil;
     self.parameters = nil;
@@ -375,6 +396,7 @@ extern NSString *const NNKRiseActionObjectId;
     if (!soundName) return nil;
     
     NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:soundName ofType:NNKSoundFormat];
+    if (!soundFilePath) return nil;
     NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
     AVAudioPlayer *player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
     [player prepareToPlay];
@@ -518,6 +540,11 @@ extern NSString *const NNKRiseActionObjectId;
 
 
 - (void)makeSoarAnimation {
+    if (!CGAffineTransformIsIdentity(self.transform)) {
+        [self.fanTimer invalidate];
+        self.fanTimer = nil;
+        return;
+    }
     CGRect rect = self.frame;
     NSInteger value = arc4random() % 3;
     value--;
@@ -526,7 +553,6 @@ extern NSString *const NNKRiseActionObjectId;
     } else {
         rect.origin.x += value;
     }
-    
     self.frame = rect;
 }
 

@@ -33,6 +33,7 @@
 @property (assign, nonatomic) BOOL pausebleAnimation;
 @property (assign, nonatomic) BOOL hidden;
 @property (assign, nonatomic) BOOL animateWithDelay;
+@property (assign, nonatomic) BOOL shouldBringToFront;
 @property (assign, nonatomic) BOOL dragable;
 @property (assign, nonatomic) BOOL scaleble;
 @property (assign, nonatomic) BOOL rotateble;

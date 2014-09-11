@@ -38,6 +38,7 @@ NSString *const GameDefaultExtension = @"plist";
 @property (nonatomic) UIDynamicAnimator *animator;
 @property (nonatomic) NNKObjectParametersHelper *parameterHelper;
 @property (weak, nonatomic) IBOutlet UIView *palmZone;
+@property (strong, nonatomic) AVAudioPlayer *effectSoundPlayer;
 
 @end
 
@@ -56,6 +57,7 @@ NSString *const GameDefaultExtension = @"plist";
 #pragma mark - IBActions 
 
 - (IBAction)goToSite:(id)sender {
+    [[SoundPlayer sharedPlayer] playClick];
     NSURL *bookUrl = [NSURL urlForSite];
     [[UIApplication sharedApplication] openURL:bookUrl];
 }
@@ -76,6 +78,7 @@ NSString *const GameDefaultExtension = @"plist";
 
 
 - (IBAction)makeSnapshot {
+    [[SoundPlayer sharedPlayer] playClick];
     for (DoorView *door in self.doors) {
         door.view.hidden = YES;
     }
@@ -92,6 +95,7 @@ NSString *const GameDefaultExtension = @"plist";
 
 
 - (IBAction)newGame {
+    [[SoundPlayer sharedPlayer] playClick];
     for (StatedObject *object in self.allObjects) {
         [object cleanResources];
     }
@@ -106,6 +110,7 @@ NSString *const GameDefaultExtension = @"plist";
 
 
 - (IBAction)returnToMenu:(id)sender {
+    [[SoundPlayer sharedPlayer] playClick];
     [self dismissViewControllerAnimated:YES completion:NULL];
 
 }
@@ -116,6 +121,9 @@ NSString *const GameDefaultExtension = @"plist";
         [self showPopupWith:door.characterId];
         return;
     }
+    self.effectSoundPlayer = [self playerWithName:@"sounds/knocking_the_door.mp3"];
+    [self.effectSoundPlayer play];
+    
     for (DoorView *currentDoor in self.doors) {
         currentDoor.questionState = NO;
     }
@@ -138,6 +146,12 @@ NSString *const GameDefaultExtension = @"plist";
         }
 
     }
+}
+
+
+- (IBAction)shelf:(id)sender {
+    self.effectSoundPlayer = [self playerWithName:@"sounds/shelf.mp3"];
+    [self.effectSoundPlayer play];
 }
 
 
@@ -303,6 +317,7 @@ NSString *const GameDefaultExtension = @"plist";
 #pragma mark - Custom Selectors
 
 - (void)branchFall:(UIButton *)button {
+    [(StatedObject *)button playAnimationSound];
     UIGravityBehavior *gravityBehavior = [[UIGravityBehavior alloc] initWithItems:@[button]];
     gravityBehavior.magnitude = 0.6;
     [self.animator addBehavior:gravityBehavior];
@@ -327,7 +342,18 @@ NSString *const GameDefaultExtension = @"plist";
 }
 
 
+- (AVAudioPlayer *)playerWithName:(NSString *)soundName {
+    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:soundName ofType:nil];
+    NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+    AVAudioPlayer *effectSoundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
+    [effectSoundPlayer prepareToPlay];
+
+    return effectSoundPlayer;
+}
+
+
 - (void)pumpkinShake:(UIButton *)button {
+    [(StatedObject *)button playAnimationSound];
     CABasicAnimation *shake = [CABasicAnimation animationWithKeyPath:@"position"];
     [shake setDuration:0.1];
     [shake setRepeatCount:2];

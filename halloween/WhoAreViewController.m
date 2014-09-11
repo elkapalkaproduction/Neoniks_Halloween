@@ -34,18 +34,21 @@
 
 
 - (void)goToSite {
+    [[SoundPlayer sharedPlayer] playClick];
     NSURL *bookUrl = [NSURL urlForSite];
     [[UIApplication sharedApplication] openURL:bookUrl];
 }
 
 
 - (void)goToRead {
+    [[SoundPlayer sharedPlayer] playClick];
     NSURL *bookUrl = [NSURL openStoreToAppWithID:bookAppID];
     [[UIApplication sharedApplication] openURL:bookUrl];
 }
 
 
 - (void)goToFeedback {
+    [[SoundPlayer sharedPlayer] playClick];
     if ([MFMailComposeViewController canSendMail]) {
         MFMailComposeViewController *mailCont = [self createMailCompose];
         [self presentViewController:mailCont animated:YES completion:NULL];
@@ -57,6 +60,7 @@
 
 
 - (void)goToBack {
+    [[SoundPlayer sharedPlayer] playClick];
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
