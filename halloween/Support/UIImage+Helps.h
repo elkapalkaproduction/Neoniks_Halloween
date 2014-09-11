@@ -13,6 +13,5 @@
 + (UIImage *)backgroundImageWithName:(NSString *)name;
 + (UIImage *)imageWithUnlocalizedName:(NSString *)name;
 + (UIImage *)imageWithLocalizedName:(NSString *)name;
-+ (UIImage *)createSnapshot;
 
 @end

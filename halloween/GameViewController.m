@@ -88,7 +88,8 @@ NSString *const GameDefaultExtension = @"plist";
     for (StatedObject *object in self.allObjects) {
         [object stopAnimation];
     }
-    UIImage *image = [UIImage createSnapshot];
+    UIImage *image = [self createSnapshot];
+    
     [self goToMakeCard:image];
 
 }
@@ -363,6 +364,17 @@ NSString *const GameDefaultExtension = @"plist";
     [shake setToValue:[NSValue valueWithCGPoint:
                        CGPointMake(button.center.x + 5, button.center.y - 5)]];
     [button.layer addAnimation:shake forKey:@"position"];
+}
+
+
+- (UIImage *)createSnapshot {
+    UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, YES, 0.0f);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [self.view.layer renderInContext:context];
+    UIImage *capturedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+
+    return capturedImage;
 }
 
 @end

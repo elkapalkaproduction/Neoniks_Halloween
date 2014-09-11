@@ -59,8 +59,7 @@
 
 
 - (UIImage *)captureScreenInRect:(CGRect)captureFrame {
-    CGRect rect = [self.cardView bounds];
-    UIGraphicsBeginImageContextWithOptions(rect.size, YES, 0.0f);
+    UIGraphicsBeginImageContextWithOptions(captureFrame.size, YES, 0.0f);
     CGContextRef context = UIGraphicsGetCurrentContext();
     [self.cardView.layer renderInContext:context];
     UIImage *capturedImage = UIGraphicsGetImageFromCurrentImageContext();
@@ -107,7 +106,7 @@
 
 - (IBAction)send {
     [[SoundPlayer sharedPlayer] playClick];
-    UIImage *image = [self captureScreenInRect:self.cardView.frame];
+    UIImage *image = [self captureScreenInRect:self.cardView.bounds];
     MFMailComposeViewController *mailCont = [self createMailFromImage:image];
     [self presentViewController:mailCont animated:YES completion:NULL];
 }
@@ -115,7 +114,7 @@
 
 - (IBAction)save {
     [[SoundPlayer sharedPlayer] playClick];
-    UIImage *image = [self captureScreenInRect:self.cardView.frame];
+    UIImage *image = [self captureScreenInRect:self.cardView.bounds];
     UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
     
 }

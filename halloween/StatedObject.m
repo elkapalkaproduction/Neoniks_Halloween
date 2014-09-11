@@ -271,7 +271,6 @@ extern NSString *const NNKRiseActionObjectId;
     NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:soundName ofType:NNKSoundFormat];
     NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
     self.effectSoundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
-//    self.effectSoundPlayer.volume = self.soundStateOn ? 1 : 0;
     [self.effectSoundPlayer prepareToPlay];
     [self.effectSoundPlayer play];
 }
