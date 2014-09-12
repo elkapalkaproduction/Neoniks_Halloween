@@ -12,6 +12,7 @@
 @interface SoundPlayer ()
 
 @property (strong, nonatomic) AVAudioPlayer *audioPlayer;
+@property (strong, nonatomic) AVAudioPlayer *backgroundPlayer;
 
 @end
 
@@ -45,8 +46,35 @@
 }
 
 
+- (AVAudioPlayer *)backgroundPlayer {
+    if (!_backgroundPlayer) {
+        NSString *soundName = @"sounds/BGM.mp3";
+        if (!soundName) return nil;
+        
+        NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:soundName ofType:nil];
+        if (!soundFilePath) return nil;
+        NSURL *soundFileURL = [NSURL fileURLWithPath:soundFilePath];
+        _backgroundPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:soundFileURL error:nil];
+        _backgroundPlayer.numberOfLoops = -1;
+        [_backgroundPlayer prepareToPlay];
+    }
+    
+    return _backgroundPlayer;
+}
+
+
 - (void)playClick {
     [self.audioPlayer play];
+}
+
+
+- (void)pauseBackgroundMusic {
+    [self.backgroundPlayer pause];
+}
+
+
+- (void)playBakgroundMusic {
+    [self.backgroundPlayer play];
 }
 
 @end

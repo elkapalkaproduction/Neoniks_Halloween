@@ -21,6 +21,7 @@ NSString *const bookAppID = @"526641427";
 @property (strong, nonatomic) IBOutlet UIButton *howToButton;
 @property (strong, nonatomic) IBOutlet UIButton *rateUsButton;
 @property (strong, nonatomic) IBOutlet UIButton *playButton;
+@property (weak, nonatomic) IBOutlet UIButton *playIconButton;
 @property (strong, nonatomic) IBOutlet UIButton *siteButton;
 
 @end
@@ -32,6 +33,18 @@ NSString *const bookAppID = @"526641427";
     [self setupTargets];
     [self updateLanguage];
     [self adjustView];
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [[SoundPlayer sharedPlayer] playBakgroundMusic];
+}
+
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [[SoundPlayer sharedPlayer] pauseBackgroundMusic];
 }
 
 
@@ -87,6 +100,7 @@ NSString *const bookAppID = @"526641427";
     [self.howToButton addTarget:self onTouchUpInsideWithAction:@selector(goToHowTo)];
     [self.rateUsButton addTarget:self onTouchUpInsideWithAction:@selector(goToRateUs)];
     [self.playButton addTarget:self onTouchUpInsideWithAction:@selector(goToPlay)];
+    [self.playIconButton addTarget:self onTouchUpInsideWithAction:@selector(goToPlay)];
     [self.siteButton addTarget:self onTouchUpInsideWithAction:@selector(goToSite)];
 }
 

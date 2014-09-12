@@ -12,5 +12,7 @@
 
 + (instancetype)sharedPlayer;
 - (void)playClick;
+- (void)playBakgroundMusic;
+- (void)pauseBackgroundMusic;
 
 @end

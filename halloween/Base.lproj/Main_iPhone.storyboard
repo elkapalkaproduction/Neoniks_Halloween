@@ -74,10 +74,13 @@
                                         <rect key="frame" x="0.0" y="70" width="55" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="menu_play_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="KDR-xo-3Wh">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcw-bt-y2K">
                                         <rect key="frame" x="99" y="144" width="55" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
+                                        <state key="normal" image="menu_play_icon.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGR-UV-Nmv" userLabel="Button - menu_who_are">
                                         <rect key="frame" x="43" y="21" width="111" height="23"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -140,6 +143,7 @@
                         <outlet property="flagButton" destination="hCl-Uv-hda" id="mMl-t2-0Rw"/>
                         <outlet property="howToButton" destination="g6A-Ji-1GC" id="bQh-E6-EQ6"/>
                         <outlet property="playButton" destination="Hwe-Z7-mJ8" id="hEN-K1-cXd"/>
+                        <outlet property="playIconButton" destination="gcw-bt-y2K" id="z4M-TG-ENj"/>
                         <outlet property="rateUsButton" destination="WPg-bS-PAo" id="NjA-UU-JJG"/>
                         <outlet property="siteButton" destination="b0o-aq-8SP" id="xiV-gw-V9e"/>
                         <outlet property="textImage" destination="pIt-gi-Quq" id="dP8-AW-s0S"/>

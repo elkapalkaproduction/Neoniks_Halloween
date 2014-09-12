@@ -14,7 +14,7 @@ BOOL isIphone5() {
     static BOOL isIphon5;
     static BOOL isInitialized = NO;
     if (!isInitialized) {
-        isIphon5 = [UIScreen mainScreen].bounds.size.height == 568;
+        isIphon5 = [UIScreen mainScreen].bounds.size.height != 480 && isIphone();
         isInitialized = YES;
     }
 

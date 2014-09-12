@@ -94,7 +94,7 @@
     if (self.questionState) {
         self.characterImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"shadow_8"]];
     } else {
-        self.characterImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"shadow_%ld", self.characterId]];
+        self.characterImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"shadow_%d", self.characterId]];
     }
 
 }

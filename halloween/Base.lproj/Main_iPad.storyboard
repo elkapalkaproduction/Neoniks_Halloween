@@ -41,10 +41,13 @@
                                 <rect key="frame" x="689" y="329" width="110" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="menu_play_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="FSU-Wm-0Hw">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nch-Qx-UgP">
                                 <rect key="frame" x="901" y="616" width="110" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <state key="normal" image="menu_play_icon.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tog-FB-X0X" userLabel="Button - menu_site">
                                 <rect key="frame" x="419" y="726" width="186" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -96,6 +99,7 @@
                         <outlet property="flagButton" destination="RFt-Pb-RGV" id="NTB-d5-P6y"/>
                         <outlet property="howToButton" destination="UyC-Rr-Ic2" id="9Qf-K7-n6g"/>
                         <outlet property="playButton" destination="XFX-A5-upr" id="QeM-RN-1dL"/>
+                        <outlet property="playIconButton" destination="nch-Qx-UgP" id="0ep-PG-VMo"/>
                         <outlet property="rateUsButton" destination="mAB-jQ-Aaf" id="STd-iG-LS5"/>
                         <outlet property="siteButton" destination="Tog-FB-X0X" id="lKB-5i-BaP"/>
                         <outlet property="textImage" destination="1sk-vl-eHX" id="njI-Vc-UoP"/>

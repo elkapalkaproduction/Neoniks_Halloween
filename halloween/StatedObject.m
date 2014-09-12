@@ -151,27 +151,30 @@ extern NSString *const NNKRiseActionObjectId;
     [self.delegate objectInteracted:self];
     if (self.currentState.shouldBringToFront)
     [self.delegate.view bringSubviewToFront:self];
-    [self resetAnimationTimer];
-    if ([sender state] == UIGestureRecognizerStateBegan) {
-        self.lastScale = 1.0;
-    }
-    [self setupHighlightedImageIfExists];
-
-    CGFloat scale = 1.0 - (self.lastScale - [sender scale]);
-    CGAffineTransform currentTransform = self.transform;
-
-    CGAffineTransform newTransform = CGAffineTransformScale(currentTransform, scale, scale);
-    if (newTransform.a > 2.f) {
-        newTransform.a = 2.f;
-        newTransform.d = 2.f;
-    }
-    if (newTransform.a < 0.5f) {
-        newTransform.a = 0.5f;
-        newTransform.d = 0.5f;
-    }
-    [self setTransform:newTransform];
     
-    self.lastScale = [sender scale];
+    [self resetAnimationTimer];
+    [self setupHighlightedImageIfExists];
+    if ([sender state] == UIGestureRecognizerStateBegan) {
+        self.lastScale = [sender scale];
+    }
+    
+    if ([sender state] == UIGestureRecognizerStateBegan ||
+        [sender state] == UIGestureRecognizerStateChanged) {
+        
+        CGFloat currentScale = [[[sender view].layer valueForKeyPath:@"transform.scale"] floatValue];
+        
+        // Constants to adjust the max/min values of zoom
+        const CGFloat kMaxScale = 2.0;
+        const CGFloat kMinScale = 1.0;
+        
+        CGFloat newScale = 1 -  (self.lastScale - [sender scale]);
+        newScale = MIN(newScale, kMaxScale / currentScale);
+        newScale = MAX(newScale, kMinScale / currentScale);
+        CGAffineTransform transform = CGAffineTransformScale([[sender view] transform], newScale, newScale);
+        [sender view].transform = transform;
+        
+        self.lastScale = [sender scale];
+    }
     if ([sender state] == UIGestureRecognizerStateEnded) {
         [self performActions];
     }
@@ -182,10 +185,13 @@ extern NSString *const NNKRiseActionObjectId;
     [self.delegate objectInteracted:self];
     if (self.currentState.shouldBringToFront)
     [self.delegate.view bringSubviewToFront:self];
+    
     [self resetAnimationTimer];
     if ([sender state] == UIGestureRecognizerStateBegan) {
     }
+    
     [self setupHighlightedImageIfExists];
+    
     if ([sender state] == UIGestureRecognizerStateEnded) {
         self.lastRotation = 0.0;
         [self performActions];
@@ -193,12 +199,13 @@ extern NSString *const NNKRiseActionObjectId;
     }
 
     
-    CGFloat rotation = 0.0 - (self.lastRotation - [sender rotation]);
 
-    CGAffineTransform currentTransform = self.transform;
-    CGAffineTransform newTransform = CGAffineTransformRotate(currentTransform, rotation);
+    CATransform3D currentTransform = self.layer.transform;
+    CGFloat rotation = 0.0 - (atan2(currentTransform.m12, currentTransform.m11) - [sender rotation]);
 
-    [self setTransform:newTransform];
+    currentTransform =  CATransform3DRotate(currentTransform, rotation, 0, 0, 1);
+
+    [self.layer setTransform:currentTransform];
     
     self.lastRotation = [sender rotation];
 
@@ -248,8 +255,8 @@ extern NSString *const NNKRiseActionObjectId;
 - (void)rotateAnimation:(NSDictionary *)actionDictionary {
     self.animationSoundPlayer.numberOfLoops = -1;
     self.animationSoundPlayer.volume = 0.5;
-#warning Uncomment please
-//    [self.animationSoundPlayer play];
+#warning Comment please
+    [self.animationSoundPlayer play];
     self.fanTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(makeRotation) userInfo:nil repeats:YES];
 }
 
