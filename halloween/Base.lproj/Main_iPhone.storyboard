@@ -387,7 +387,7 @@
                                             <action selector="makeSnapshot" destination="s9Z-rh-7lE" eventType="touchUpInside" id="Lvb-H9-lYe"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgh-K2-tBA" userLabel="Button - new_icon">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgh-K2-tBA" userLabel="Button - new_icon" customClass="NNKShapedButton">
                                         <rect key="frame" x="134" y="0.0" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="game_new_game_icon.png">
@@ -397,7 +397,7 @@
                                             <action selector="newGame" destination="s9Z-rh-7lE" eventType="touchUpInside" id="lig-hg-5j1"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Si-Ir-29u" userLabel="Button - return_icon">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Si-Ir-29u" userLabel="Button - return_icon" customClass="NNKShapedButton">
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="game_return_icon.png">
