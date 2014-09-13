@@ -261,7 +261,6 @@ extern NSString *const NNKRiseActionObjectId;
 - (void)rotateAnimation:(NSDictionary *)actionDictionary {
     self.animationSoundPlayer.numberOfLoops = -1;
     self.animationSoundPlayer.volume = 0.5;
-#warning Comment please
     [self.animationSoundPlayer play];
     if (self.fanTimer) {
         [self.fanTimer invalidate];
@@ -532,8 +531,6 @@ extern NSString *const NNKRiseActionObjectId;
     }
     [self resetAnimationTimer];
 }
-
-
 
 
 - (void)nextState {

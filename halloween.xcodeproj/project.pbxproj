@@ -87,6 +87,16 @@
 		754F4176198ECFD600C13D07 /* NNKObjectState.m in Sources */ = {isa = PBXBuildFile; fileRef = 754F4175198ECFD600C13D07 /* NNKObjectState.m */; };
 		754F4179198ECFFB00C13D07 /* NNKObjectAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 754F4178198ECFFB00C13D07 /* NNKObjectAction.m */; };
 		754F417C198ED01000C13D07 /* NNKObjectParameters.m in Sources */ = {isa = PBXBuildFile; fileRef = 754F417B198ED01000C13D07 /* NNKObjectParameters.m */; };
+		75566FD419C4E152007A95EE /* NNKAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75566FD319C4E152007A95EE /* NNKAlertView.m */; };
+		75566FDF19C4E213007A95EE /* alert_cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 75566FD619C4E213007A95EE /* alert_cloud.png */; };
+		75566FE019C4E213007A95EE /* alert_message_0_eng.png in Resources */ = {isa = PBXBuildFile; fileRef = 75566FD719C4E213007A95EE /* alert_message_0_eng.png */; };
+		75566FE119C4E213007A95EE /* alert_message_0_rus.png in Resources */ = {isa = PBXBuildFile; fileRef = 75566FD819C4E213007A95EE /* alert_message_0_rus.png */; };
+		75566FE219C4E213007A95EE /* alert_message_1_eng.png in Resources */ = {isa = PBXBuildFile; fileRef = 75566FD919C4E213007A95EE /* alert_message_1_eng.png */; };
+		75566FE319C4E213007A95EE /* alert_message_1_rus.png in Resources */ = {isa = PBXBuildFile; fileRef = 75566FDA19C4E213007A95EE /* alert_message_1_rus.png */; };
+		75566FE419C4E213007A95EE /* alert_no_eng.png in Resources */ = {isa = PBXBuildFile; fileRef = 75566FDB19C4E213007A95EE /* alert_no_eng.png */; };
+		75566FE519C4E213007A95EE /* alert_no_rus.png in Resources */ = {isa = PBXBuildFile; fileRef = 75566FDC19C4E213007A95EE /* alert_no_rus.png */; };
+		75566FE619C4E213007A95EE /* alert_yes_eng.png in Resources */ = {isa = PBXBuildFile; fileRef = 75566FDD19C4E213007A95EE /* alert_yes_eng.png */; };
+		75566FE719C4E213007A95EE /* alert_yes_rus.png in Resources */ = {isa = PBXBuildFile; fileRef = 75566FDE19C4E213007A95EE /* alert_yes_rus.png */; };
 		756C860F1992BC1F00933ADD /* door_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 756C86041992BC1F00933ADD /* door_0.png */; };
 		756C86101992BC1F00933ADD /* door_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 756C86051992BC1F00933ADD /* door_1.png */; };
 		756C86111992BC1F00933ADD /* shadow_0.png in Resources */ = {isa = PBXBuildFile; fileRef = 756C86061992BC1F00933ADD /* shadow_0.png */; };
@@ -314,6 +324,17 @@
 		754F4178198ECFFB00C13D07 /* NNKObjectAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNKObjectAction.m; sourceTree = "<group>"; };
 		754F417A198ED01000C13D07 /* NNKObjectParameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNKObjectParameters.h; sourceTree = "<group>"; };
 		754F417B198ED01000C13D07 /* NNKObjectParameters.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNKObjectParameters.m; sourceTree = "<group>"; };
+		75566FD219C4E152007A95EE /* NNKAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNKAlertView.h; sourceTree = "<group>"; };
+		75566FD319C4E152007A95EE /* NNKAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNKAlertView.m; sourceTree = "<group>"; };
+		75566FD619C4E213007A95EE /* alert_cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alert_cloud.png; sourceTree = "<group>"; };
+		75566FD719C4E213007A95EE /* alert_message_0_eng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alert_message_0_eng.png; sourceTree = "<group>"; };
+		75566FD819C4E213007A95EE /* alert_message_0_rus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alert_message_0_rus.png; sourceTree = "<group>"; };
+		75566FD919C4E213007A95EE /* alert_message_1_eng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alert_message_1_eng.png; sourceTree = "<group>"; };
+		75566FDA19C4E213007A95EE /* alert_message_1_rus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alert_message_1_rus.png; sourceTree = "<group>"; };
+		75566FDB19C4E213007A95EE /* alert_no_eng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alert_no_eng.png; sourceTree = "<group>"; };
+		75566FDC19C4E213007A95EE /* alert_no_rus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alert_no_rus.png; sourceTree = "<group>"; };
+		75566FDD19C4E213007A95EE /* alert_yes_eng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alert_yes_eng.png; sourceTree = "<group>"; };
+		75566FDE19C4E213007A95EE /* alert_yes_rus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alert_yes_rus.png; sourceTree = "<group>"; };
 		756C86041992BC1F00933ADD /* door_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = door_0.png; sourceTree = "<group>"; };
 		756C86051992BC1F00933ADD /* door_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = door_1.png; sourceTree = "<group>"; };
 		756C86061992BC1F00933ADD /* shadow_0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shadow_0.png; sourceTree = "<group>"; };
@@ -608,6 +629,22 @@
 			path = game_images;
 			sourceTree = "<group>";
 		};
+		75566FD519C4E213007A95EE /* alertImages */ = {
+			isa = PBXGroup;
+			children = (
+				75566FD619C4E213007A95EE /* alert_cloud.png */,
+				75566FD719C4E213007A95EE /* alert_message_0_eng.png */,
+				75566FD819C4E213007A95EE /* alert_message_0_rus.png */,
+				75566FD919C4E213007A95EE /* alert_message_1_eng.png */,
+				75566FDA19C4E213007A95EE /* alert_message_1_rus.png */,
+				75566FDB19C4E213007A95EE /* alert_no_eng.png */,
+				75566FDC19C4E213007A95EE /* alert_no_rus.png */,
+				75566FDD19C4E213007A95EE /* alert_yes_eng.png */,
+				75566FDE19C4E213007A95EE /* alert_yes_rus.png */,
+			);
+			path = alertImages;
+			sourceTree = "<group>";
+		};
 		756C86031992BC1F00933ADD /* shadows */ = {
 			isa = PBXGroup;
 			children = (
@@ -699,6 +736,9 @@
 				7543E4B919C230CA002004DD /* SoundPlayer.m */,
 				75BF7E7419916C5900C1F31B /* DoorView.h */,
 				75BF7E7519916C5900C1F31B /* DoorView.m */,
+				75566FD219C4E152007A95EE /* NNKAlertView.h */,
+				75566FD319C4E152007A95EE /* NNKAlertView.m */,
+				75566FD519C4E213007A95EE /* alertImages */,
 				752CB2E01996A4E9001C5459 /* sounds */,
 				756C86031992BC1F00933ADD /* shadows */,
 				75C4C63019902C4B008E55F7 /* Characters */,
@@ -965,12 +1005,14 @@
 				758A0F42198CF08300FB0F7C /* Main_iPad.storyboard in Resources */,
 				758A0F82198CF63200FB0F7C /* menu_flag_eng.png in Resources */,
 				75B43C691998017A000BB491 /* make_a_card_text3_rus.png in Resources */,
+				75566FE419C4E213007A95EE /* alert_no_eng.png in Resources */,
 				752CB2B719968B4D001C5459 /* 1_popup_art.png in Resources */,
 				752CB2C919968B4D001C5459 /* 5_text_rus.png in Resources */,
 				756C861B1992C71600933ADD /* shadow_1.png in Resources */,
 				756C86161992BC1F00933ADD /* shadow_5.png in Resources */,
 				752CB2CB19968B4D001C5459 /* 6_text_rus.png in Resources */,
 				45F4084219A850570074FC5F /* 76.png in Resources */,
+				75566FDF19C4E213007A95EE /* alert_cloud.png in Resources */,
 				752CB2B819968B4D001C5459 /* 2_popup_art.png in Resources */,
 				758A1030198D1A5D00FB0F7C /* make_card_fon.png in Resources */,
 				756C86101992BC1F00933ADD /* door_1.png in Resources */,
@@ -988,6 +1030,8 @@
 				752CB2BE19968B4D001C5459 /* 0_text_eng.png in Resources */,
 				75B43C1A1997B246000BB491 /* game_return_rus.png in Resources */,
 				752CB2C719968B4D001C5459 /* 4_text_rus.png in Resources */,
+				75566FE619C4E213007A95EE /* alert_yes_eng.png in Resources */,
+				75566FE219C4E213007A95EE /* alert_message_1_eng.png in Resources */,
 				752CB2DB19968B4D001C5459 /* 6_title_rus.png in Resources */,
 				758A0FE6198D0D6E00FB0F7C /* who_are_feedback_icon.png in Resources */,
 				752CB2D519968B4D001C5459 /* 3_title_rus.png in Resources */,
@@ -995,12 +1039,14 @@
 				758A0FEC198D0D6E00FB0F7C /* who_are_read_icon.png in Resources */,
 				75B43C191997B246000BB491 /* game_return_eng.png in Resources */,
 				75B43C471997FAEC000BB491 /* card_caption_text3_rus.png in Resources */,
+				75566FE119C4E213007A95EE /* alert_message_0_rus.png in Resources */,
 				752CB28719968911001C5459 /* ipad_pop_up_fon.png in Resources */,
 				752CB2BB19968B4D001C5459 /* 5_popup_art.png in Resources */,
 				752CB20F199687BE001C5459 /* cross.png in Resources */,
 				758A0F88198CF63200FB0F7C /* menu_how_to_icon.png in Resources */,
 				752CB11F199684AC001C5459 /* PopUpViewController.xib in Resources */,
 				758A0FE3198D0D6E00FB0F7C /* who_are_contributors_eng.png in Resources */,
+				75566FE519C4E213007A95EE /* alert_no_rus.png in Resources */,
 				752CB2C319968B4D001C5459 /* 2_text_rus.png in Resources */,
 				752CB2D619968B4D001C5459 /* 4_title_eng.png in Resources */,
 				75B43C671998017A000BB491 /* make_a_card_text2_rus.png in Resources */,
@@ -1038,13 +1084,16 @@
 				758A0FE8198D0D6E00FB0F7C /* who_are_fon-568.png in Resources */,
 				754F416E198E78BC00C13D07 /* GameDefaultObjects.plist in Resources */,
 				758A0F81198CF63200FB0F7C /* menu_banner_rus.png in Resources */,
+				75566FE319C4E213007A95EE /* alert_message_1_rus.png in Resources */,
 				758A0F3F198CF08300FB0F7C /* Main_iPhone.storyboard in Resources */,
 				758A0F86198CF63200FB0F7C /* menu_fon~ipad.png in Resources */,
 				75B43C5F1998017A000BB491 /* make_a_card_save_icon.png in Resources */,
 				756C86171992BC1F00933ADD /* shadow_6.png in Resources */,
 				75B43C621998017A000BB491 /* make_a_card_send_icon.png in Resources */,
+				75566FE019C4E213007A95EE /* alert_message_0_eng.png in Resources */,
 				752CB2CA19968B4D001C5459 /* 6_text_eng.png in Resources */,
 				758A0F8D198CF63200FB0F7C /* menu_rate_us_eng.png in Resources */,
+				75566FE719C4E213007A95EE /* alert_yes_rus.png in Resources */,
 				75B43C641998017A000BB491 /* make_a_card_text1_eng.png in Resources */,
 				752CB2C619968B4D001C5459 /* 4_text_eng.png in Resources */,
 				758A102F198D1A5D00FB0F7C /* make_card_fon-568.png in Resources */,
@@ -1160,6 +1209,7 @@
 				754F4169198E76A100C13D07 /* StatedObject.m in Sources */,
 				752CB11E199684AC001C5459 /* PopUpViewController.m in Sources */,
 				75B43C231997D0CE000BB491 /* MakeACardViewController.m in Sources */,
+				75566FD419C4E152007A95EE /* NNKAlertView.m in Sources */,
 				7543E4BA19C230CA002004DD /* SoundPlayer.m in Sources */,
 				758A101E198D188E00FB0F7C /* HowToViewController.m in Sources */,
 				754F417C198ED01000C13D07 /* NNKObjectParameters.m in Sources */,

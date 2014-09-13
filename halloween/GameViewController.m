@@ -17,11 +17,12 @@
 #import "Utils.h"
 #import "BranchObject.h"
 #import <QuartzCore/QuartzCore.h>
+#import "NNKAlertView.h"
 
 NSString *const GameDefaultObjects = @"GameDefaultObjects";
 NSString *const GameDefaultExtension = @"plist";
 
-@interface GameViewController () <UIDynamicAnimatorDelegate, DoorDelegate, StatedObjectDelegate, PopUpDelegate>
+@interface GameViewController () <UIDynamicAnimatorDelegate, DoorDelegate, StatedObjectDelegate, PopUpDelegate, NNKAlertViewDelegate>
 
 @property (strong, nonatomic) NSMutableArray *allObjects;
 @property (strong, nonatomic) StatedObject *currentObject;
@@ -97,22 +98,17 @@ NSString *const GameDefaultExtension = @"plist";
 
 - (IBAction)newGame {
     [[SoundPlayer sharedPlayer] playClick];
-    for (StatedObject *object in self.allObjects) {
-        [object cleanResources];
-    }
-    if (self.currentObject) {
-        [self.currentObject cleanResources];
-    }
-    [self setupInitialView];
-    for (DoorView *currentDoor in self.doors) {
-        currentDoor.questionState = NO;
-    }
+    NNKAlertView *alert = [NNKAlertView initWithMessageType:AlertViewMessageNewGame delegate:self];
+    alert.view.center = self.view.center;
+    [StoryboardUtils addViewController:alert onViewController:self];
 }
 
 
 - (IBAction)returnToMenu:(id)sender {
     [[SoundPlayer sharedPlayer] playClick];
-    [self dismissViewControllerAnimated:YES completion:NULL];
+    NNKAlertView *alert = [NNKAlertView initWithMessageType:AlertViewMessageQuit delegate:self];
+    alert.view.center = self.view.center;
+    [StoryboardUtils addViewController:alert onViewController:self];
 
 }
 
@@ -210,6 +206,23 @@ NSString *const GameDefaultExtension = @"plist";
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
     [self performSelector:selector withObject:objectId];
 #pragma clang diagnostic pop
+}
+
+
+- (void)alertView:(NNKAlertView *)alertView pressedButtonWithResponse:(BOOL)response {
+    if (!response) return;
+
+    AlertViewMessage message = alertView.messageType;
+    switch (message) {
+        case AlertViewMessageNewGame:
+            [self createNewGame];
+            break;
+        case AlertViewMessageQuit:
+            [self dismissViewControllerAnimated:YES completion:NULL];
+            break;
+        default:
+            break;
+    }
 }
 
 
@@ -350,6 +363,20 @@ NSString *const GameDefaultExtension = @"plist";
     [effectSoundPlayer prepareToPlay];
 
     return effectSoundPlayer;
+}
+
+
+- (void)createNewGame {
+    for (StatedObject *object in self.allObjects) {
+        [object cleanResources];
+    }
+    if (self.currentObject) {
+        [self.currentObject cleanResources];
+    }
+    [self setupInitialView];
+    for (DoorView *currentDoor in self.doors) {
+        currentDoor.questionState = NO;
+    }
 }
 
 
