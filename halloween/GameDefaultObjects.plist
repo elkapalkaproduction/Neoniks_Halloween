@@ -284,6 +284,25 @@
 				<true/>
 				<key>soundPath</key>
 				<string>sounds/fan</string>
+				<key>autoTransition</key>
+				<true/>
+				<key>actions</key>
+				<array>
+					<dict>
+						<key>actionBehavior</key>
+						<string>nextState:</string>
+					</dict>
+				</array>
+			</dict>
+			<dict>
+				<key>interactive</key>
+				<true/>
+				<key>backgroundImage</key>
+				<string>Characters/fan_images/fan_prop.png</string>
+				<key>idle</key>
+				<true/>
+				<key>soundPath</key>
+				<string>sounds/fan</string>
 				<key>actionsOnInitState</key>
 				<array>
 					<dict>
@@ -298,6 +317,12 @@
 						<string>playSoundWithName:</string>
 						<key>soundName</key>
 						<string>sounds/fan_screech</string>
+					</dict>
+					<dict>
+						<key>actionBehavior</key>
+						<string>nextState:</string>
+						<key>time</key>
+						<string>2</string>
 					</dict>
 				</array>
 			</dict>

@@ -242,7 +242,13 @@ extern NSString *const NNKRiseActionObjectId;
 }
 
 
-- (void)nextState:(NSDictionary *)actionDictionary {
+- (void)nextState:(NNKObjectAction *)actionDictionary {
+    if (actionDictionary.otherValues[@"time"]) {
+        NSTimeInterval time = [actionDictionary.otherValues[@"time"] floatValue];
+        [self performSelector:@selector(nextState) withObject:nil afterDelay:time];
+        [self.fanTimer performSelector:@selector(invalidate) withObject:nil afterDelay:time];
+        return;
+    }
     [self nextState];
 }
 
@@ -257,6 +263,10 @@ extern NSString *const NNKRiseActionObjectId;
     self.animationSoundPlayer.volume = 0.5;
 #warning Comment please
     [self.animationSoundPlayer play];
+    if (self.fanTimer) {
+        [self.fanTimer invalidate];
+        self.fanTimer = nil;
+    }
     self.fanTimer = [NSTimer scheduledTimerWithTimeInterval:0.1 target:self selector:@selector(makeRotation) userInfo:nil repeats:YES];
 }
 
@@ -522,6 +532,8 @@ extern NSString *const NNKRiseActionObjectId;
     }
     [self resetAnimationTimer];
 }
+
+
 
 
 - (void)nextState {
