@@ -14,7 +14,7 @@ BOOL isIphone5() {
     static BOOL isIphon5;
     static BOOL isInitialized = NO;
     if (!isInitialized) {
-        isIphon5 = [UIScreen mainScreen].bounds.size.height != 480 && isIphone();
+        isIphon5 = [DeviceUtils screenSize].width != 480 && isIphone();
         isInitialized = YES;
     }
 
@@ -31,6 +31,16 @@ BOOL isIphone() {
     }
 
     return isIphon5;
+}
+
+
++ (CGSize)screenSize {
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    if ((NSFoundationVersionNumber <= NSFoundationVersionNumber_iOS_7_1) && UIInterfaceOrientationIsLandscape([UIApplication sharedApplication].statusBarOrientation)) {
+        return CGSizeMake(screenSize.height, screenSize.width);
+    } else {
+        return screenSize;
+    }
 }
 
 @end

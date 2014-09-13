@@ -10,29 +10,29 @@
 	<string>halloween</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>D6AF6DB2-E286-40D3-A7B5-D806B847B893</key>
+		<key>40AE0E06AE2ECB2A580486DD6142EBFC2327015D</key>
 		<string>ssh://github.com/elkapalkaproduction/Neoniks_Halloween.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>halloween.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>D6AF6DB2-E286-40D3-A7B5-D806B847B893</key>
+		<key>40AE0E06AE2ECB2A580486DD6142EBFC2327015D</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>ssh://github.com/elkapalkaproduction/Neoniks_Halloween.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>D6AF6DB2-E286-40D3-A7B5-D806B847B893</string>
+	<string>40AE0E06AE2ECB2A580486DD6142EBFC2327015D</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D6AF6DB2-E286-40D3-A7B5-D806B847B893</string>
+			<string>40AE0E06AE2ECB2A580486DD6142EBFC2327015D</string>
 			<key>IDESourceControlWCCName</key>
 			<string>halloween</string>
 		</dict>

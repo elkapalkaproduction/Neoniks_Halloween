@@ -580,10 +580,12 @@ extern NSString *const NNKRiseActionObjectId;
     if (point.x < magicValue) {
         return YES;
     }
-    if (point.x > [UIScreen mainScreen].bounds.size.height - magicValue) {
+    CGSize size = [DeviceUtils screenSize];
+    
+    if (point.x > size.width - magicValue) {
         return YES;
     }
-    if (point.y > [UIScreen mainScreen].bounds.size.width - magicValue / 2) {
+    if (point.y > size.height - magicValue / 2) {
         return YES;
     }
     

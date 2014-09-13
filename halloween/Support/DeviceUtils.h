@@ -10,7 +10,8 @@
 
 @interface DeviceUtils : NSObject
 
-    BOOL isIphone5();
+BOOL isIphone5();
 BOOL isIphone();
++ (CGSize)screenSize;
 
 @end

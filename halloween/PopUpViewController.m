@@ -120,8 +120,7 @@
 #pragma mark - Private Methods
 
 - (void)setupView {
-    CGRect screenRect = [UIScreen mainScreen].bounds;
-    CGSize screenSize = CGSizeMake(CGRectGetHeight(screenRect), CGRectGetWidth(screenRect));
+    CGSize screenSize = [DeviceUtils screenSize];
     changeSize(screenSize, self.view);
 
     [self setupNextPages];
