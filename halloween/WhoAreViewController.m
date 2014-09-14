@@ -10,6 +10,7 @@
 #import "Utils.h"
 #import <MessageUI/MessageUI.h>
 #import "AdsManager.h"
+#import "ATConnect.h"
 
 @interface WhoAreViewController () <MFMailComposeViewControllerDelegate>
 
@@ -31,6 +32,13 @@
     [self setupTargets];
     [self updateLanguage];
     [self adjustView];
+}
+
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [[ATConnect sharedConnection] engage:@"test_event" fromViewController:self];
+
 }
 
 
