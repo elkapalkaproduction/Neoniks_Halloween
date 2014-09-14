@@ -106,7 +106,7 @@ NSString *const APPTENTIVE_API_KEY = @"dd73ae21b91b262e13ab7d70efe5de74243051ab3
 
 
 - (void)playVideosWithZone:(NSString *)zone {
-    if ([AdColony zoneStatusForZone:zone] == ADCOLONY_ZONE_STATUS_ACTIVE) {
+    if ([AdColony zoneStatusForZone:zone] == ADCOLONY_ZONE_STATUS_ACTIVE && (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_7_1)) {
         [AdColony playVideoAdForZone:zone withDelegate:self];
     } else {
         [ALInterstitialAd show];
