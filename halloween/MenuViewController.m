@@ -68,8 +68,10 @@ NSString *const bookAppID = @"526641427";
 - (void)goToWhoAre {
     [[AdsManager sharedManager] logEvent:EVENT_MAIN_NEONIKS_CLICKED];
     [[SoundPlayer sharedPlayer] playClick];
-    [StoryboardUtils presentViewControllerWithStoryboardID:@"who_are_view_controller"
-                                        fromViewController:self];
+#warning uncomment StoryboardUtils row and row below. please delete this and row with ATConnect
+    [[ATConnect sharedConnection] engage:@"test_event" fromViewController:self];
+//    [StoryboardUtils presentViewControllerWithStoryboardID:@"who_are_view_controller"
+//                                        fromViewController:self];
 }
 
 
