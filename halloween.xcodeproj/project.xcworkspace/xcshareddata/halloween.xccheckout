@@ -11,17 +11,17 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>40AE0E06AE2ECB2A580486DD6142EBFC2327015D</key>
-		<string>ssh://github.com/elkapalkaproduction/Neoniks_Halloween.git</string>
+		<string>https://github.com/elkapalkaproduction/Neoniks_Halloween.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>halloween.xcodeproj/project.xcworkspace</string>
+	<string>halloween.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>40AE0E06AE2ECB2A580486DD6142EBFC2327015D</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/elkapalkaproduction/Neoniks_Halloween.git</string>
+	<string>https://github.com/elkapalkaproduction/Neoniks_Halloween.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>40AE0E06AE2ECB2A580486DD6142EBFC2327015D</string>
 			<key>IDESourceControlWCCName</key>
-			<string>halloween</string>
+			<string>Neoniks_Halloween</string>
 		</dict>
 	</array>
 </dict>

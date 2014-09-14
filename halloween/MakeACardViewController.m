@@ -98,7 +98,7 @@
         [mailCont addAttachmentData:myData mimeType:@"image/png" fileName:@"otkrytka_na_halloween.png"];
     } else {
         [mailCont setSubject:@"Here’s a Halloween card for you"];
-        [mailCont setMessageBody:@"Check out the cool greeting card I created with the FREE iPad/iPhone app, Neoniks and Halloween!\n\nwww.neoniks.com" isHTML:NO];
+        [mailCont setMessageBody:@"Check out this cool greeting card I created with the FREE iPad/iPhone app, Neoniks and Halloween!\n\nwww.neoniks.com" isHTML:NO];
         [mailCont addAttachmentData:myData mimeType:@"image/png" fileName:@"halloween_card.png"];
     }
     

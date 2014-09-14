@@ -10,8 +10,8 @@
 #import "Utils.h"
 #import "AdsManager.h"
 
-NSString *const halloweenAppID = @"526641427";
-NSString *const bookAppID = @"526641427";
+NSString *const halloweenAppID = @"918984559";
+NSString *const bookAppID = @"899196882";
 
 @interface MenuViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *backgroundImage;
