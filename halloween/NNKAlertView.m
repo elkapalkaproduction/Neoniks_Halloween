@@ -10,6 +10,7 @@
 #import "UIImage+Helps.h"
 #import "UIButton+Helps.h"
 #import "StoryboardUtils.h"
+#import "DeviceUtils.h"
 
 @interface NNKAlertView ()
 @property (weak, nonatomic) IBOutlet UIView *embedView;
@@ -34,8 +35,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.frame = self.delegate.view.frame;
-    self.view.center = self.delegate.view.center;
+    self.view.frame = CGRectMake(0, 0, [DeviceUtils screenSize].width, [DeviceUtils screenSize].height);
     NSString *message = [NSString stringWithFormat:@"alert_message_%ld", (long)self.messageType];
     self.textLabel.image = [UIImage imageWithUnlocalizedName:message];
     self.yesButton.image = [UIImage imageWithUnlocalizedName:@"alert_yes"];

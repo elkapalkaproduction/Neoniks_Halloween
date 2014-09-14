@@ -101,7 +101,6 @@ NSString *const GameDefaultExtension = @"plist";
 - (IBAction)newGame {
     [[SoundPlayer sharedPlayer] playClick];
     NNKAlertView *alert = [NNKAlertView initWithMessageType:AlertViewMessageNewGame delegate:self];
-    alert.view.center = self.view.center;
     [StoryboardUtils addViewController:alert onViewController:self];
 }
 
@@ -109,7 +108,6 @@ NSString *const GameDefaultExtension = @"plist";
 - (IBAction)returnToMenu:(id)sender {
     [[SoundPlayer sharedPlayer] playClick];
     NNKAlertView *alert = [NNKAlertView initWithMessageType:AlertViewMessageQuit delegate:self];
-    alert.view.center = self.view.center;
     [StoryboardUtils addViewController:alert onViewController:self];
 
 }
