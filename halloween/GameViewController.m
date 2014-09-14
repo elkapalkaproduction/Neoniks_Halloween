@@ -18,6 +18,7 @@
 #import "BranchObject.h"
 #import <QuartzCore/QuartzCore.h>
 #import "NNKAlertView.h"
+#import "AdsManager.h"
 
 NSString *const GameDefaultObjects = @"GameDefaultObjects";
 NSString *const GameDefaultExtension = @"plist";
@@ -79,6 +80,7 @@ NSString *const GameDefaultExtension = @"plist";
 
 
 - (IBAction)makeSnapshot {
+    [[AdsManager sharedManager] logEvent:EVENT_PLAY_TAKE_SNAPSHOT];
     [[SoundPlayer sharedPlayer] playClick];
     for (DoorView *door in self.doors) {
         door.view.hidden = YES;
@@ -115,6 +117,7 @@ NSString *const GameDefaultExtension = @"plist";
 
 - (void)pressDoor:(DoorView *)door {
     if ([door isQuestionState]) {
+        [[AdsManager sharedManager] logEvent:EVENT_PLAY_QUESTION_CLICKED];
         [self showPopupWith:door.characterId];
         return;
     }
@@ -215,9 +218,11 @@ NSString *const GameDefaultExtension = @"plist";
     AlertViewMessage message = alertView.messageType;
     switch (message) {
         case AlertViewMessageNewGame:
+            [[AdsManager sharedManager]logEvent:EVENT_PLAY_NEW_GAME];
             [self createNewGame];
             break;
         case AlertViewMessageQuit:
+            [[AdsManager sharedManager]logEvent:EVENT_PLAY_RETURN_TO_MENU];
             [self dismissViewControllerAnimated:YES completion:NULL];
             break;
         default:
@@ -307,6 +312,7 @@ NSString *const GameDefaultExtension = @"plist";
 
 
 - (void)readTheBook {
+    [[AdsManager sharedManager] logEvent:EVENT_PLAY_QUESTION_READ_BOOK];
     NSURL *bookUrl = [NSURL openStoreToAppWithID:bookAppID];
     [[UIApplication sharedApplication] openURL:bookUrl];
 }

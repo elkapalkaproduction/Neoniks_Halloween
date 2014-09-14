@@ -7,6 +7,7 @@
 #import "Utils.h"
 #import "NNKObjectState.h"
 #import "NNKObjectAction.h"
+#import "AdsManager.h"
 
 CGFloat defaultAnimationDuration = 1;
 
@@ -436,6 +437,7 @@ extern NSString *const NNKRiseActionObjectId;
 
 
 - (void)performActions {
+    [[AdsManager sharedManager] logEvent:EVENT_PLAY_ANIMATION_CLICKED];
     if ([self shouldRemoveFromScreen:self.center]) {
         [self cleanResources];
         return;

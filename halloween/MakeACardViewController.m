@@ -10,6 +10,7 @@
 #import "CaptionsViewController.h"
 #import "Utils.h"
 #import <MessageUI/MessageUI.h>
+#import "AdsManager.h"
 
 @interface MakeACardViewController () <MFMailComposeViewControllerDelegate, CaptionsDelegate>
 
@@ -70,6 +71,7 @@
 
 
 - (IBAction)captions {
+    [[AdsManager sharedManager] logEvent:EVENT_MAKE_CARD_CAPTIONS];
     [[SoundPlayer sharedPlayer] playClick];
     CaptionsViewController *captions = [CaptionsViewController instantiateWithDelegate:self];
     captions.view.bounds = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
@@ -105,6 +107,7 @@
 
 
 - (IBAction)send {
+    [[AdsManager sharedManager] logEvent:EVENT_MAKE_CARD_SEND];
     [[SoundPlayer sharedPlayer] playClick];
     UIImage *image = [self captureScreenInRect:self.cardView.bounds];
     MFMailComposeViewController *mailCont = [self createMailFromImage:image];
@@ -113,6 +116,7 @@
 
 
 - (IBAction)save {
+    [[AdsManager sharedManager] logEvent:EVENT_MAKE_CARD_SAVE];
     [[SoundPlayer sharedPlayer] playClick];
     UIImage *image = [self captureScreenInRect:self.cardView.bounds];
     UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);

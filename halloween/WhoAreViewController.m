@@ -9,6 +9,7 @@
 #import "WhoAreViewController.h"
 #import "Utils.h"
 #import <MessageUI/MessageUI.h>
+#import "AdsManager.h"
 
 @interface WhoAreViewController () <MFMailComposeViewControllerDelegate>
 
@@ -41,6 +42,7 @@
 
 
 - (void)goToRead {
+    [[AdsManager sharedManager] logEvent:EVENT_WHO_ARE_READ_BOOK];
     [[SoundPlayer sharedPlayer] playClick];
     NSURL *bookUrl = [NSURL openStoreToAppWithID:bookAppID];
     [[UIApplication sharedApplication] openURL:bookUrl];
@@ -48,6 +50,7 @@
 
 
 - (void)goToFeedback {
+    [[AdsManager sharedManager] logEvent:EVENT_WHO_ARE_FEEDBACK];
     [[SoundPlayer sharedPlayer] playClick];
     if ([MFMailComposeViewController canSendMail]) {
         MFMailComposeViewController *mailCont = [self createMailCompose];

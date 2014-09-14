@@ -74,7 +74,7 @@
 
 
 - (void)playBakgroundMusic {
-    [self.backgroundPlayer play];
+//    [self.backgroundPlayer play];
 }
 
 @end

@@ -8,12 +8,21 @@
 
 #import "AppDelegate.h"
 #import "Utils.h"
+#import "AdsManager.h"
+
+@interface AppDelegate ()
+
+@property (strong, nonatomic) NSTimer *timer ;
+
+@end
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [LanguageSettings setupLanguage];
+    [[AdsManager sharedManager] setupAllLibraries];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:10 * 60 target:[AdsManager sharedManager] selector:@selector(showVideoAfterTenMinutes) userInfo:nil repeats:YES];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
 
     return YES;
@@ -21,6 +30,7 @@
 
 
 - (void)applicationWillResignActive:(UIApplication *)application {
+    [self.timer invalidate];
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
@@ -38,6 +48,7 @@
 
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:10 * 60 target:[AdsManager sharedManager] selector:@selector(showVideoAfterTenMinutes) userInfo:nil repeats:YES];
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 

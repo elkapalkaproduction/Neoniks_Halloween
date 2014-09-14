@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AppLovinSdkKey</key>
+	<string>g-R2_665UhigdIT9bNzG0B8xqorNGMEyLg_Ko5PGn7yOPVX0tVGuhOpVAeuR_7NLoMfZS4rEBncaG9b8fs0MEq</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>

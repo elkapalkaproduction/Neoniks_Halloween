@@ -8,6 +8,7 @@
 
 #import "MenuViewController.h"
 #import "Utils.h"
+#import "AdsManager.h"
 
 NSString *const halloweenAppID = @"526641427";
 NSString *const bookAppID = @"526641427";
@@ -38,6 +39,7 @@ NSString *const bookAppID = @"526641427";
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    [[AdsManager sharedManager] showStartVideo];
     [[SoundPlayer sharedPlayer] playBakgroundMusic];
 }
 
@@ -49,6 +51,7 @@ NSString *const bookAppID = @"526641427";
 
 
 - (void)changeLanguge {
+    [[AdsManager sharedManager] logEvent:EVENT_MAIN_LANGUAGE_CHANGE];
     [[SoundPlayer sharedPlayer] playClick];
     if (isRussian()) {
         setEnglishLanguage();
@@ -60,6 +63,7 @@ NSString *const bookAppID = @"526641427";
 
 
 - (void)goToWhoAre {
+    [[AdsManager sharedManager] logEvent:EVENT_MAIN_NEONIKS_CLICKED];
     [[SoundPlayer sharedPlayer] playClick];
     [StoryboardUtils presentViewControllerWithStoryboardID:@"who_are_view_controller"
                                         fromViewController:self];
@@ -67,6 +71,7 @@ NSString *const bookAppID = @"526641427";
 
 
 - (void)goToHowTo {
+    [[AdsManager sharedManager] logEvent:EVENT_MAIN_HOW_TO_PLAY_CLICKED];
     [[SoundPlayer sharedPlayer] playClick];
     [StoryboardUtils presentViewControllerWithStoryboardID:@"how_to_view_controller"
                                         fromViewController:self];
@@ -81,6 +86,7 @@ NSString *const bookAppID = @"526641427";
 
 
 - (void)goToPlay {
+    [[AdsManager sharedManager] logEvent:EVENT_MAIN_PLAY_CLICKED];
     [[SoundPlayer sharedPlayer] playClick];
     [StoryboardUtils presentViewControllerWithStoryboardID:@"game_view_controller"
                                         fromViewController:self];
