@@ -42,8 +42,14 @@ NSString *const bookAppID = @"526641427";
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [[AdsManager sharedManager] showStartVideo];
     [[SoundPlayer sharedPlayer] playBakgroundMusic];
+}
+
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [[AdsManager sharedManager] showStartVideo];
+
 }
 
 
