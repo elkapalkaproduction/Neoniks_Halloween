@@ -9,6 +9,7 @@
 #import "MenuViewController.h"
 #import "Utils.h"
 #import "AdsManager.h"
+#import "ATConnect.h"
 
 NSString *const halloweenAppID = @"526641427";
 NSString *const bookAppID = @"526641427";
@@ -34,6 +35,8 @@ NSString *const bookAppID = @"526641427";
     [self setupTargets];
     [self updateLanguage];
     [self adjustView];
+    [[ATConnect sharedConnection] engage:@"completed_level" fromViewController:self];
+
 }
 
 
