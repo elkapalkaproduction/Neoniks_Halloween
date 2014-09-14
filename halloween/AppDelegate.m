@@ -24,6 +24,13 @@
     [[AdsManager sharedManager] setupAllLibraries];
     self.timer = [NSTimer scheduledTimerWithTimeInterval:10 * 60 target:[AdsManager sharedManager] selector:@selector(showVideoAfterTenMinutes) userInfo:nil repeats:YES];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    // Override point for customization after application launch.
+    self.viewController = [[LogoViewController alloc] initWithNibName:@"LogoViewController" bundle:nil];
+    self.navController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
+    [self.navController setNavigationBarHidden:YES];
+    self.window.rootViewController = self.navController;
+    [self.window makeKeyAndVisible];    // Override point for customization after application launch.
 
     return YES;
 }

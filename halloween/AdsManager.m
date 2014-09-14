@@ -15,6 +15,7 @@
 #import "ALInterstitialAd.h"
 #import <Chartboost/Chartboost.h>
 #import "ATConnect.h"
+#import "SoundPlayer.h"
 
 NSString *const EVENT_MAIN_LANGUAGE_CHANGE = @"EVENT_MAIN_LANGUAGE_CHANGE";
 NSString *const EVENT_MAIN_NEONIKS_CLICKED = @"EVENT_MAIN_NEONIKS_CLICKED";
@@ -47,6 +48,8 @@ NSString *const CHARTBOOST_APP_SIGNATURE = @"9b0b9236c73d16956b68b0b375f2b0accd7
 NSString *const APPTENTIVE_API_KEY = @"dd73ae21b91b262e13ab7d70efe5de74243051ab35ee535e75c4e744de176baa";
 
 @interface AdsManager () <AdColonyDelegate, AdColonyAdDelegate, ChartboostDelegate>
+
+@property (assign, nonatomic) BOOL isPlayingMusic;
 
 @end
 
@@ -109,7 +112,20 @@ NSString *const APPTENTIVE_API_KEY = @"dd73ae21b91b262e13ab7d70efe5de74243051ab3
         [ALInterstitialAd show];
         [Chartboost showInterstitial:CBLocationHomeScreen];
     }
-
 }
+
+
+- (void)onAdColonyAdStartedInZone:(NSString *)zoneID {
+    self.isPlayingMusic = [[SoundPlayer sharedPlayer] isPlayingBackgroundMusic];
+    [[SoundPlayer sharedPlayer] pauseBackgroundMusic];
+}
+
+
+- (void)onAdColonyAdAttemptFinished:(BOOL)shown inZone:(NSString *)zoneID {
+    if (self.isPlayingMusic) {
+        [[SoundPlayer sharedPlayer] playBakgroundMusic];
+    }
+}
+
 
 @end

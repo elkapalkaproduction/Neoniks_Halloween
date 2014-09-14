@@ -74,7 +74,12 @@
 
 
 - (void)playBakgroundMusic {
-//    [self.backgroundPlayer play];
+    [self.backgroundPlayer play];
+}
+
+
+- (BOOL)isPlayingBackgroundMusic {
+    return [self.backgroundPlayer isPlaying];
 }
 
 @end

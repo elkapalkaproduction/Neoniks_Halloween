@@ -14,5 +14,6 @@
 - (void)playClick;
 - (void)playBakgroundMusic;
 - (void)pauseBackgroundMusic;
+- (BOOL)isPlayingBackgroundMusic;
 
 @end

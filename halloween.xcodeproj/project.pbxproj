@@ -14,6 +14,11 @@
 		45F4084319A850570074FC5F /* 80.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F4083A19A850570074FC5F /* 80.png */; };
 		45F4084419A850570074FC5F /* 120.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F4083B19A850570074FC5F /* 120.png */; };
 		45F4084519A850570074FC5F /* 152.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F4083C19A850570074FC5F /* 152.png */; };
+		7521395319C60B35002634A4 /* LogoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7521395019C60B35002634A4 /* LogoViewController.m */; };
+		7521395419C60B35002634A4 /* LogoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7521395119C60B35002634A4 /* LogoViewController.xib */; };
+		7521395519C60B35002634A4 /* LogoViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7521395219C60B35002634A4 /* LogoViewController~ipad.xib */; };
+		7521395819C60B4C002634A4 /* logo_eng.png in Resources */ = {isa = PBXBuildFile; fileRef = 7521395619C60B4C002634A4 /* logo_eng.png */; };
+		7521395919C60B4C002634A4 /* logo_rus.png in Resources */ = {isa = PBXBuildFile; fileRef = 7521395719C60B4C002634A4 /* logo_rus.png */; };
 		752CB11E199684AC001C5459 /* PopUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752CB118199684AC001C5459 /* PopUpViewController.m */; };
 		752CB11F199684AC001C5459 /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 752CB119199684AC001C5459 /* PopUpViewController.xib */; };
 		752CB120199684AC001C5459 /* PopUpViewController5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 752CB11A199684AC001C5459 /* PopUpViewController5.xib */; };
@@ -304,6 +309,12 @@
 		45F4083A19A850570074FC5F /* 80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 80.png; sourceTree = "<group>"; };
 		45F4083B19A850570074FC5F /* 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 120.png; sourceTree = "<group>"; };
 		45F4083C19A850570074FC5F /* 152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 152.png; sourceTree = "<group>"; };
+		7521394F19C60B35002634A4 /* LogoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoViewController.h; sourceTree = "<group>"; };
+		7521395019C60B35002634A4 /* LogoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoViewController.m; sourceTree = "<group>"; };
+		7521395119C60B35002634A4 /* LogoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoViewController.xib; sourceTree = "<group>"; };
+		7521395219C60B35002634A4 /* LogoViewController~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "LogoViewController~ipad.xib"; sourceTree = "<group>"; };
+		7521395619C60B4C002634A4 /* logo_eng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_eng.png; sourceTree = "<group>"; };
+		7521395719C60B4C002634A4 /* logo_rus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_rus.png; sourceTree = "<group>"; };
 		752CB117199684AC001C5459 /* PopUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopUpViewController.h; sourceTree = "<group>"; };
 		752CB118199684AC001C5459 /* PopUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopUpViewController.m; sourceTree = "<group>"; };
 		752CB119199684AC001C5459 /* PopUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
@@ -654,6 +665,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7521394E19C60B35002634A4 /* LogoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7521394F19C60B35002634A4 /* LogoViewController.h */,
+				7521395019C60B35002634A4 /* LogoViewController.m */,
+				7521395119C60B35002634A4 /* LogoViewController.xib */,
+				7521395219C60B35002634A4 /* LogoViewController~ipad.xib */,
+				7521395619C60B4C002634A4 /* logo_eng.png */,
+				7521395719C60B4C002634A4 /* logo_rus.png */,
+			);
+			path = LogoViewController;
+			sourceTree = "<group>";
+		};
 		752CB123199684B1001C5459 /* PopUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -937,6 +961,7 @@
 				758A0F3B198CF08300FB0F7C /* AppDelegate.m */,
 				758A0F3D198CF08300FB0F7C /* Main_iPhone.storyboard */,
 				758A0F40198CF08300FB0F7C /* Main_iPad.storyboard */,
+				7521394E19C60B35002634A4 /* LogoViewController */,
 				752CB123199684B1001C5459 /* PopUp */,
 				758A0F43198CF08300FB0F7C /* MenuViewController.h */,
 				758A0F44198CF08300FB0F7C /* MenuViewController.m */,
@@ -1169,7 +1194,6 @@
 				758A0F24198CF08300FB0F7C /* Sources */,
 				758A0F25198CF08300FB0F7C /* Frameworks */,
 				758A0F26198CF08300FB0F7C /* Resources */,
-				OBJCLEANCUSTOMRUNSCRIPTT /* Objective-Clean Run Script */,
 			);
 			buildRules = (
 			);
@@ -1293,6 +1317,7 @@
 				752CB2CF19968B4D001C5459 /* 0_title_rus.png in Resources */,
 				752CB2BC19968B4D001C5459 /* 6_popup_art.png in Resources */,
 				752CB2B919968B4D001C5459 /* 3_popup_art.png in Resources */,
+				7521395419C60B35002634A4 /* LogoViewController.xib in Resources */,
 				75C4C63119902C4B008E55F7 /* Characters in Resources */,
 				752CB2C519968B4D001C5459 /* 3_text_rus.png in Resources */,
 				752CB2CD19968B4D001C5459 /* 7_text_rus.png in Resources */,
@@ -1380,6 +1405,7 @@
 				758A0F84198CF63200FB0F7C /* menu_fon-568.png in Resources */,
 				758A0F91198CF63200FB0F7C /* menu_text_rus.png in Resources */,
 				758A0FCB198D07A300FB0F7C /* StyleSettings.plist in Resources */,
+				7521395919C60B4C002634A4 /* logo_rus.png in Resources */,
 				75B43C591998017A000BB491 /* make_a_card_banner_eng.png in Resources */,
 				758A0F8F198CF63200FB0F7C /* menu_rate_us_rus.png in Resources */,
 				756C860F1992BC1F00933ADD /* door_0.png in Resources */,
@@ -1387,6 +1413,7 @@
 				75B43C651998017A000BB491 /* make_a_card_text1_rus.png in Resources */,
 				752CB2D819968B4D001C5459 /* 5_title_eng.png in Resources */,
 				45F4083F19A850570074FC5F /* 40.png in Resources */,
+				7521395519C60B35002634A4 /* LogoViewController~ipad.xib in Resources */,
 				756C86131992BC1F00933ADD /* shadow_2.png in Resources */,
 				756C86111992BC1F00933ADD /* shadow_0.png in Resources */,
 				75B43C411997FAEC000BB491 /* card_caption_fon.png in Resources */,
@@ -1442,6 +1469,7 @@
 				758A0F87198CF63200FB0F7C /* menu_how_to_eng.png in Resources */,
 				7543E4CE19C23D27002004DD /* how_to_top_fon_rus-568.jpg in Resources */,
 				75B43C421997FAEC000BB491 /* card_caption_text1_eng.png in Resources */,
+				7521395819C60B4C002634A4 /* logo_eng.png in Resources */,
 				752CB2D219968B4D001C5459 /* 2_title_eng.png in Resources */,
 				752CB2C019968B4D001C5459 /* 1_text_eng.png in Resources */,
 			);
@@ -1455,23 +1483,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		OBJCLEANCUSTOMRUNSCRIPTT /* Objective-Clean Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Objective-Clean Run Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/bash;
-			shellScript = "if [[ -z ${SKIP_OBJCLEAN} || ${SKIP_OBJCLEAN} != 1 ]]; then\nif [[ -d \"${LOCAL_APPS_DIR}/Objective-Clean.app\" ]]; then \n\"${LOCAL_APPS_DIR}\"/Objective-Clean.app/Contents/Resources/ObjClean.app/Contents/MacOS/ObjClean \"${SRCROOT}\" \nelse\necho \"warning: You have to install and set up Objective-Clean to use its features!\" \nfi\nfi";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		758A0F24198CF08300FB0F7C /* Sources */ = {
@@ -1507,6 +1518,7 @@
 				758A0FC0198CFAFD00FB0F7C /* UIImage+Helps.m in Sources */,
 				754F4173198E874A00C13D07 /* NSDictionary+Helps.m in Sources */,
 				752CB122199684AC001C5459 /* PopUpParameters.m in Sources */,
+				7521395319C60B35002634A4 /* LogoViewController.m in Sources */,
 				758A0FCE198D0BE200FB0F7C /* WhoAreViewController.m in Sources */,
 				75443B8A19C5B2CE0004A4EE /* AdsManager.m in Sources */,
 				754F410E198E354400C13D07 /* GameViewController.m in Sources */,
