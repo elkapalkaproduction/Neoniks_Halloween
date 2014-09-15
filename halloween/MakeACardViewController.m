@@ -93,12 +93,12 @@
     MFMailComposeViewController *mailCont = [[MFMailComposeViewController alloc] init];
     mailCont.mailComposeDelegate = self;
     if (isRussian()) {
-        [mailCont setSubject:@"Открытка с Хэллоуином."];
-        [mailCont setMessageBody:@"Открытка, созданная в БЕСПЛАТНОМ приложении для iPad/iPhone “Неоники и Хэллоуин”.\n\nwww.neoniki.com" isHTML:NO];
+        [mailCont setSubject:@"Смешная открытка с Хэллоуином - специально для тебя"];
+        [mailCont setMessageBody:@"Смотри, какая смешная открытка у меня получилась! (это из бесплатного приложения 'Неоники и Хэллоуин' для iPad и iPhone).”.\n\nhttp://bit.ly/Halloween_RU" isHTML:NO];
         [mailCont addAttachmentData:myData mimeType:@"image/png" fileName:@"otkrytka_na_halloween.png"];
     } else {
-        [mailCont setSubject:@"Here’s a Halloween card for you"];
-        [mailCont setMessageBody:@"Check out this cool greeting card I created with the FREE iPad/iPhone app, Neoniks and Halloween!\n\nwww.neoniks.com" isHTML:NO];
+        [mailCont setSubject:@"My awesome Halloween card just for you!"];
+        [mailCont setMessageBody:@"Check out this cool greeting card I created with the FREE iPad/iPhone app, Neoniks and Halloween!\n\nhttp://bit.ly/Halloween_US" isHTML:NO];
         [mailCont addAttachmentData:myData mimeType:@"image/png" fileName:@"halloween_card.png"];
     }
     
