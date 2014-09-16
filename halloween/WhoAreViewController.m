@@ -37,7 +37,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [[ATConnect sharedConnection] engage:@"test_event" fromViewController:self];
+    [[ATConnect sharedConnection] engage:@"about_us_clicked" fromViewController:self];
 
 }
 
