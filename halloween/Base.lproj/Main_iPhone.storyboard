@@ -109,10 +109,10 @@
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_banner_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="kTu-93-n7E">
-                                <rect key="frame" x="119" y="0.0" width="330" height="74"/>
+                                <rect key="frame" x="102" y="0.0" width="365" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="74" id="bLL-6P-0XF"/>
-                                    <constraint firstAttribute="width" constant="330" id="lMY-at-JNU"/>
+                                    <constraint firstAttribute="height" constant="70" id="bLL-6P-0XF"/>
+                                    <constraint firstAttribute="width" constant="365" id="lMY-at-JNU"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0o-aq-8SP" userLabel="Button - menu_site">
@@ -193,7 +193,7 @@
                             <constraint firstItem="hCl-Uv-hda" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="NkP-eA-1hp"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="8zy-GT-PUa" secondAttribute="bottom" id="OUP-2G-OsO"/>
                             <constraint firstAttribute="centerX" secondItem="kTu-93-n7E" secondAttribute="centerX" id="P9N-hU-TPJ"/>
-                            <constraint firstItem="pIt-gi-Quq" firstAttribute="top" secondItem="kTu-93-n7E" secondAttribute="bottom" constant="8" id="YAF-93-IJg"/>
+                            <constraint firstItem="pIt-gi-Quq" firstAttribute="top" secondItem="kTu-93-n7E" secondAttribute="bottom" constant="12" id="YAF-93-IJg"/>
                             <constraint firstAttribute="trailing" secondItem="8zy-GT-PUa" secondAttribute="trailing" id="aVC-kU-bZn"/>
                             <constraint firstItem="kTu-93-n7E" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="cJ8-8J-ju2"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="nxg-Ck-KzD" secondAttribute="bottom" constant="10" id="eVO-6M-MbM"/>
@@ -236,10 +236,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="who_are_banner_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="JRi-C5-dFf">
-                                <rect key="frame" x="119" y="0.0" width="329" height="74"/>
+                                <rect key="frame" x="101" y="0.0" width="365" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="329" id="FVK-mJ-18L"/>
-                                    <constraint firstAttribute="height" constant="74" id="fiK-8v-4Sn"/>
+                                    <constraint firstAttribute="width" constant="365" id="FVK-mJ-18L"/>
+                                    <constraint firstAttribute="height" constant="70" id="fiK-8v-4Sn"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="who_are_text_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="PyY-G1-0o4">
@@ -308,12 +308,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="JRi-C5-dFf" firstAttribute="top" secondItem="87Q-xi-H8j" secondAttribute="top" id="0Zk-gY-SUd"/>
-                            <constraint firstItem="0nx-Tp-KtF" firstAttribute="top" secondItem="JRi-C5-dFf" secondAttribute="bottom" constant="64" id="1Js-Uv-gWp"/>
+                            <constraint firstItem="0nx-Tp-KtF" firstAttribute="top" secondItem="JRi-C5-dFf" secondAttribute="bottom" constant="68" id="1Js-Uv-gWp"/>
                             <constraint firstAttribute="trailing" secondItem="Bqr-rp-XLl" secondAttribute="trailing" constant="20" id="2mc-Bp-Dve"/>
                             <constraint firstItem="oDi-RC-Ibj" firstAttribute="top" secondItem="87Q-xi-H8j" secondAttribute="top" id="70V-sL-MhZ"/>
                             <constraint firstItem="PyY-G1-0o4" firstAttribute="leading" secondItem="87Q-xi-H8j" secondAttribute="leading" constant="38" id="8Q4-Ff-nY6"/>
                             <constraint firstItem="oDi-RC-Ibj" firstAttribute="leading" secondItem="87Q-xi-H8j" secondAttribute="leading" id="U2O-8m-Cph"/>
-                            <constraint firstItem="PyY-G1-0o4" firstAttribute="top" secondItem="JRi-C5-dFf" secondAttribute="bottom" constant="7" id="YtK-oA-Qpo"/>
+                            <constraint firstItem="PyY-G1-0o4" firstAttribute="top" secondItem="JRi-C5-dFf" secondAttribute="bottom" constant="11" id="YtK-oA-Qpo"/>
                             <constraint firstAttribute="centerX" secondItem="JRi-C5-dFf" secondAttribute="centerX" id="aFh-Yl-cUO"/>
                             <constraint firstItem="jiK-Ux-Jfy" firstAttribute="top" secondItem="oDi-RC-Ibj" secondAttribute="bottom" id="aVZ-ts-CPU"/>
                             <constraint firstItem="qpR-ng-8aa" firstAttribute="top" secondItem="PyY-G1-0o4" secondAttribute="bottom" constant="4" id="fCL-xJ-Bto"/>
@@ -339,7 +339,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVE-MJ-1XE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="749"/>
+            <point key="canvasLocation" x="132" y="700"/>
         </scene>
         <!--How To View Controller-->
         <scene sceneID="PfB-MS-CQP">
@@ -726,10 +726,10 @@
                                 </constraints>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="make_a_card_banner_eng.png" translatesAutoresizingMaskIntoConstraints="NO" id="uoj-kH-7hr">
-                                <rect key="frame" x="120" y="0.0" width="329" height="74"/>
+                                <rect key="frame" x="102" y="0.0" width="365" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="329" id="8qH-eF-XqZ"/>
-                                    <constraint firstAttribute="height" constant="74" id="EyI-uh-0BC"/>
+                                    <constraint firstAttribute="width" constant="365" id="8qH-eF-XqZ"/>
+                                    <constraint firstAttribute="height" constant="70" id="EyI-uh-0BC"/>
                                 </constraints>
                             </imageView>
                         </subviews>
