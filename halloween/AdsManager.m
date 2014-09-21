@@ -7,15 +7,17 @@
 //
 
 #import "AdsManager.h"
+#import "SoundPlayer.h"
 #import "GAI.h"
 #import "GAIDictionaryBuilder.h"
 #import "GAIFields.h"
+#ifdef FreeVersion
 #import <AdColony/AdColony.h>
 #import "ALSdk.h"
 #import "ALInterstitialAd.h"
 #import <Chartboost/Chartboost.h>
 #import "ATConnect.h"
-#import "SoundPlayer.h"
+#endif
 
 NSString *const EVENT_MAIN_LANGUAGE_CHANGE = @"EVENT_MAIN_LANGUAGE_CHANGE";
 NSString *const EVENT_MAIN_NEONIKS_CLICKED = @"EVENT_MAIN_NEONIKS_CLICKED";
@@ -47,7 +49,11 @@ NSString *const CHARTBOOST_APP_SIGNATURE = @"9b0b9236c73d16956b68b0b375f2b0accd7
 
 NSString *const APPTENTIVE_API_KEY = @"dd73ae21b91b262e13ab7d70efe5de74243051ab35ee535e75c4e744de176baa";
 
-@interface AdsManager () <AdColonyDelegate, AdColonyAdDelegate, ChartboostDelegate>
+
+@interface AdsManager ()
+#ifdef FreeVersion
+<AdColonyDelegate, AdColonyAdDelegate, ChartboostDelegate>
+#endif
 
 @property (assign, nonatomic) BOOL isPlayingMusic;
 
@@ -72,7 +78,7 @@ NSString *const APPTENTIVE_API_KEY = @"dd73ae21b91b262e13ab7d70efe5de74243051ab3
     [GAI sharedInstance].dispatchInterval = 20;
     [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelNone];
     [[GAI sharedInstance] trackerWithTrackingId:GOOGLE_ANALITYCS_TRACKING_ID];
-    
+#ifdef FreeVersion
     [AdColony configureWithAppID:AD_COLONY_APP_ID
                          zoneIDs:@[AD_COLONY_START_ZONE_ID, AD_COLONY_MINUTES_ZONE_ID]
                         delegate:self
@@ -83,6 +89,7 @@ NSString *const APPTENTIVE_API_KEY = @"dd73ae21b91b262e13ab7d70efe5de74243051ab3
                       delegate:self];
     
     [ATConnect sharedConnection].apiKey = APPTENTIVE_API_KEY;
+#endif
 }
 
 
@@ -106,12 +113,14 @@ NSString *const APPTENTIVE_API_KEY = @"dd73ae21b91b262e13ab7d70efe5de74243051ab3
 
 
 - (void)playVideosWithZone:(NSString *)zone {
+#ifdef FreeVersion
     if ([AdColony zoneStatusForZone:zone] == ADCOLONY_ZONE_STATUS_ACTIVE && (NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_7_1)) {
         [AdColony playVideoAdForZone:zone withDelegate:self];
     } else {
         [ALInterstitialAd show];
         [Chartboost showInterstitial:CBLocationHomeScreen];
     }
+#endif
 }
 
 
