@@ -16,6 +16,7 @@
 #import "DeviceUtils.h"
 #import "StoryboardUtils.h"
 #import "NSDictionary+Helps.h"
+#import "DeepLinks.h"
 
 extern NSString *const halloweenAppID;
 extern NSString *const bookAppID;

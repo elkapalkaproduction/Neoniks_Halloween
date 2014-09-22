@@ -52,8 +52,13 @@
 - (void)goToRead {
     [[AdsManager sharedManager] logEvent:EVENT_WHO_ARE_READ_BOOK];
     [[SoundPlayer sharedPlayer] playClick];
-    NSURL *bookUrl = [NSURL openStoreToAppWithID:bookAppID];
-    [[UIApplication sharedApplication] openURL:bookUrl];
+    NSURL *bookAppUrl = [NSURL URLWithString:NeoniksBookLink];
+    if ([[UIApplication sharedApplication] canOpenURL:bookAppUrl]) {
+        [[UIApplication sharedApplication] openURL:bookAppUrl];
+    } else {
+        NSURL *bookUrl = [NSURL openStoreToAppWithID:bookAppID];
+        [[UIApplication sharedApplication] openURL:bookUrl];
+    }
 }
 
 

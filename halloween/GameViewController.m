@@ -312,8 +312,13 @@ NSString *const GameDefaultExtension = @"plist";
 
 - (void)readTheBook {
     [[AdsManager sharedManager] logEvent:EVENT_PLAY_QUESTION_READ_BOOK];
-    NSURL *bookUrl = [NSURL openStoreToAppWithID:bookAppID];
-    [[UIApplication sharedApplication] openURL:bookUrl];
+    NSURL *bookAppUrl = [NSURL URLWithString:NeoniksBookLink];
+    if ([[UIApplication sharedApplication] canOpenURL:bookAppUrl]) {
+        [[UIApplication sharedApplication] openURL:bookAppUrl];
+    } else {
+        NSURL *bookUrl = [NSURL openStoreToAppWithID:bookAppID];
+        [[UIApplication sharedApplication] openURL:bookUrl];
+    }
 }
 
 
