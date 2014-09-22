@@ -221,6 +221,7 @@ NSString *const GameDefaultExtension = @"plist";
             break;
         case AlertViewMessageQuit:
             [[AdsManager sharedManager]logEvent:EVENT_PLAY_RETURN_TO_MENU];
+            [self cleanAllResources];
             [self dismissViewControllerAnimated:YES completion:NULL];
             break;
         default:
@@ -370,13 +371,18 @@ NSString *const GameDefaultExtension = @"plist";
 }
 
 
-- (void)createNewGame {
+- (void)cleanAllResources {
     for (StatedObject *object in self.allObjects) {
         [object cleanResources];
     }
     if (self.currentObject) {
         [self.currentObject cleanResources];
     }
+}
+
+
+- (void)createNewGame {
+    [self cleanAllResources];
     [self setupInitialView];
     for (DoorView *currentDoor in self.doors) {
         currentDoor.questionState = NO;

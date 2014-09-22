@@ -113,6 +113,7 @@
     [[SoundPlayer sharedPlayer] playClick];
     UIImage *image = [self captureScreenInRect:self.cardView.bounds];
     MFMailComposeViewController *mailCont = [self createMailFromImage:image];
+    if (mailCont) 
     [self presentViewController:mailCont animated:YES completion:NULL];
 }
 
