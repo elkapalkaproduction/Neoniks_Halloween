@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NNKParentAlertView"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="4" customClass="NNKParentAlertView">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" image="DimScreen.png" translatesAutoresizingMaskIntoConstraints="NO" id="35">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="37">
+                    <rect key="frame" x="314" y="0.0" width="396" height="319"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="CustomPopView.png" translatesAutoresizingMaskIntoConstraints="NO" id="8">
+                            <rect key="frame" x="0.0" y="0.0" width="396" height="319"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        </imageView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Five Thousand Seven Hundred Twenty-Five" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" minimumFontSize="10" preferredMaxLayoutWidth="277" translatesAutoresizingMaskIntoConstraints="NO" id="6">
+                            <rect key="frame" x="60" y="101" width="277" height="48"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" minimumFontSize="10" preferredMaxLayoutWidth="240" translatesAutoresizingMaskIntoConstraints="NO" id="7">
+                            <rect key="frame" x="78" y="40" width="240" height="41"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <string key="text">Grown-ups Only!
+Enter this number numerically:</string>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5">
+                            <rect key="frame" x="40" y="229" width="316" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="12">
+                                    <rect key="frame" x="169" y="0.0" width="125" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="125" id="Ca6-AI-lQk"/>
+                                        <constraint firstAttribute="height" constant="40" id="wB4-Rp-he7"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <state key="normal" title="OK" backgroundImage="AlertActionButton.png">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="14">
+                                    <rect key="frame" x="22" y="0.0" width="125" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="onG-Ug-LaL"/>
+                                        <constraint firstAttribute="width" constant="125" id="xWE-KX-eI2"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <state key="normal" title="Cancel" backgroundImage="AlertButtonCancelDown.png">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="12" firstAttribute="top" secondItem="5" secondAttribute="top" id="3ml-Lx-TGf"/>
+                                <constraint firstItem="14" firstAttribute="top" secondItem="5" secondAttribute="top" id="HWF-eN-bCS"/>
+                                <constraint firstItem="12" firstAttribute="leading" secondItem="14" secondAttribute="trailing" constant="22" id="bir-Cq-n0V"/>
+                                <constraint firstItem="14" firstAttribute="leading" secondItem="5" secondAttribute="leading" constant="22" id="gfV-t8-sE7"/>
+                                <constraint firstAttribute="bottom" secondItem="14" secondAttribute="bottom" id="hSI-AJ-afE"/>
+                                <constraint firstAttribute="trailing" secondItem="12" secondAttribute="trailing" constant="22" id="kYK-vc-iZ1"/>
+                                <constraint firstAttribute="bottom" secondItem="12" secondAttribute="bottom" id="n38-81-VgR"/>
+                                <constraint firstItem="12" firstAttribute="leading" secondItem="14" secondAttribute="trailing" constant="22" id="rb9-PC-0wL"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="81">
+                            <rect key="frame" x="40" y="169" width="316" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="6" firstAttribute="top" secondItem="7" secondAttribute="bottom" constant="20" id="5A6-L3-hFj"/>
+                        <constraint firstItem="8" firstAttribute="top" secondItem="37" secondAttribute="top" id="64G-l6-S1E"/>
+                        <constraint firstAttribute="bottom" secondItem="8" secondAttribute="bottom" id="915-Dj-uOL"/>
+                        <constraint firstAttribute="bottom" secondItem="5" secondAttribute="bottom" constant="50" id="9Ez-33-v7P"/>
+                        <constraint firstItem="5" firstAttribute="top" secondItem="81" secondAttribute="bottom" constant="30" id="BVR-wl-GSR"/>
+                        <constraint firstItem="81" firstAttribute="top" secondItem="6" secondAttribute="bottom" constant="20" id="CIE-E8-KPI"/>
+                        <constraint firstItem="7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="37" secondAttribute="leading" constant="40" id="DHf-um-Qgd"/>
+                        <constraint firstAttribute="trailing" secondItem="81" secondAttribute="trailing" constant="40" id="FC1-2o-UOC"/>
+                        <constraint firstItem="6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="37" secondAttribute="leading" constant="40" id="PYI-Zj-bRo"/>
+                        <constraint firstAttribute="trailing" secondItem="8" secondAttribute="trailing" id="Pf7-Q1-kDX"/>
+                        <constraint firstItem="7" firstAttribute="top" secondItem="37" secondAttribute="top" constant="40" id="RWL-E8-SuY"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="7" secondAttribute="trailing" constant="40" id="UY3-kH-OJB"/>
+                        <constraint firstItem="81" firstAttribute="leading" secondItem="37" secondAttribute="leading" constant="40" id="VG5-1T-dyM"/>
+                        <constraint firstAttribute="trailing" secondItem="5" secondAttribute="trailing" constant="40" id="YP7-sD-I2T"/>
+                        <constraint firstItem="8" firstAttribute="leading" secondItem="37" secondAttribute="leading" id="hCi-Q5-C12"/>
+                        <constraint firstAttribute="centerX" secondItem="6" secondAttribute="centerX" id="iGq-Fk-s0U"/>
+                        <constraint firstAttribute="centerX" secondItem="7" secondAttribute="centerX" id="jkb-cq-EwF"/>
+                        <constraint firstItem="5" firstAttribute="leading" secondItem="37" secondAttribute="leading" constant="40" id="kdQ-6d-8UW"/>
+                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="6" secondAttribute="trailing" constant="40" id="lkW-Y3-gGD"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="37" firstAttribute="top" secondItem="4" secondAttribute="top" id="2vJ-Zo-Pjk"/>
+                <constraint firstAttribute="bottom" secondItem="35" secondAttribute="bottom" id="4hN-Ek-5TR"/>
+                <constraint firstAttribute="centerX" secondItem="37" secondAttribute="centerX" id="AzE-gi-8qG"/>
+                <constraint firstAttribute="trailing" secondItem="35" secondAttribute="trailing" id="rn7-3d-RwF"/>
+                <constraint firstItem="35" firstAttribute="top" secondItem="4" secondAttribute="top" id="tRH-TT-9fs"/>
+                <constraint firstItem="35" firstAttribute="leading" secondItem="4" secondAttribute="leading" id="y6U-wh-svI"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="alertAction" destination="12" id="26"/>
+                <outlet property="alertCancel" destination="14" id="29"/>
+                <outlet property="alertDetailText" destination="6" id="33"/>
+                <outlet property="alertText" destination="7" id="akS-dO-0Ff"/>
+                <outlet property="customPop" destination="37" id="38"/>
+                <outlet property="textField" destination="81" id="83"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="AlertActionButton.png" width="125" height="40"/>
+        <image name="AlertButtonCancelDown.png" width="125" height="40"/>
+        <image name="CustomPopView.png" width="320" height="200"/>
+        <image name="DimScreen.png" width="640" height="960"/>
+    </resources>
+</document>

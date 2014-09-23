@@ -20,6 +20,10 @@
 #import "NNKAlertView.h"
 #import "AdsManager.h"
 
+#ifndef FreeVersion
+#import "NNKParentAlertView.h"
+#endif
+
 NSString *const GameDefaultObjects = @"GameDefaultObjects";
 NSString *const GameDefaultExtension = @"plist";
 
@@ -61,7 +65,15 @@ NSString *const GameDefaultExtension = @"plist";
 - (IBAction)goToSite:(id)sender {
     [[SoundPlayer sharedPlayer] playClick];
     NSURL *bookUrl = [NSURL urlForSite];
+#ifdef FreeVersion
     [[UIApplication sharedApplication] openURL:bookUrl];
+#else
+    NNKParentAlertView *alertView = [[NNKParentAlertView alloc] initCustomPopWithFrame:self.view.frame
+                                                                       completionBlock:^{
+                                                                           [[UIApplication sharedApplication] openURL:bookUrl];
+                                                                    }];
+    [alertView showInView:self.view];
+#endif
 }
 
 
@@ -310,8 +322,7 @@ NSString *const GameDefaultExtension = @"plist";
 }
 
 
-- (void)readTheBook {
-    [[AdsManager sharedManager] logEvent:EVENT_PLAY_QUESTION_READ_BOOK];
+- (void)readTheBookParentGate {
     NSURL *bookAppUrl = [NSURL URLWithString:NeoniksBookLink];
     if ([[UIApplication sharedApplication] canOpenURL:bookAppUrl]) {
         [[UIApplication sharedApplication] openURL:bookAppUrl];
@@ -319,6 +330,19 @@ NSString *const GameDefaultExtension = @"plist";
         NSURL *bookUrl = [NSURL openStoreToAppWithID:bookAppID];
         [[UIApplication sharedApplication] openURL:bookUrl];
     }
+}
+
+- (void)readTheBook {
+    [[AdsManager sharedManager] logEvent:EVENT_PLAY_QUESTION_READ_BOOK];
+#ifdef FreeVersion
+    [self readTheBookParentGate];
+#else
+    NNKParentAlertView *alertView = [[NNKParentAlertView alloc] initCustomPopWithFrame:self.view.frame
+                                                                       completionBlock:^{
+                                                                           [self readTheBookParentGate];
+                                                                       }];
+    [alertView showInView:self.view];
+#endif
 }
 
 

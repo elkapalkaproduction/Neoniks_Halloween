@@ -10,6 +10,10 @@
 #import "Utils.h"
 #import "AdsManager.h"
 
+#ifndef FreeVersion
+#import "NNKParentAlertView.h"
+#endif
+
 NSString *const halloweenAppID = @"918984559";
 NSString *const bookAppID = @"899196882";
 
@@ -87,7 +91,15 @@ NSString *const bookAppID = @"899196882";
 - (void)goToRateUs {
     [[SoundPlayer sharedPlayer] playClick];
     NSURL *bookUrl = [NSURL openStoreToAppWithID:halloweenAppID];
+#ifdef FreeVersion
     [[UIApplication sharedApplication] openURL:bookUrl];
+#else
+    NNKParentAlertView *alertView = [[NNKParentAlertView alloc] initCustomPopWithFrame:self.view.frame
+                                                                       completionBlock:^{
+                                                                           [[UIApplication sharedApplication] openURL:bookUrl];
+                                                                       }];
+    [alertView showInView:self.view];
+#endif
 }
 
 
@@ -102,7 +114,15 @@ NSString *const bookAppID = @"899196882";
 - (void)goToSite {
     [[SoundPlayer sharedPlayer] playClick];
     NSURL *bookUrl = [NSURL urlForSite];
+#ifdef FreeVersion
     [[UIApplication sharedApplication] openURL:bookUrl];
+#else
+    NNKParentAlertView *alertView = [[NNKParentAlertView alloc] initCustomPopWithFrame:self.view.frame
+                                                                       completionBlock:^{
+                                                                           [[UIApplication sharedApplication] openURL:bookUrl];
+                                                                       }];
+    [alertView showInView:self.view];
+#endif
 }
 
 

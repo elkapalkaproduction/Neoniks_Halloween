@@ -13,6 +13,11 @@
 #import "AdsManager.h"
 #import "ATConnect.h"
 
+#ifndef FreeVersion
+#import "NNKParentAlertView.h"
+#endif
+
+
 @interface MakeACardViewController () <MFMailComposeViewControllerDelegate, CaptionsDelegate>
 
 @property (strong, nonatomic) IBOutlet UIImageView *cardImageView;
@@ -85,7 +90,15 @@
 - (void)goToSite {
     [[SoundPlayer sharedPlayer] playClick];
     NSURL *siteUrl = [NSURL urlForSite];
+#ifdef FreeVersion
     [[UIApplication sharedApplication] openURL:siteUrl];
+#else
+    NNKParentAlertView *alertView = [[NNKParentAlertView alloc] initCustomPopWithFrame:self.view.frame
+                                                                       completionBlock:^{
+                                                                           [[UIApplication sharedApplication] openURL:siteUrl];
+                                                                       }];
+    [alertView showInView:self.view];
+#endif
 }
 
 
@@ -113,8 +126,16 @@
     [[SoundPlayer sharedPlayer] playClick];
     UIImage *image = [self captureScreenInRect:self.cardView.bounds];
     MFMailComposeViewController *mailCont = [self createMailFromImage:image];
-    if (mailCont) 
+    if (!mailCont) return;
+#ifdef FreeVersion
     [self presentViewController:mailCont animated:YES completion:NULL];
+#else
+    NNKParentAlertView *alertView = [[NNKParentAlertView alloc] initCustomPopWithFrame:self.view.frame
+                                                                       completionBlock:^{
+                                                                           [self presentViewController:mailCont animated:YES completion:NULL];
+                                                                       }];
+    [alertView showInView:self.view];
+#endif
 }
 
 

@@ -215,6 +215,15 @@
 		75B3B63619D2066D000B1659 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B3B53619D2066C000B1659 /* FacebookSDK.framework */; };
 		75B3B64F19D2066D000B1659 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 75B3B56319D2066D000B1659 /* LICENSE */; };
 		75B3B65019D2066D000B1659 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 75B3B56419D2066D000B1659 /* README.txt */; };
+		75B3B6F319D20A7D000B1659 /* AlertActionButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B3B6E919D20A7D000B1659 /* AlertActionButton@2x.png */; };
+		75B3B6F419D20A7D000B1659 /* AlertActionButtonDown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B3B6EA19D20A7D000B1659 /* AlertActionButtonDown@2x.png */; };
+		75B3B6F519D20A7D000B1659 /* AlertButtonCancel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B3B6EB19D20A7D000B1659 /* AlertButtonCancel@2x.png */; };
+		75B3B6F619D20A7D000B1659 /* AlertButtonCancelDown@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B3B6EC19D20A7D000B1659 /* AlertButtonCancelDown@2x.png */; };
+		75B3B6F719D20A7D000B1659 /* CustomPopView@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B3B6ED19D20A7D000B1659 /* CustomPopView@2x.png */; };
+		75B3B6F819D20A7D000B1659 /* DimScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B3B6EE19D20A7D000B1659 /* DimScreen.png */; };
+		75B3B6F919D20A7D000B1659 /* NNKParentAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B3B6F019D20A7D000B1659 /* NNKParentAlertView.m */; };
+		75B3B6FA19D20A7D000B1659 /* NNKParentAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75B3B6F119D20A7D000B1659 /* NNKParentAlertView.xib */; };
+		75B3B6FB19D20A7D000B1659 /* NNKParentAlertView~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75B3B6F219D20A7D000B1659 /* NNKParentAlertView~ipad.xib */; };
 		75B43C151997B246000BB491 /* game_make_eng.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B43C0F1997B246000BB491 /* game_make_eng.png */; };
 		75B43C161997B246000BB491 /* game_make_rus.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B43C101997B246000BB491 /* game_make_rus.png */; };
 		75B43C171997B246000BB491 /* game_new_game_eng.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B43C111997B246000BB491 /* game_new_game_eng.png */; };
@@ -820,6 +829,16 @@
 		75B3B53619D2066C000B1659 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		75B3B56319D2066D000B1659 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		75B3B56419D2066D000B1659 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		75B3B6E919D20A7D000B1659 /* AlertActionButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlertActionButton@2x.png"; sourceTree = "<group>"; };
+		75B3B6EA19D20A7D000B1659 /* AlertActionButtonDown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlertActionButtonDown@2x.png"; sourceTree = "<group>"; };
+		75B3B6EB19D20A7D000B1659 /* AlertButtonCancel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlertButtonCancel@2x.png"; sourceTree = "<group>"; };
+		75B3B6EC19D20A7D000B1659 /* AlertButtonCancelDown@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlertButtonCancelDown@2x.png"; sourceTree = "<group>"; };
+		75B3B6ED19D20A7D000B1659 /* CustomPopView@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CustomPopView@2x.png"; sourceTree = "<group>"; };
+		75B3B6EE19D20A7D000B1659 /* DimScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DimScreen.png; sourceTree = "<group>"; };
+		75B3B6EF19D20A7D000B1659 /* NNKParentAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNKParentAlertView.h; sourceTree = "<group>"; };
+		75B3B6F019D20A7D000B1659 /* NNKParentAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNKParentAlertView.m; sourceTree = "<group>"; };
+		75B3B6F119D20A7D000B1659 /* NNKParentAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NNKParentAlertView.xib; sourceTree = "<group>"; };
+		75B3B6F219D20A7D000B1659 /* NNKParentAlertView~ipad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "NNKParentAlertView~ipad.xib"; sourceTree = "<group>"; };
 		75B43C0F1997B246000BB491 /* game_make_eng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game_make_eng.png; sourceTree = "<group>"; };
 		75B43C101997B246000BB491 /* game_make_rus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game_make_rus.png; sourceTree = "<group>"; };
 		75B43C111997B246000BB491 /* game_new_game_eng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game_new_game_eng.png; sourceTree = "<group>"; };
@@ -1244,6 +1263,7 @@
 				758A0F3B198CF08300FB0F7C /* AppDelegate.m */,
 				758A0F3D198CF08300FB0F7C /* Main_iPhone.storyboard */,
 				758A0F40198CF08300FB0F7C /* Main_iPad.storyboard */,
+				75B3B6E819D20A7D000B1659 /* CustomAlertView */,
 				7521394E19C60B35002634A4 /* LogoViewController */,
 				752CB123199684B1001C5459 /* PopUp */,
 				758A0F43198CF08300FB0F7C /* MenuViewController.h */,
@@ -1462,6 +1482,23 @@
 				75B3B56419D2066D000B1659 /* README.txt */,
 			);
 			path = FacebookSDK;
+			sourceTree = "<group>";
+		};
+		75B3B6E819D20A7D000B1659 /* CustomAlertView */ = {
+			isa = PBXGroup;
+			children = (
+				75B3B6E919D20A7D000B1659 /* AlertActionButton@2x.png */,
+				75B3B6EA19D20A7D000B1659 /* AlertActionButtonDown@2x.png */,
+				75B3B6EB19D20A7D000B1659 /* AlertButtonCancel@2x.png */,
+				75B3B6EC19D20A7D000B1659 /* AlertButtonCancelDown@2x.png */,
+				75B3B6ED19D20A7D000B1659 /* CustomPopView@2x.png */,
+				75B3B6EE19D20A7D000B1659 /* DimScreen.png */,
+				75B3B6EF19D20A7D000B1659 /* NNKParentAlertView.h */,
+				75B3B6F019D20A7D000B1659 /* NNKParentAlertView.m */,
+				75B3B6F119D20A7D000B1659 /* NNKParentAlertView.xib */,
+				75B3B6F219D20A7D000B1659 /* NNKParentAlertView~ipad.xib */,
+			);
+			path = CustomAlertView;
 			sourceTree = "<group>";
 		};
 		75B43C371997FAEC000BB491 /* card_caption_images */ = {
@@ -1808,8 +1845,10 @@
 				75F87DF719CF683300331D5A /* 3_popup_art.png in Resources */,
 				75F87DF819CF683300331D5A /* LogoViewController.xib in Resources */,
 				75F87DF919CF683300331D5A /* Characters in Resources */,
+				75B3B6FA19D20A7D000B1659 /* NNKParentAlertView.xib in Resources */,
 				75F87DFA19CF683300331D5A /* 3_text_rus.png in Resources */,
 				75F87DFB19CF683300331D5A /* 7_text_rus.png in Resources */,
+				75B3B6F519D20A7D000B1659 /* AlertButtonCancel@2x.png in Resources */,
 				75F87DFC19CF683300331D5A /* menu_fon.png in Resources */,
 				75F87DFD19CF683300331D5A /* make_a_card_captions_rus.png in Resources */,
 				75F87DFE19CF683300331D5A /* menu_how_to_rus.png in Resources */,
@@ -1826,6 +1865,8 @@
 				75F87E0919CF683300331D5A /* game_return_eng.png in Resources */,
 				75F87E0A19CF683300331D5A /* card_caption_text3_rus.png in Resources */,
 				75F87E0B19CF683300331D5A /* alert_message_0_rus.png in Resources */,
+				75B3B6F819D20A7D000B1659 /* DimScreen.png in Resources */,
+				75B3B6FB19D20A7D000B1659 /* NNKParentAlertView~ipad.xib in Resources */,
 				75F87E0C19CF683300331D5A /* ipad_pop_up_fon.png in Resources */,
 				75F87E0D19CF683300331D5A /* 5_popup_art.png in Resources */,
 				75F87E0E19CF683300331D5A /* cross.png in Resources */,
@@ -1839,6 +1880,7 @@
 				75F87E1619CF683300331D5A /* who_are_feedback_rus.png in Resources */,
 				75F87E1719CF683300331D5A /* sounds in Resources */,
 				75F87E1819CF683300331D5A /* make_a_card_text3_eng.png in Resources */,
+				75B3B6F719D20A7D000B1659 /* CustomPopView@2x.png in Resources */,
 				75F87E1919CF683300331D5A /* 58.png in Resources */,
 				75F87E1A19CF683300331D5A /* card_caption_text3_eng.png in Resources */,
 				75F87E1B19CF683300331D5A /* 80.png in Resources */,
@@ -1903,6 +1945,7 @@
 				75F87E5619CF683300331D5A /* 5_title_eng.png in Resources */,
 				75F87E5719CF683300331D5A /* 40.png in Resources */,
 				75F87E5819CF683300331D5A /* LogoViewController~ipad.xib in Resources */,
+				75B3B6F619D20A7D000B1659 /* AlertButtonCancelDown@2x.png in Resources */,
 				75F87E5919CF683300331D5A /* shadow_2.png in Resources */,
 				75F87E5A19CF683300331D5A /* shadow_0.png in Resources */,
 				75F87E5B19CF683300331D5A /* card_caption_fon.png in Resources */,
@@ -1932,6 +1975,7 @@
 				75F87E7319CF683300331D5A /* game_make_icon.png in Resources */,
 				75F87E7419CF683300331D5A /* menu_site_eng.png in Resources */,
 				75F87E7519CF683300331D5A /* 7_title_rus.png in Resources */,
+				75B3B6F419D20A7D000B1659 /* AlertActionButtonDown@2x.png in Resources */,
 				75F87E7619CF683300331D5A /* 1_text_rus.png in Resources */,
 				75F87E7719CF683300331D5A /* make_a_card_captions_eng.png in Resources */,
 				75F87E7819CF683300331D5A /* menu_who_are_eng.png in Resources */,
@@ -1960,6 +2004,7 @@
 				75F87E8F19CF683300331D5A /* card_caption_text1_eng.png in Resources */,
 				75F87E9019CF683300331D5A /* logo_eng.png in Resources */,
 				75F87E9119CF683300331D5A /* 2_title_eng.png in Resources */,
+				75B3B6F319D20A7D000B1659 /* AlertActionButton@2x.png in Resources */,
 				75F87E9219CF683300331D5A /* 1_text_eng.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2026,6 +2071,7 @@
 				75F87DA819CF683300331D5A /* MenuViewController.m in Sources */,
 				75F87DA919CF683300331D5A /* AppDelegate.m in Sources */,
 				75F87DAA19CF683300331D5A /* PositionUtils.m in Sources */,
+				75B3B6F919D20A7D000B1659 /* NNKParentAlertView.m in Sources */,
 				75F87DAB19CF683300331D5A /* DeviceUtils.m in Sources */,
 				75F87DAC19CF683300331D5A /* NNKObjectAction.m in Sources */,
 				75F87DAD19CF683300331D5A /* DoorView.m in Sources */,

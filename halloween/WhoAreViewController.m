@@ -12,6 +12,10 @@
 #import "AdsManager.h"
 #import "ATConnect.h"
 
+#ifndef FreeVersion
+#import "NNKParentAlertView.h"
+#endif
+
 @interface WhoAreViewController () <MFMailComposeViewControllerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIImageView *backgroundImage;
@@ -45,13 +49,33 @@
 - (void)goToSite {
     [[SoundPlayer sharedPlayer] playClick];
     NSURL *bookUrl = [NSURL urlForSite];
+#ifdef FreeVersion
     [[UIApplication sharedApplication] openURL:bookUrl];
+#else
+    NNKParentAlertView *alertView = [[NNKParentAlertView alloc] initCustomPopWithFrame:self.view.frame
+                                                                       completionBlock:^{
+                                                                           [[UIApplication sharedApplication] openURL:bookUrl];
+                                                                       }];
+    [alertView showInView:self.view];
+#endif
 }
 
 
 - (void)goToRead {
     [[AdsManager sharedManager] logEvent:EVENT_WHO_ARE_READ_BOOK];
     [[SoundPlayer sharedPlayer] playClick];
+#ifdef FreeVersion
+    [self readTheBookParentGate];
+#else
+    NNKParentAlertView *alertView = [[NNKParentAlertView alloc] initCustomPopWithFrame:self.view.frame
+                                                                       completionBlock:^{
+                                                                           [self readTheBookParentGate];
+                                                                       }];
+    [alertView showInView:self.view];
+#endif
+}
+
+- (void)readTheBookParentGate {
     NSURL *bookAppUrl = [NSURL URLWithString:NeoniksBookLink];
     if ([[UIApplication sharedApplication] canOpenURL:bookAppUrl]) {
         [[UIApplication sharedApplication] openURL:bookAppUrl];
@@ -61,10 +85,13 @@
     }
 }
 
+- (void)readTheBook {
+    [[AdsManager sharedManager] logEvent:EVENT_PLAY_QUESTION_READ_BOOK];
+}
 
-- (void)goToFeedback {
-    [[AdsManager sharedManager] logEvent:EVENT_WHO_ARE_FEEDBACK];
-    [[SoundPlayer sharedPlayer] playClick];
+
+
+- (void)feedbackParentGate {
     if ([MFMailComposeViewController canSendMail]) {
         MFMailComposeViewController *mailCont = [self createMailCompose];
         [self presentViewController:mailCont animated:YES completion:NULL];
@@ -72,6 +99,20 @@
         NSURL *bookUrl = [NSURL openStoreToAppWithID:halloweenAppID];
         [[UIApplication sharedApplication] openURL:bookUrl];
     }
+}
+
+- (void)goToFeedback {
+    [[AdsManager sharedManager] logEvent:EVENT_WHO_ARE_FEEDBACK];
+    [[SoundPlayer sharedPlayer] playClick];
+#ifdef FreeVersion
+    [self feedbackParentGate];
+#else
+    NNKParentAlertView *alertView = [[NNKParentAlertView alloc] initCustomPopWithFrame:self.view.frame
+                                                                       completionBlock:^{
+                                                                           [self feedbackParentGate];
+                                                                       }];
+    [alertView showInView:self.view];
+#endif
 }
 
 
