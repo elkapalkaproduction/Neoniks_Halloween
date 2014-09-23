@@ -17,6 +17,8 @@
 #import "ALInterstitialAd.h"
 #import <Chartboost/Chartboost.h>
 #import "ATConnect.h"
+#import <MobileAppTracker/MobileAppTracker.h>
+#import <AdSupport/AdSupport.h>
 #endif
 
 NSString *const EVENT_MAIN_LANGUAGE_CHANGE = @"EVENT_MAIN_LANGUAGE_CHANGE";
@@ -89,6 +91,10 @@ NSString *const APPTENTIVE_API_KEY = @"dd73ae21b91b262e13ab7d70efe5de74243051ab3
                       delegate:self];
     
     [ATConnect sharedConnection].apiKey = APPTENTIVE_API_KEY;
+    [MobileAppTracker initializeWithMATAdvertiserId:@"20460"
+                                   MATConversionKey:@"e76deeecd77756a4861d9a10389124c7"];
+    [MobileAppTracker setAppleAdvertisingIdentifier:[[ASIdentifierManager sharedManager] advertisingIdentifier]
+                         advertisingTrackingEnabled:[[ASIdentifierManager sharedManager] isAdvertisingTrackingEnabled]];
 #endif
 }
 
@@ -136,5 +142,18 @@ NSString *const APPTENTIVE_API_KEY = @"dd73ae21b91b262e13ab7d70efe5de74243051ab3
     }
 }
 
+
+- (void)matDidBecomeActive {
+#ifdef NeoniksFree
+    [MobileAppTracker measureSession];
+#endif
+}
+
+
+- (void)matOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication {
+#ifdef NeoniksFree
+    [MobileAppTracker applicationDidOpenURL:[url absoluteString] sourceApplication:sourceApplication];
+#endif
+}
 
 @end

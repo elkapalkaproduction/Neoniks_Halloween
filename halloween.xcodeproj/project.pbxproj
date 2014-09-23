@@ -211,6 +211,10 @@
 		75ABADD319AA101B0021007E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 75ABADD219AA101B0021007E /* README.md */; };
 		75B0BA1E19B7A1C700E4DBEA /* PumpkinObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B0BA1D19B7A1C700E4DBEA /* PumpkinObject.m */; };
 		75B0BA2119B7A3B800E4DBEA /* NNKObjectParametersHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 75B0BA2019B7A3B800E4DBEA /* NNKObjectParametersHelper.m */; };
+		75B3B53219D2047F000B1659 /* MobileAppTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B3B53119D2047F000B1659 /* MobileAppTracker.framework */; };
+		75B3B63619D2066D000B1659 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75B3B53619D2066C000B1659 /* FacebookSDK.framework */; };
+		75B3B64F19D2066D000B1659 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 75B3B56319D2066D000B1659 /* LICENSE */; };
+		75B3B65019D2066D000B1659 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 75B3B56419D2066D000B1659 /* README.txt */; };
 		75B43C151997B246000BB491 /* game_make_eng.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B43C0F1997B246000BB491 /* game_make_eng.png */; };
 		75B43C161997B246000BB491 /* game_make_rus.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B43C101997B246000BB491 /* game_make_rus.png */; };
 		75B43C171997B246000BB491 /* game_new_game_eng.png in Resources */ = {isa = PBXBuildFile; fileRef = 75B43C111997B246000BB491 /* game_new_game_eng.png */; };
@@ -812,6 +816,10 @@
 		75B0BA1D19B7A1C700E4DBEA /* PumpkinObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PumpkinObject.m; sourceTree = "<group>"; };
 		75B0BA1F19B7A3B800E4DBEA /* NNKObjectParametersHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NNKObjectParametersHelper.h; sourceTree = "<group>"; };
 		75B0BA2019B7A3B800E4DBEA /* NNKObjectParametersHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NNKObjectParametersHelper.m; sourceTree = "<group>"; };
+		75B3B53119D2047F000B1659 /* MobileAppTracker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileAppTracker.framework; sourceTree = "<group>"; };
+		75B3B53619D2066C000B1659 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		75B3B56319D2066D000B1659 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		75B3B56419D2066D000B1659 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		75B43C0F1997B246000BB491 /* game_make_eng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game_make_eng.png; sourceTree = "<group>"; };
 		75B43C101997B246000BB491 /* game_make_rus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game_make_rus.png; sourceTree = "<group>"; };
 		75B43C111997B246000BB491 /* game_new_game_eng.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = game_new_game_eng.png; sourceTree = "<group>"; };
@@ -874,6 +882,7 @@
 				756B56F319C5CD070050244F /* MessageUI.framework in Frameworks */,
 				756B56F119C5CCF70050244F /* CoreMedia.framework in Frameworks */,
 				756B56EF19C5CCE50050244F /* AudioToolbox.framework in Frameworks */,
+				75B3B63619D2066D000B1659 /* FacebookSDK.framework in Frameworks */,
 				756B56ED19C5CCCF0050244F /* libz.1.2.5.dylib in Frameworks */,
 				756B56EB19C5CC0A0050244F /* MediaPlayer.framework in Frameworks */,
 				756B56E919C5CC040050244F /* AVFoundation.framework in Frameworks */,
@@ -883,6 +892,7 @@
 				756B56E519C5CBEB0050244F /* EventKitUI.framework in Frameworks */,
 				756B56E119C5CBE50050244F /* CoreTelephony.framework in Frameworks */,
 				756B56DF19C5CBDF0050244F /* Social.framework in Frameworks */,
+				75B3B53219D2047F000B1659 /* MobileAppTracker.framework in Frameworks */,
 				756B56D919C5C50B0050244F /* libAdIdAccess.a in Frameworks */,
 				756B56D819C5C4550050244F /* CFNetwork.framework in Frameworks */,
 				756B56D619C5C44F0050244F /* libsqlite3.0.dylib in Frameworks */,
@@ -1091,6 +1101,8 @@
 		756B56BF19C5C1880050244F /* libraries */ = {
 			isa = PBXGroup;
 			children = (
+				75B3B53419D2066C000B1659 /* FacebookSDK */,
+				75B3B53119D2047F000B1659 /* MobileAppTracker.framework */,
 				75D3394A19C5D9C000233CA4 /* ATConnect.h */,
 				756B572019C5D68F0050244F /* ApptentiveConnect.xcodeproj */,
 				756B571E19C5D4CD0050244F /* Chartboost.framework */,
@@ -1442,6 +1454,16 @@
 			path = make_card_images;
 			sourceTree = "<group>";
 		};
+		75B3B53419D2066C000B1659 /* FacebookSDK */ = {
+			isa = PBXGroup;
+			children = (
+				75B3B53619D2066C000B1659 /* FacebookSDK.framework */,
+				75B3B56319D2066D000B1659 /* LICENSE */,
+				75B3B56419D2066D000B1659 /* README.txt */,
+			);
+			path = FacebookSDK;
+			sourceTree = "<group>";
+		};
 		75B43C371997FAEC000BB491 /* card_caption_images */ = {
 			isa = PBXGroup;
 			children = (
@@ -1522,6 +1544,7 @@
 			knownRegions = (
 				en,
 				Base,
+				he,
 			);
 			mainGroup = 758A0F1F198CF08300FB0F7C;
 			productRefGroup = 758A0F29198CF08300FB0F7C /* Products */;
@@ -1577,6 +1600,7 @@
 				756B573719C5D77D0050244F /* ApptentiveResources.bundle in Resources */,
 				758A0F42198CF08300FB0F7C /* Main_iPad.storyboard in Resources */,
 				758A0F82198CF63200FB0F7C /* menu_flag_eng.png in Resources */,
+				75B3B64F19D2066D000B1659 /* LICENSE in Resources */,
 				75B43C691998017A000BB491 /* make_a_card_text3_rus.png in Resources */,
 				75566FE419C4E213007A95EE /* alert_no_eng.png in Resources */,
 				752CB2B719968B4D001C5459 /* 1_popup_art.png in Resources */,
@@ -1716,6 +1740,7 @@
 				758A0F8A198CF63200FB0F7C /* menu_play_eng.png in Resources */,
 				752CB2C219968B4D001C5459 /* 2_text_eng.png in Resources */,
 				75ABADD319AA101B0021007E /* README.md in Resources */,
+				75B3B65019D2066D000B1659 /* README.txt in Resources */,
 				75B43C5A1998017A000BB491 /* make_a_card_banner_rus.png in Resources */,
 				75B43C1E1997B372000BB491 /* game_make_icon.png in Resources */,
 				758A0F98198CF90A00FB0F7C /* menu_site_eng.png in Resources */,
@@ -2162,6 +2187,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/halloween",
+					"$(PROJECT_DIR)/halloween/FacebookSDK",
+					"$(PROJECT_DIR)/halloween/FacebookSDK/FBAudienceNetwork",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "halloween/halloween-Prefix.pch";
@@ -2192,6 +2219,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/halloween",
+					"$(PROJECT_DIR)/halloween/FacebookSDK",
+					"$(PROJECT_DIR)/halloween/FacebookSDK/FBAudienceNetwork",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "halloween/halloween-Prefix.pch";

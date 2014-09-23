@@ -19,6 +19,7 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    [[AdsManager sharedManager] matOpenURL:url sourceApplication:sourceApplication];
     return YES;
 }
 
@@ -62,6 +63,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     self.timer = [NSTimer scheduledTimerWithTimeInterval:10 * 60 target:[AdsManager sharedManager] selector:@selector(showVideoAfterTenMinutes) userInfo:nil repeats:YES];
+    [[AdsManager sharedManager] matDidBecomeActive];
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
 }
 

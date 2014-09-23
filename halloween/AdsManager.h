@@ -34,5 +34,7 @@ NSString *const EVENT_MAKE_CARD_SAVE;
 - (void)logEvent:(NSString *)event;
 - (void)showStartVideo;
 - (void)showVideoAfterTenMinutes;
+- (void)matDidBecomeActive;
+- (void)matOpenURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication;
 
 @end
