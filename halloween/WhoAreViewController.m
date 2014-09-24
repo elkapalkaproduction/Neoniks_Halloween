@@ -10,10 +10,11 @@
 #import "Utils.h"
 #import <MessageUI/MessageUI.h>
 #import "AdsManager.h"
-#import "ATConnect.h"
 
 #ifndef FreeVersion
 #import "NNKParentAlertView.h"
+#else
+#import "ATConnect.h"
 #endif
 
 @interface WhoAreViewController () <MFMailComposeViewControllerDelegate>
@@ -41,7 +42,9 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+#ifdef FreeVersion
     [[ATConnect sharedConnection] engage:@"about_us_clicked" fromViewController:self];
+#endif
 
 }
 

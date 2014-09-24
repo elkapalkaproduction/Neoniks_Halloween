@@ -298,7 +298,6 @@
 		75F87DBC19CF683300331D5A /* AdsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 75443B8919C5B2CE0004A4EE /* AdsManager.m */; };
 		75F87DBD19CF683300331D5A /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 754F410D198E354400C13D07 /* GameViewController.m */; };
 		75F87DBE19CF683300331D5A /* NSString+Helps.m in Sources */ = {isa = PBXBuildFile; fileRef = 758A0FA8198CFAFD00FB0F7C /* NSString+Helps.m */; };
-		75F87DC019CF683300331D5A /* libApptentiveConnect.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 756B572719C5D68F0050244F /* libApptentiveConnect.a */; };
 		75F87DC119CF683300331D5A /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756B573019C5D6BC0050244F /* CoreText.framework */; };
 		75F87DC219CF683300331D5A /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756B572E19C5D6B60050244F /* AssetsLibrary.framework */; };
 		75F87DC319CF683300331D5A /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 756B572C19C5D6B10050244F /* Accelerate.framework */; };
@@ -932,7 +931,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75F87DC019CF683300331D5A /* libApptentiveConnect.a in Frameworks */,
 				75F87DC119CF683300331D5A /* CoreText.framework in Frameworks */,
 				75F87DC219CF683300331D5A /* AssetsLibrary.framework in Frameworks */,
 				75F87DC319CF683300331D5A /* Accelerate.framework in Frameworks */,

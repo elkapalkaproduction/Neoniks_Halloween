@@ -11,12 +11,12 @@
 #import "Utils.h"
 #import <MessageUI/MessageUI.h>
 #import "AdsManager.h"
-#import "ATConnect.h"
 
 #ifndef FreeVersion
 #import "NNKParentAlertView.h"
+#else
+#import "ATConnect.h"
 #endif
-
 
 @interface MakeACardViewController () <MFMailComposeViewControllerDelegate, CaptionsDelegate>
 
@@ -62,7 +62,9 @@
     self.sendTextButton.image = [UIImage imageWithUnlocalizedName:@"make_a_card_send"];
     self.saveTextButton.image = [UIImage imageWithUnlocalizedName:@"make_a_card_save"];
     [self.siteAddress addTarget:self onTouchUpInsideWithAction:@selector(goToSite)];
+#ifdef FreeVersion
     [[ATConnect sharedConnection] engage:@"make_card_clicked" fromViewController:self];
+#endif
 }
 
 
