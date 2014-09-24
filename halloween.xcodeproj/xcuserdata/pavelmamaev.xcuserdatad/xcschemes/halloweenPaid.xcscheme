@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0510"
+   LastUpgradeVersion = "0610"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "758A0F27198CF08300FB0F7C"
-               BuildableName = "halloweenFree.app"
-               BlueprintName = "halloweenFree"
+               BlueprintIdentifier = "75F87D9719CF683300331D5A"
+               BuildableName = "halloween copy.app"
+               BlueprintName = "halloweenPaid"
                ReferencedContainer = "container:halloween.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,23 +28,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "758A0F4B198CF08300FB0F7C"
-               BuildableName = "halloweenTests.xctest"
-               BlueprintName = "halloweenTests"
-               ReferencedContainer = "container:halloween.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "758A0F27198CF08300FB0F7C"
-            BuildableName = "halloweenFree.app"
-            BlueprintName = "halloweenFree"
+            BlueprintIdentifier = "75F87D9719CF683300331D5A"
+            BuildableName = "halloween copy.app"
+            BlueprintName = "halloweenPaid"
             ReferencedContainer = "container:halloween.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -61,9 +51,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "758A0F27198CF08300FB0F7C"
-            BuildableName = "halloweenFree.app"
-            BlueprintName = "halloweenFree"
+            BlueprintIdentifier = "75F87D9719CF683300331D5A"
+            BuildableName = "halloween copy.app"
+            BlueprintName = "halloweenPaid"
             ReferencedContainer = "container:halloween.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -79,9 +69,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "758A0F27198CF08300FB0F7C"
-            BuildableName = "halloweenFree.app"
-            BlueprintName = "halloweenFree"
+            BlueprintIdentifier = "75F87D9719CF683300331D5A"
+            BuildableName = "halloween copy.app"
+            BlueprintName = "halloweenPaid"
             ReferencedContainer = "container:halloween.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
