@@ -503,7 +503,6 @@
 		75F87E9019CF683300331D5A /* logo_eng.png in Resources */ = {isa = PBXBuildFile; fileRef = 7521395619C60B4C002634A4 /* logo_eng.png */; };
 		75F87E9119CF683300331D5A /* 2_title_eng.png in Resources */ = {isa = PBXBuildFile; fileRef = 752CB2AA19968B4D001C5459 /* 2_title_eng.png */; };
 		75F87E9219CF683300331D5A /* 1_text_eng.png in Resources */ = {isa = PBXBuildFile; fileRef = 752CB29719968B4D001C5459 /* 1_text_eng.png */; };
-		75F87E9919CF6A1800331D5A /* libAdIdAccess.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 756B56CB19C5C1B20050244F /* libAdIdAccess.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -943,7 +942,6 @@
 				75F87DCA19CF683300331D5A /* AVFoundation.framework in Frameworks */,
 				75F87DCB19CF683300331D5A /* StoreKit.framework in Frameworks */,
 				75F87DCC19CF683300331D5A /* EventKit.framework in Frameworks */,
-				75F87E9919CF6A1800331D5A /* libAdIdAccess.a in Frameworks */,
 				75F87DCE19CF683300331D5A /* EventKitUI.framework in Frameworks */,
 				75F87DCF19CF683300331D5A /* CoreTelephony.framework in Frameworks */,
 				75F87DD019CF683300331D5A /* Social.framework in Frameworks */,
