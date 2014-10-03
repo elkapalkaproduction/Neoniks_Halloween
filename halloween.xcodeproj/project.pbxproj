@@ -977,11 +977,11 @@
 		752CB123199684B1001C5459 /* PopUp */ = {
 			isa = PBXGroup;
 			children = (
-				752CB117199684AC001C5459 /* PopUpViewController.h */,
-				752CB118199684AC001C5459 /* PopUpViewController.m */,
 				752CB119199684AC001C5459 /* PopUpViewController.xib */,
 				752CB11A199684AC001C5459 /* PopUpViewController5.xib */,
 				752CB11B199684AC001C5459 /* PopUpViewController~ipad.xib */,
+				752CB117199684AC001C5459 /* PopUpViewController.h */,
+				752CB118199684AC001C5459 /* PopUpViewController.m */,
 				752CB11C199684AC001C5459 /* PopUpParameters.h */,
 				752CB11D199684AC001C5459 /* PopUpParameters.m */,
 				752CB124199684ED001C5459 /* PopUpAnimations.h */,

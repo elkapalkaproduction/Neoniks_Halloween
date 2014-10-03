@@ -10,7 +10,7 @@
 
 @interface NNKParentAlertView ()
 
-@property (weak, nonatomic) ActionBlock completionBlock;
+@property (strong, nonatomic) ActionBlock completionBlock;
 @property (strong, nonatomic) IBOutlet UIButton *alertCancel;
 @property (strong, nonatomic) IBOutlet UIButton *alertAction;
 @property (strong, nonatomic) IBOutlet UITextField *textField;
