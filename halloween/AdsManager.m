@@ -142,6 +142,20 @@ NSString *const APPTENTIVE_API_KEY = @"dd73ae21b91b262e13ab7d70efe5de74243051ab3
     }
 }
 
+#ifdef FreeVersion
+
+- (void)didDismissInterstitial:(CBLocation)location {
+    if (self.isPlayingMusic) {
+        [[SoundPlayer sharedPlayer] playBakgroundMusic];
+    }
+}
+
+- (void)didDisplayInterstitial:(CBLocation)location {
+    self.isPlayingMusic = [[SoundPlayer sharedPlayer] isPlayingBackgroundMusic];
+    [[SoundPlayer sharedPlayer] pauseBackgroundMusic];
+}
+#endif
+
 
 - (void)matDidBecomeActive {
 #ifdef NeoniksFree
