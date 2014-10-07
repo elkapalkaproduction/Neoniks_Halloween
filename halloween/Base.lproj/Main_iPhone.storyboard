@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
@@ -281,23 +281,14 @@
                                 <rect key="frame" x="358" y="70" width="160" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lSm-mM-Fc7" userLabel="Button - who_are_read">
-                                        <rect key="frame" x="50" y="6" width="110" height="40"/>
+                                        <rect key="frame" x="50" y="40" width="110" height="40"/>
                                         <state key="normal" image="who_are_read_eng.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="who_are_read_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="JNf-oT-HOw">
-                                        <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
+                                        <rect key="frame" x="0.0" y="34" width="55" height="55"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="who_are_feedback_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="6nk-W7-E15">
-                                        <rect key="frame" x="3" y="44" width="55" height="55"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rdc-yI-OyI" userLabel="Button - who_are_feedback">
-                                        <rect key="frame" x="45" y="60" width="110" height="40"/>
-                                        <state key="normal" image="who_are_feedback_eng.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -332,7 +323,6 @@
                         <outlet property="backgroundImage" destination="oDi-RC-Ibj" id="T3a-vj-3rL"/>
                         <outlet property="bannerImage" destination="JRi-C5-dFf" id="GVU-4w-Gmx"/>
                         <outlet property="contributorsImage" destination="qpR-ng-8aa" id="Jn8-R3-JFU"/>
-                        <outlet property="feedbackButton" destination="rdc-yI-OyI" id="ykK-V0-V91"/>
                         <outlet property="readButton" destination="lSm-mM-Fc7" id="0iP-2b-TK5"/>
                         <outlet property="siteButton" destination="0nx-Tp-KtF" id="o2S-JY-iA4"/>
                         <outlet property="textImage" destination="PyY-G1-0o4" id="NOY-Ha-Hvi"/>
@@ -951,8 +941,6 @@
         <image name="menu_who_are_icon.png" width="220" height="220"/>
         <image name="who_are_banner_eng.png" width="1413" height="271"/>
         <image name="who_are_contributors_eng.png" width="974" height="468"/>
-        <image name="who_are_feedback_eng.png" width="474" height="162"/>
-        <image name="who_are_feedback_icon.png" width="220" height="220"/>
         <image name="who_are_fon.png" width="960" height="640"/>
         <image name="who_are_read_eng.png" width="474" height="162"/>
         <image name="who_are_read_icon.png" width="220" height="220"/>

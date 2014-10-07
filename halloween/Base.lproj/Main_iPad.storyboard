@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
@@ -522,10 +521,7 @@
                                 <rect key="frame" x="78" y="486" width="487" height="234"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="who_are_read_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="SIJ-Ez-jic">
-                                <rect key="frame" x="591" y="173" width="110" height="110"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="who_are_feedback_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="wqy-dm-oKU">
-                                <rect key="frame" x="601" y="264" width="110" height="110"/>
+                                <rect key="frame" x="591" y="236" width="110" height="110"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nro-MB-BKp" userLabel="Button - arrow_back">
                                 <rect key="frame" x="967" y="20" width="32" height="38"/>
@@ -540,14 +536,8 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQC-da-dmx" userLabel="Button - who_are_read">
-                                <rect key="frame" x="694" y="184" width="237" height="81"/>
+                                <rect key="frame" x="694" y="247" width="237" height="81"/>
                                 <state key="normal" image="who_are_read_eng.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sZJ-6j-Hwq" userLabel="Button - who_are_feedback">
-                                <rect key="frame" x="685" y="297" width="237" height="81"/>
-                                <state key="normal" image="who_are_feedback_eng.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
@@ -559,7 +549,6 @@
                         <outlet property="arrowBackButton" destination="Nro-MB-BKp" id="9Vo-kl-EKF"/>
                         <outlet property="bannerImage" destination="5il-4n-I9L" id="bhY-vc-qnP"/>
                         <outlet property="contributorsImage" destination="5s9-by-LkS" id="0NS-vn-PUl"/>
-                        <outlet property="feedbackButton" destination="sZJ-6j-Hwq" id="fd1-rl-S5v"/>
                         <outlet property="readButton" destination="FQC-da-dmx" id="JdC-ZF-D8M"/>
                         <outlet property="siteButton" destination="cVf-O4-91K" id="W7E-uH-8Wm"/>
                         <outlet property="textImage" destination="bMu-dL-VgB" id="eNa-KJ-OVk"/>
@@ -705,8 +694,6 @@
         <image name="menu_who_are_icon.png" width="220" height="220"/>
         <image name="who_are_banner_eng.png" width="1413" height="271"/>
         <image name="who_are_contributors_eng.png" width="974" height="468"/>
-        <image name="who_are_feedback_eng.png" width="474" height="162"/>
-        <image name="who_are_feedback_icon.png" width="220" height="220"/>
         <image name="who_are_fon.png" width="2048" height="1536"/>
         <image name="who_are_read_eng.png" width="474" height="162"/>
         <image name="who_are_read_icon.png" width="220" height="220"/>
