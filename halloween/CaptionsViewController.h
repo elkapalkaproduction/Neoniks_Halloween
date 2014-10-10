@@ -14,7 +14,7 @@
 
 @end
 
-@interface CaptionsViewController : UIViewController
+@interface CaptionsViewController : HalloweenBaseViewController
 
 + (instancetype)instantiateWithDelegate:(id<CaptionsDelegate>)delegate;
 

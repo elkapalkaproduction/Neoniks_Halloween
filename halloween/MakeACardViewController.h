@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MakeACardViewController : UIViewController
+@interface MakeACardViewController : HalloweenBaseViewController
 
 + (instancetype)instantiateWithImage:(UIImage *)image;
 

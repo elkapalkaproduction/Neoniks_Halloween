@@ -58,6 +58,7 @@ NSString *const APPTENTIVE_API_KEY = @"2ebf152d36054ba38048e44ce0d89479266588d68
 #endif
 
 @property (assign, nonatomic) BOOL isPlayingMusic;
+@property (strong, nonatomic) GAIDictionaryBuilder *builder;
 
 @end
 
@@ -106,6 +107,20 @@ NSString *const APPTENTIVE_API_KEY = @"2ebf152d36054ba38048e44ce0d89479266588d68
                                                             label:nil
                                                             value:nil] set:@"start" forKey:kGAISessionControl] build]];
 }
+
+- (void)startLogTime:(NSString *)screenName {
+    id tracker = [[GAI sharedInstance] defaultTracker];
+    
+    self.builder = [GAIDictionaryBuilder createScreenView];
+    [self.builder set:@"start" forKey:kGAISessionControl];
+    [tracker set:kGAIScreenName value:screenName];
+    [tracker send:[self.builder build]];
+}
+
+- (void)endLogTime {
+    [self.builder set:@"end" forKey:kGAISessionControl];
+}
+
 
 
 - (void)showStartVideo {

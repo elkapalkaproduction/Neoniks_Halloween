@@ -32,6 +32,8 @@ NSString *const EVENT_MAKE_CARD_SAVE;
 + (instancetype)sharedManager;
 - (void)setupAllLibraries;
 - (void)logEvent:(NSString *)event;
+- (void)startLogTime:(NSString *)screenName;
+- (void)endLogTime;
 - (void)showStartVideo;
 - (void)showVideoAfterTenMinutes;
 - (void)matDidBecomeActive;

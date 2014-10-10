@@ -74,6 +74,8 @@
 		752CB2DD19968B4D001C5459 /* 7_title_rus.png in Resources */ = {isa = PBXBuildFile; fileRef = 752CB2B519968B4D001C5459 /* 7_title_rus.png */; };
 		752CB2DF19968BAC001C5459 /* nextPages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 752CB2DE19968BAC001C5459 /* nextPages.plist */; };
 		752CB2E11996A4E9001C5459 /* sounds in Resources */ = {isa = PBXBuildFile; fileRef = 752CB2E01996A4E9001C5459 /* sounds */; };
+		752F58F719E883A00001D24D /* HalloweenBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752F58F619E883A00001D24D /* HalloweenBaseViewController.m */; };
+		752F58F819E883A00001D24D /* HalloweenBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 752F58F619E883A00001D24D /* HalloweenBaseViewController.m */; };
 		7543E4BA19C230CA002004DD /* SoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7543E4B919C230CA002004DD /* SoundPlayer.m */; };
 		7543E4CD19C23D27002004DD /* how_to_top_fon_eng-568.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7543E4C719C23D27002004DD /* how_to_top_fon_eng-568.jpg */; };
 		7543E4CE19C23D27002004DD /* how_to_top_fon_rus-568.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7543E4C819C23D27002004DD /* how_to_top_fon_rus-568.jpg */; };
@@ -630,6 +632,8 @@
 		752CB2B519968B4D001C5459 /* 7_title_rus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7_title_rus.png; sourceTree = "<group>"; };
 		752CB2DE19968BAC001C5459 /* nextPages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = nextPages.plist; sourceTree = "<group>"; };
 		752CB2E01996A4E9001C5459 /* sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = sounds; sourceTree = "<group>"; };
+		752F58F519E883A00001D24D /* HalloweenBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HalloweenBaseViewController.h; sourceTree = "<group>"; };
+		752F58F619E883A00001D24D /* HalloweenBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HalloweenBaseViewController.m; sourceTree = "<group>"; };
 		7543E4B819C230CA002004DD /* SoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundPlayer.h; sourceTree = "<group>"; };
 		7543E4B919C230CA002004DD /* SoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundPlayer.m; sourceTree = "<group>"; };
 		7543E4C719C23D27002004DD /* how_to_top_fon_eng-568.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "how_to_top_fon_eng-568.jpg"; sourceTree = "<group>"; };
@@ -1262,6 +1266,8 @@
 				75B3B6E819D20A7D000B1659 /* CustomAlertView */,
 				7521394E19C60B35002634A4 /* LogoViewController */,
 				752CB123199684B1001C5459 /* PopUp */,
+				752F58F519E883A00001D24D /* HalloweenBaseViewController.h */,
+				752F58F619E883A00001D24D /* HalloweenBaseViewController.m */,
 				758A0F43198CF08300FB0F7C /* MenuViewController.h */,
 				758A0F44198CF08300FB0F7C /* MenuViewController.m */,
 				758A0FCC198D0BE200FB0F7C /* WhoAreViewController.h */,
@@ -2014,6 +2020,7 @@
 			files = (
 				754F4169198E76A100C13D07 /* StatedObject.m in Sources */,
 				752CB11E199684AC001C5459 /* PopUpViewController.m in Sources */,
+				752F58F719E883A00001D24D /* HalloweenBaseViewController.m in Sources */,
 				75B43C231997D0CE000BB491 /* MakeACardViewController.m in Sources */,
 				75566FD419C4E152007A95EE /* NNKAlertView.m in Sources */,
 				7543E4BA19C230CA002004DD /* SoundPlayer.m in Sources */,
@@ -2086,6 +2093,7 @@
 				75F87DBA19CF683300331D5A /* LogoViewController.m in Sources */,
 				75F87DBB19CF683300331D5A /* WhoAreViewController.m in Sources */,
 				75F87DBC19CF683300331D5A /* AdsManager.m in Sources */,
+				752F58F819E883A00001D24D /* HalloweenBaseViewController.m in Sources */,
 				75F87DBD19CF683300331D5A /* GameViewController.m in Sources */,
 				75F87DBE19CF683300331D5A /* NSString+Helps.m in Sources */,
 			);

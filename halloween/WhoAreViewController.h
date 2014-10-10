@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WhoAreViewController : UIViewController
+@interface WhoAreViewController : HalloweenBaseViewController
 
 @end
