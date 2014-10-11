@@ -7,6 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4585E93F19E8DAF200C5C6C3 /* TSAppEventSourceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4585E92419E8DAF200C5C6C3 /* TSAppEventSourceImpl.m */; };
+		4585E94019E8DAF200C5C6C3 /* TSAppEventSourceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4585E92419E8DAF200C5C6C3 /* TSAppEventSourceImpl.m */; };
+		4585E94119E8DAF200C5C6C3 /* TSConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4585E92619E8DAF200C5C6C3 /* TSConfig.m */; };
+		4585E94219E8DAF200C5C6C3 /* TSConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4585E92619E8DAF200C5C6C3 /* TSConfig.m */; };
+		4585E94319E8DAF200C5C6C3 /* TSCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4585E92819E8DAF200C5C6C3 /* TSCore.m */; };
+		4585E94419E8DAF200C5C6C3 /* TSCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4585E92819E8DAF200C5C6C3 /* TSCore.m */; };
+		4585E94519E8DAF200C5C6C3 /* TSCoreListenerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4585E92B19E8DAF200C5C6C3 /* TSCoreListenerImpl.m */; };
+		4585E94619E8DAF200C5C6C3 /* TSCoreListenerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4585E92B19E8DAF200C5C6C3 /* TSCoreListenerImpl.m */; };
+		4585E94719E8DAF200C5C6C3 /* TSEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4585E92E19E8DAF200C5C6C3 /* TSEvent.m */; };
+		4585E94819E8DAF200C5C6C3 /* TSEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4585E92E19E8DAF200C5C6C3 /* TSEvent.m */; };
+		4585E94919E8DAF200C5C6C3 /* TSHit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4585E93119E8DAF200C5C6C3 /* TSHit.m */; };
+		4585E94A19E8DAF200C5C6C3 /* TSHit.m in Sources */ = {isa = PBXBuildFile; fileRef = 4585E93119E8DAF200C5C6C3 /* TSHit.m */; };
+		4585E94B19E8DAF200C5C6C3 /* TSLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 4585E93319E8DAF200C5C6C3 /* TSLogging.m */; };
+		4585E94C19E8DAF200C5C6C3 /* TSLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 4585E93319E8DAF200C5C6C3 /* TSLogging.m */; };
+		4585E94D19E8DAF200C5C6C3 /* TSPlatformImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4585E93719E8DAF200C5C6C3 /* TSPlatformImpl.m */; };
+		4585E94E19E8DAF200C5C6C3 /* TSPlatformImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4585E93719E8DAF200C5C6C3 /* TSPlatformImpl.m */; };
+		4585E94F19E8DAF200C5C6C3 /* TSResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4585E93919E8DAF200C5C6C3 /* TSResponse.m */; };
+		4585E95019E8DAF200C5C6C3 /* TSResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4585E93919E8DAF200C5C6C3 /* TSResponse.m */; };
+		4585E95119E8DAF200C5C6C3 /* TSTapstream.m in Sources */ = {isa = PBXBuildFile; fileRef = 4585E93B19E8DAF200C5C6C3 /* TSTapstream.m */; };
+		4585E95219E8DAF200C5C6C3 /* TSTapstream.m in Sources */ = {isa = PBXBuildFile; fileRef = 4585E93B19E8DAF200C5C6C3 /* TSTapstream.m */; };
+		4585E95319E8DAF200C5C6C3 /* TSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4585E93D19E8DAF200C5C6C3 /* TSUtils.m */; };
+		4585E95419E8DAF200C5C6C3 /* TSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4585E93D19E8DAF200C5C6C3 /* TSUtils.m */; };
 		45F4083F19A850570074FC5F /* 40.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F4083619A850570074FC5F /* 40.png */; };
 		45F4084019A850570074FC5F /* 29.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F4083719A850570074FC5F /* 29.png */; };
 		45F4084119A850570074FC5F /* 58.png in Resources */ = {isa = PBXBuildFile; fileRef = 45F4083819A850570074FC5F /* 58.png */; };
@@ -560,6 +582,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4585E92119E8DAF200C5C6C3 /* TSApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSApi.h; sourceTree = "<group>"; };
+		4585E92219E8DAF200C5C6C3 /* TSAppEventSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAppEventSource.h; sourceTree = "<group>"; };
+		4585E92319E8DAF200C5C6C3 /* TSAppEventSourceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAppEventSourceImpl.h; sourceTree = "<group>"; };
+		4585E92419E8DAF200C5C6C3 /* TSAppEventSourceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAppEventSourceImpl.m; sourceTree = "<group>"; };
+		4585E92519E8DAF200C5C6C3 /* TSConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSConfig.h; sourceTree = "<group>"; };
+		4585E92619E8DAF200C5C6C3 /* TSConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSConfig.m; sourceTree = "<group>"; };
+		4585E92719E8DAF200C5C6C3 /* TSCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCore.h; sourceTree = "<group>"; };
+		4585E92819E8DAF200C5C6C3 /* TSCore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCore.m; sourceTree = "<group>"; };
+		4585E92919E8DAF200C5C6C3 /* TSCoreListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCoreListener.h; sourceTree = "<group>"; };
+		4585E92A19E8DAF200C5C6C3 /* TSCoreListenerImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCoreListenerImpl.h; sourceTree = "<group>"; };
+		4585E92B19E8DAF200C5C6C3 /* TSCoreListenerImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSCoreListenerImpl.m; sourceTree = "<group>"; };
+		4585E92C19E8DAF200C5C6C3 /* TSDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDelegate.h; sourceTree = "<group>"; };
+		4585E92D19E8DAF200C5C6C3 /* TSEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSEvent.h; sourceTree = "<group>"; };
+		4585E92E19E8DAF200C5C6C3 /* TSEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSEvent.m; sourceTree = "<group>"; };
+		4585E92F19E8DAF200C5C6C3 /* TSHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSHelpers.h; sourceTree = "<group>"; };
+		4585E93019E8DAF200C5C6C3 /* TSHit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSHit.h; sourceTree = "<group>"; };
+		4585E93119E8DAF200C5C6C3 /* TSHit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSHit.m; sourceTree = "<group>"; };
+		4585E93219E8DAF200C5C6C3 /* TSLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSLogging.h; sourceTree = "<group>"; };
+		4585E93319E8DAF200C5C6C3 /* TSLogging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSLogging.m; sourceTree = "<group>"; };
+		4585E93419E8DAF200C5C6C3 /* TSLogLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSLogLevel.h; sourceTree = "<group>"; };
+		4585E93519E8DAF200C5C6C3 /* TSPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPlatform.h; sourceTree = "<group>"; };
+		4585E93619E8DAF200C5C6C3 /* TSPlatformImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSPlatformImpl.h; sourceTree = "<group>"; };
+		4585E93719E8DAF200C5C6C3 /* TSPlatformImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSPlatformImpl.m; sourceTree = "<group>"; };
+		4585E93819E8DAF200C5C6C3 /* TSResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSResponse.h; sourceTree = "<group>"; };
+		4585E93919E8DAF200C5C6C3 /* TSResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSResponse.m; sourceTree = "<group>"; };
+		4585E93A19E8DAF200C5C6C3 /* TSTapstream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTapstream.h; sourceTree = "<group>"; };
+		4585E93B19E8DAF200C5C6C3 /* TSTapstream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTapstream.m; sourceTree = "<group>"; };
+		4585E93C19E8DAF200C5C6C3 /* TSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSUtils.h; sourceTree = "<group>"; };
+		4585E93D19E8DAF200C5C6C3 /* TSUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSUtils.m; sourceTree = "<group>"; };
+		4585E93E19E8DAF200C5C6C3 /* TSWordOfMouthDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSWordOfMouthDelegate.h; sourceTree = "<group>"; };
 		45F4083619A850570074FC5F /* 40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 40.png; sourceTree = "<group>"; };
 		45F4083719A850570074FC5F /* 29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 29.png; sourceTree = "<group>"; };
 		45F4083819A850570074FC5F /* 58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 58.png; sourceTree = "<group>"; };
@@ -965,6 +1017,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4585E92019E8DAF200C5C6C3 /* Tapstream */ = {
+			isa = PBXGroup;
+			children = (
+				4585E92119E8DAF200C5C6C3 /* TSApi.h */,
+				4585E92219E8DAF200C5C6C3 /* TSAppEventSource.h */,
+				4585E92319E8DAF200C5C6C3 /* TSAppEventSourceImpl.h */,
+				4585E92419E8DAF200C5C6C3 /* TSAppEventSourceImpl.m */,
+				4585E92519E8DAF200C5C6C3 /* TSConfig.h */,
+				4585E92619E8DAF200C5C6C3 /* TSConfig.m */,
+				4585E92719E8DAF200C5C6C3 /* TSCore.h */,
+				4585E92819E8DAF200C5C6C3 /* TSCore.m */,
+				4585E92919E8DAF200C5C6C3 /* TSCoreListener.h */,
+				4585E92A19E8DAF200C5C6C3 /* TSCoreListenerImpl.h */,
+				4585E92B19E8DAF200C5C6C3 /* TSCoreListenerImpl.m */,
+				4585E92C19E8DAF200C5C6C3 /* TSDelegate.h */,
+				4585E92D19E8DAF200C5C6C3 /* TSEvent.h */,
+				4585E92E19E8DAF200C5C6C3 /* TSEvent.m */,
+				4585E92F19E8DAF200C5C6C3 /* TSHelpers.h */,
+				4585E93019E8DAF200C5C6C3 /* TSHit.h */,
+				4585E93119E8DAF200C5C6C3 /* TSHit.m */,
+				4585E93219E8DAF200C5C6C3 /* TSLogging.h */,
+				4585E93319E8DAF200C5C6C3 /* TSLogging.m */,
+				4585E93419E8DAF200C5C6C3 /* TSLogLevel.h */,
+				4585E93519E8DAF200C5C6C3 /* TSPlatform.h */,
+				4585E93619E8DAF200C5C6C3 /* TSPlatformImpl.h */,
+				4585E93719E8DAF200C5C6C3 /* TSPlatformImpl.m */,
+				4585E93819E8DAF200C5C6C3 /* TSResponse.h */,
+				4585E93919E8DAF200C5C6C3 /* TSResponse.m */,
+				4585E93A19E8DAF200C5C6C3 /* TSTapstream.h */,
+				4585E93B19E8DAF200C5C6C3 /* TSTapstream.m */,
+				4585E93C19E8DAF200C5C6C3 /* TSUtils.h */,
+				4585E93D19E8DAF200C5C6C3 /* TSUtils.m */,
+				4585E93E19E8DAF200C5C6C3 /* TSWordOfMouthDelegate.h */,
+			);
+			path = Tapstream;
+			sourceTree = "<group>";
+		};
 		7521394E19C60B35002634A4 /* LogoViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -1207,6 +1296,7 @@
 		758A0F1F198CF08300FB0F7C = {
 			isa = PBXGroup;
 			children = (
+				4585E92019E8DAF200C5C6C3 /* Tapstream */,
 				75ABADD219AA101B0021007E /* README.md */,
 				758A0FCA198D07A300FB0F7C /* StyleSettings.plist */,
 				758A0F31198CF08300FB0F7C /* halloween */,
@@ -2019,13 +2109,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				754F4169198E76A100C13D07 /* StatedObject.m in Sources */,
+				4585E94F19E8DAF200C5C6C3 /* TSResponse.m in Sources */,
 				752CB11E199684AC001C5459 /* PopUpViewController.m in Sources */,
 				752F58F719E883A00001D24D /* HalloweenBaseViewController.m in Sources */,
 				75B43C231997D0CE000BB491 /* MakeACardViewController.m in Sources */,
 				75566FD419C4E152007A95EE /* NNKAlertView.m in Sources */,
+				4585E94D19E8DAF200C5C6C3 /* TSPlatformImpl.m in Sources */,
+				4585E94719E8DAF200C5C6C3 /* TSEvent.m in Sources */,
 				7543E4BA19C230CA002004DD /* SoundPlayer.m in Sources */,
 				758A101E198D188E00FB0F7C /* HowToViewController.m in Sources */,
+				4585E94319E8DAF200C5C6C3 /* TSCore.m in Sources */,
 				754F417C198ED01000C13D07 /* NNKObjectParameters.m in Sources */,
+				4585E95119E8DAF200C5C6C3 /* TSTapstream.m in Sources */,
+				4585E94119E8DAF200C5C6C3 /* TSConfig.m in Sources */,
 				754F4176198ECFD600C13D07 /* NNKObjectState.m in Sources */,
 				75B0BA2119B7A3B800E4DBEA /* NNKObjectParametersHelper.m in Sources */,
 				75DAE83119B5009100CC61A4 /* BranchObject.m in Sources */,
@@ -2036,6 +2132,7 @@
 				758A0FC8198CFCDE00FB0F7C /* DeviceUtils.m in Sources */,
 				754F4179198ECFFB00C13D07 /* NNKObjectAction.m in Sources */,
 				75BF7E7719916C5900C1F31B /* DoorView.m in Sources */,
+				4585E95319E8DAF200C5C6C3 /* TSUtils.m in Sources */,
 				758A0F38198CF08300FB0F7C /* main.m in Sources */,
 				754F416C198E76C500C13D07 /* NNKShapedButton.m in Sources */,
 				75F00664199945DD00C2FE3E /* CaptionsViewController.m in Sources */,
@@ -2044,6 +2141,8 @@
 				758A0FFC198D132500FB0F7C /* StoryboardUtils.m in Sources */,
 				752CB126199684ED001C5459 /* PopUpAnimations.m in Sources */,
 				75B0BA1E19B7A1C700E4DBEA /* PumpkinObject.m in Sources */,
+				4585E94519E8DAF200C5C6C3 /* TSCoreListenerImpl.m in Sources */,
+				4585E93F19E8DAF200C5C6C3 /* TSAppEventSourceImpl.m in Sources */,
 				758A0FBD198CFAFD00FB0F7C /* NSURL+Helps.m in Sources */,
 				758A0FC0198CFAFD00FB0F7C /* UIImage+Helps.m in Sources */,
 				754F4173198E874A00C13D07 /* NSDictionary+Helps.m in Sources */,
@@ -2051,7 +2150,9 @@
 				7521395319C60B35002634A4 /* LogoViewController.m in Sources */,
 				758A0FCE198D0BE200FB0F7C /* WhoAreViewController.m in Sources */,
 				75443B8A19C5B2CE0004A4EE /* AdsManager.m in Sources */,
+				4585E94B19E8DAF200C5C6C3 /* TSLogging.m in Sources */,
 				754F410E198E354400C13D07 /* GameViewController.m in Sources */,
+				4585E94919E8DAF200C5C6C3 /* TSHit.m in Sources */,
 				758A0FBC198CFAFD00FB0F7C /* NSString+Helps.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2062,33 +2163,44 @@
 			files = (
 				75F87D9D19CF683300331D5A /* StatedObject.m in Sources */,
 				75F87D9E19CF683300331D5A /* PopUpViewController.m in Sources */,
+				4585E94819E8DAF200C5C6C3 /* TSEvent.m in Sources */,
 				75F87D9F19CF683300331D5A /* MakeACardViewController.m in Sources */,
 				75F87DA019CF683300331D5A /* NNKAlertView.m in Sources */,
+				4585E94E19E8DAF200C5C6C3 /* TSPlatformImpl.m in Sources */,
 				75F87DA119CF683300331D5A /* SoundPlayer.m in Sources */,
 				75F87DA219CF683300331D5A /* HowToViewController.m in Sources */,
+				4585E95219E8DAF200C5C6C3 /* TSTapstream.m in Sources */,
 				75F87DA319CF683300331D5A /* NNKObjectParameters.m in Sources */,
 				75F87DA419CF683300331D5A /* NNKObjectState.m in Sources */,
 				75F87DA519CF683300331D5A /* NNKObjectParametersHelper.m in Sources */,
+				4585E95419E8DAF200C5C6C3 /* TSUtils.m in Sources */,
 				75F87DA619CF683300331D5A /* BranchObject.m in Sources */,
 				75F87DA719CF683300331D5A /* LanguageSettings.m in Sources */,
 				75F87DA819CF683300331D5A /* MenuViewController.m in Sources */,
+				4585E94419E8DAF200C5C6C3 /* TSCore.m in Sources */,
 				75F87DA919CF683300331D5A /* AppDelegate.m in Sources */,
 				75F87DAA19CF683300331D5A /* PositionUtils.m in Sources */,
 				75B3B6F919D20A7D000B1659 /* NNKParentAlertView.m in Sources */,
 				75F87DAB19CF683300331D5A /* DeviceUtils.m in Sources */,
+				4585E94A19E8DAF200C5C6C3 /* TSHit.m in Sources */,
 				75F87DAC19CF683300331D5A /* NNKObjectAction.m in Sources */,
+				4585E94C19E8DAF200C5C6C3 /* TSLogging.m in Sources */,
 				75F87DAD19CF683300331D5A /* DoorView.m in Sources */,
 				75F87DAE19CF683300331D5A /* main.m in Sources */,
 				75F87DAF19CF683300331D5A /* NNKShapedButton.m in Sources */,
 				75F87DB019CF683300331D5A /* CaptionsViewController.m in Sources */,
 				75F87DB119CF683300331D5A /* UIPopoverController+iPhone.m in Sources */,
+				4585E94219E8DAF200C5C6C3 /* TSConfig.m in Sources */,
 				75F87DB219CF683300331D5A /* UIButton+Helps.m in Sources */,
+				4585E94019E8DAF200C5C6C3 /* TSAppEventSourceImpl.m in Sources */,
 				75F87DB319CF683300331D5A /* StoryboardUtils.m in Sources */,
 				75F87DB419CF683300331D5A /* PopUpAnimations.m in Sources */,
 				75F87DB519CF683300331D5A /* PumpkinObject.m in Sources */,
 				75F87DB619CF683300331D5A /* NSURL+Helps.m in Sources */,
 				75F87DB719CF683300331D5A /* UIImage+Helps.m in Sources */,
+				4585E94619E8DAF200C5C6C3 /* TSCoreListenerImpl.m in Sources */,
 				75F87DB819CF683300331D5A /* NSDictionary+Helps.m in Sources */,
+				4585E95019E8DAF200C5C6C3 /* TSResponse.m in Sources */,
 				75F87DB919CF683300331D5A /* PopUpParameters.m in Sources */,
 				75F87DBA19CF683300331D5A /* LogoViewController.m in Sources */,
 				75F87DBB19CF683300331D5A /* WhoAreViewController.m in Sources */,
@@ -2187,7 +2299,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "d81b5c56-a2de-4087-8909-708804d8248e";
+				PROVISIONING_PROFILE = "5c1b8f93-266a-446e-9ec5-522c83c20465";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2221,7 +2333,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				PROVISIONING_PROFILE = "d81b5c56-a2de-4087-8909-708804d8248e";
+				PROVISIONING_PROFILE = "5c1b8f93-266a-446e-9ec5-522c83c20465";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -2232,8 +2344,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Pavel Mamaev (94G97SK366)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Pavel Mamaev (94G97SK366)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/halloween",
@@ -2255,7 +2367,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "5c1b8f93-266a-446e-9ec5-522c83c20465";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2264,8 +2376,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Pavel Mamaev (94G97SK366)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Pavel Mamaev (94G97SK366)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/halloween",
@@ -2287,7 +2399,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "5c1b8f93-266a-446e-9ec5-522c83c20465";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

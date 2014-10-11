@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Utils.h"
 #import "AdsManager.h"
+#import "TSTapstream.h"
 
 @interface AppDelegate ()
 
@@ -38,6 +39,10 @@
     [self.navController setNavigationBarHidden:YES];
     self.window.rootViewController = self.navController;
     [self.window makeKeyAndVisible];    // Override point for customization after application launch.
+    
+    // Tapstream
+    TSConfig *config = [TSConfig configWithDefaults];
+    [TSTapstream createWithAccountName:@"neoniks" developerSecret:@"c_9ek3--RY-PeLND6eR4_Q" config:config];
 
     return YES;
 }
