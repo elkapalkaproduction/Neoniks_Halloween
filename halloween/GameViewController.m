@@ -22,7 +22,6 @@
 
 #ifndef FreeVersion
 #import "NNKParentAlertView.h"
-#import <FacebookSDK/FacebookSDK.h>
 #endif
 
 NSString *const GameDefaultObjects = @"GameDefaultObjects";
