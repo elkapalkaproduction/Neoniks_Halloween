@@ -51,10 +51,10 @@
 
 - (void)goToSite {
     [[SoundPlayer sharedPlayer] playClick];
-    [[AdsManager sharedManager] LogFacebookEvent];
     NSURL *bookUrl = [NSURL urlForSite];
 #ifdef FreeVersion
     [[UIApplication sharedApplication] openURL:bookUrl];
+    [[AdsManager sharedManager] LogFacebookEvent];
 #else
     NNKParentAlertView *alertView = [[NNKParentAlertView alloc] initCustomPopWithFrame:self.view.frame
                                                                        completionBlock:^{
@@ -68,9 +68,9 @@
 - (void)goToRead {
     [[AdsManager sharedManager] logEvent:EVENT_WHO_ARE_READ_BOOK];
     [[SoundPlayer sharedPlayer] playClick];
-    [[AdsManager sharedManager] LogFacebookEvent];
 #ifdef FreeVersion
     [self readTheBookParentGate];
+    [[AdsManager sharedManager] LogFacebookEvent];
 #else
     NNKParentAlertView *alertView = [[NNKParentAlertView alloc] initCustomPopWithFrame:self.view.frame
                                                                        completionBlock:^{
@@ -92,7 +92,9 @@
 
 - (void)readTheBook {
     [[AdsManager sharedManager] logEvent:EVENT_PLAY_QUESTION_READ_BOOK];
+#ifndef FreeVersion
     [[AdsManager sharedManager] LogFacebookEvent];
+#endif
 }
 
 

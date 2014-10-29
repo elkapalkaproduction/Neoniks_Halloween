@@ -110,7 +110,9 @@ NSString *const APPTENTIVE_API_KEY = @"2ebf152d36054ba38048e44ce0d89479266588d68
 }
 
 - (void)LogFacebookEvent {
+#ifdef FreeVersion
     [FBAppEvents logEvent:@"Interested in Neoniks"];
+#endif
 }
 
 - (void)startLogTime:(NSString *)screenName {
