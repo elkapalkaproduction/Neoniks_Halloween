@@ -51,6 +51,7 @@
 
 - (void)goToSite {
     [[SoundPlayer sharedPlayer] playClick];
+    [[AdsManager sharedManager] LogFacebookEvent];
     NSURL *bookUrl = [NSURL urlForSite];
 #ifdef FreeVersion
     [[UIApplication sharedApplication] openURL:bookUrl];
@@ -67,6 +68,7 @@
 - (void)goToRead {
     [[AdsManager sharedManager] logEvent:EVENT_WHO_ARE_READ_BOOK];
     [[SoundPlayer sharedPlayer] playClick];
+    [[AdsManager sharedManager] LogFacebookEvent];
 #ifdef FreeVersion
     [self readTheBookParentGate];
 #else
@@ -90,6 +92,7 @@
 
 - (void)readTheBook {
     [[AdsManager sharedManager] logEvent:EVENT_PLAY_QUESTION_READ_BOOK];
+    [[AdsManager sharedManager] LogFacebookEvent];
 }
 
 

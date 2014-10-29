@@ -19,6 +19,7 @@
 #import "ATConnect.h"
 #import <MobileAppTracker/MobileAppTracker.h>
 #import <AdSupport/AdSupport.h>
+#import <FacebookSDK/FacebookSDK.h>
 #endif
 
 NSString *const EVENT_MAIN_LANGUAGE_CHANGE = @"EVENT_MAIN_LANGUAGE_CHANGE";
@@ -106,6 +107,10 @@ NSString *const APPTENTIVE_API_KEY = @"2ebf152d36054ba38048e44ce0d89479266588d68
                                                            action:event
                                                             label:nil
                                                             value:nil] set:@"start" forKey:kGAISessionControl] build]];
+}
+
+- (void)LogFacebookEvent {
+    [FBAppEvents logEvent:@"Interested in Neoniks"];
 }
 
 - (void)startLogTime:(NSString *)screenName {
